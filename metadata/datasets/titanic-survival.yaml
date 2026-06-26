@@ -1,0 +1,75 @@
+id: titanic-survival
+title: "Titanic Passenger Survival"
+description: >
+  Passenger-level data on the 1912 Titanic disaster, including age, sex,
+  ticket class, and survival outcome. Widely used to introduce logistic
+  regression, classification, and discussions of confounding.
+
+source:
+  citation: "Kaggle Titanic dataset, derived from Encyclopedia Titanica"
+  url: "https://www.kaggle.com/c/titanic"
+  license: "CC0-1.0"
+
+file: "data/raw/titanic-survival/titanic.csv"
+
+methods: [logistic_regression]
+concepts: [missing_data, confounding]
+variable_types: [binary, categorical, continuous, ordinal]
+course_level: [introductory, intermediate]
+discipline: [health, sports]
+
+characteristics:
+  n_obs: 891
+  n_vars: 12
+  missingness: true
+  survey_weights: false
+  longitudinal: false
+  hierarchical: false
+  cross_sectional: true
+
+teaching:
+  learning_objectives:
+    - "Fit and interpret a logistic regression model"
+    - "Recognize confounding by passenger class and sex"
+  classroom_activities:
+    - "Compare crude vs. adjusted survival odds by sex"
+  common_misconceptions:
+    - "Treating fare as a clean linear predictor without checking skew"
+    
+variables:
+  - name: PassengerId
+    type: continuous
+    description: "Unique passenger identifier"
+  - name: Survived
+    type: binary
+    description: "0 = died, 1 = survived"
+  - name: Pclass
+    type: ordinal
+    description: "Ticket class: 1 = first, 2 = second, 3 = third"
+  - name: Name
+    type: text
+    description: "Passenger name"
+  - name: Sex
+    type: categorical
+    description: "Passenger sex"
+  - name: Age
+    type: continuous
+    description: "Age in years (some values missing)"
+  - name: SibSp
+    type: count
+    description: "Number of siblings/spouses aboard"
+  - name: Parch
+    type: count
+    description: "Number of parents/children aboard"
+  - name: Ticket
+    type: categorical
+    description: "Ticket number"
+  - name: Fare
+    type: continuous
+    description: "Passenger fare"
+  - name: Cabin
+    type: categorical
+    description: "Cabin number (mostly missing)"
+  - name: Embarked
+    type: categorical
+    description: "Port of embarkation: C, Q, or S"
