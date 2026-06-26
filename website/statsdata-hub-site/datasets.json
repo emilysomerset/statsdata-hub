@@ -1,0 +1,26 @@
+[
+  {
+    "id": "epilepsy-seizures",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "description": "Longitudinal data from a clinical trial of the anti-epileptic drug progabide. Each of 59 patients was observed over 4 follow-up periods, with seizure counts recorded at each visit, alongside baseline seizure count and age. Commonly used to teach Poisson regression for count data with repeated measurements on the same subject.\n",
+    "methods": ["poisson_regression"],
+    "concepts": ["clustered_observations", "overdispersion"],
+    "variable_types": ["count", "categorical", "continuous"],
+    "course_level": ["intermediate", "advanced_undergraduate", "graduate"],
+    "discipline": ["health"],
+    "n_obs": 236,
+    "n_vars": 9
+  },
+  {
+    "id": "titanic-survival",
+    "title": "Titanic Passenger Survival",
+    "description": "Passenger-level data on the 1912 Titanic disaster, including age, sex, ticket class, and survival outcome. Widely used to introduce logistic regression, classification, and discussions of confounding.\n",
+    "methods": ["logistic_regression"],
+    "concepts": ["missing_data", "confounding"],
+    "variable_types": ["binary", "categorical", "continuous", "ordinal"],
+    "course_level": ["introductory", "intermediate"],
+    "discipline": ["health", "sports"],
+    "n_obs": 891,
+    "n_vars": 12
+  }
+]
