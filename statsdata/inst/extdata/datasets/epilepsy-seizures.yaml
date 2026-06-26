@@ -1,0 +1,69 @@
+id: epilepsy-seizures
+title: "Epilepsy Seizure Counts (Progabide Trial)"
+description: >
+  Longitudinal data from a clinical trial of the anti-epileptic drug
+  progabide. Each of 59 patients was observed over 4 follow-up periods,
+  with seizure counts recorded at each visit, alongside baseline seizure
+  count and age. Commonly used to teach Poisson regression for count
+  data with repeated measurements on the same subject.
+
+source:
+  citation: "Thall and Vail (1990), distributed in the MASS R package"
+  url: "https://cran.r-project.org/web/packages/MASS/"
+  license: "Available via the MASS package (part of base R distribution)"
+
+file: "data/raw/epilepsy-seizures/epil.csv"
+
+methods: [poisson_regression]
+concepts: [clustered_observations, overdispersion]
+variable_types: [count, categorical, continuous]
+course_level: [intermediate, advanced_undergraduate, graduate]
+discipline: [health]
+
+characteristics:
+  n_obs: 236
+  n_vars: 9
+  missingness: false
+  survey_weights: false
+  longitudinal: true
+  hierarchical: true
+  cross_sectional: false
+
+teaching:
+  learning_objectives:
+    - "Fit a Poisson regression model for count outcomes"
+    - "Recognize the need to account for repeated measurements per subject"
+    - "Compare naive Poisson models to overdispersion-corrected alternatives"
+  classroom_activities:
+    - "Model seizure counts as a function of treatment and baseline rate, ignoring then accounting for repeated measures"
+  common_misconceptions:
+    - "Treating each of the 4 visits per patient as an independent observation"
+
+variables:
+  - name: y
+    type: count
+    description: "Number of seizures during the follow-up period"
+  - name: trt
+    type: categorical
+    description: "Treatment group: placebo or progabide"
+  - name: base
+    type: count
+    description: "Baseline seizure count (8 weeks prior to trial)"
+  - name: age
+    type: continuous
+    description: "Patient age in years"
+  - name: V4
+    type: binary
+    description: "Indicator for the 4th (final) follow-up period"
+  - name: subject
+    type: categorical
+    description: "Patient identifier (1-59), repeated across 4 rows each"
+  - name: period
+    type: ordinal
+    description: "Follow-up period number (1 to 4)"
+  - name: lbase
+    type: continuous
+    description: "Log-transformed, centered baseline seizure count"
+  - name: lage
+    type: continuous
+    description: "Log-transformed, centered age"
