@@ -1,0 +1,156 @@
+[
+  {
+    "objectID": "r-package.html",
+    "href": "r-package.html",
+    "title": "R Package",
+    "section": "",
+    "text": "Installation instructions coming soon."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html",
+    "href": "datasets/epilepsy-seizures.html",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "",
+    "text": "Longitudinal data from a clinical trial of the anti-epileptic drug progabide. Each of 59 patients was observed over 4 follow-up periods, with seizure counts recorded at each visit, alongside baseline seizure count and age. Commonly used to teach Poisson regression for count data with repeated measurements on the same subject."
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#source-and-citation",
+    "href": "datasets/epilepsy-seizures.html#source-and-citation",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Source and Citation",
+    "text": "Source and Citation\n\nCitation: Thall and Vail (1990), distributed in the MASS R package\nURL: https://cran.r-project.org/web/packages/MASS/\nLicense: Available via the MASS package (part of base R distribution)"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#dataset-characteristics",
+    "href": "datasets/epilepsy-seizures.html#dataset-characteristics",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Dataset Characteristics",
+    "text": "Dataset Characteristics\n\nObservations: 236\nVariables: 9\nMissingness present: FALSE\nLongitudinal: TRUE\nHierarchical: TRUE"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#variable-dictionary",
+    "href": "datasets/epilepsy-seizures.html#variable-dictionary",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Variable Dictionary",
+    "text": "Variable Dictionary\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nTRUE\ncount\nNumber of seizures during the follow-up period\n\n\ntrt\ncategorical\nTreatment group: placebo or progabide\n\n\nbase\ncount\nBaseline seizure count (8 weeks prior to trial)\n\n\nage\ncontinuous\nPatient age in years\n\n\nV4\nbinary\nIndicator for the 4th (final) follow-up period\n\n\nsubject\ncategorical\nPatient identifier (1-59), repeated across 4 rows each\n\n\nperiod\nordinal\nFollow-up period number (1 to 4)\n\n\nlbase\ncontinuous\nLog-transformed, centered baseline seizure count\n\n\nlage\ncontinuous\nLog-transformed, centered age"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
+    "href": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Suggested Learning Objectives",
+    "text": "Suggested Learning Objectives\n\nFit a Poisson regression model for count outcomes\nRecognize the need to account for repeated measurements per subject\nCompare naive Poisson models to overdispersion-corrected alternatives"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
+    "href": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Suggested Classroom Activities",
+    "text": "Suggested Classroom Activities\n\nModel seizure counts as a function of treatment and baseline rate, ignoring then accounting for repeated measures"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#common-student-misconceptions",
+    "href": "datasets/epilepsy-seizures.html#common-student-misconceptions",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Common Student Misconceptions",
+    "text": "Common Student Misconceptions\n\nTreating each of the 4 visits per patient as an independent observation"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
+    "href": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Load This Dataset in R",
+    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"epilepsy-seizures\")"
+  },
+  {
+    "objectID": "contribute.html",
+    "href": "contribute.html",
+    "title": "Contribute a Dataset",
+    "section": "",
+    "text": "Contribution guide coming soon."
+  },
+  {
+    "objectID": "datasets/titanic-survival.html",
+    "href": "datasets/titanic-survival.html",
+    "title": "Titanic Passenger Survival",
+    "section": "",
+    "text": "Passenger-level data on the 1912 Titanic disaster, including age, sex, ticket class, and survival outcome. Widely used to introduce logistic regression, classification, and discussions of confounding."
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#source-and-citation",
+    "href": "datasets/titanic-survival.html#source-and-citation",
+    "title": "Titanic Passenger Survival",
+    "section": "Source and Citation",
+    "text": "Source and Citation\n\nCitation: Kaggle Titanic dataset, derived from Encyclopedia Titanica\nURL: https://www.kaggle.com/c/titanic\nLicense: CC0-1.0"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#dataset-characteristics",
+    "href": "datasets/titanic-survival.html#dataset-characteristics",
+    "title": "Titanic Passenger Survival",
+    "section": "Dataset Characteristics",
+    "text": "Dataset Characteristics\n\nObservations: 891\nVariables: 12\nMissingness present: TRUE\nLongitudinal: FALSE\nHierarchical: FALSE"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#variable-dictionary",
+    "href": "datasets/titanic-survival.html#variable-dictionary",
+    "title": "Titanic Passenger Survival",
+    "section": "Variable Dictionary",
+    "text": "Variable Dictionary\n\n\n\nVariable\nType\nDescription\n\n\n\n\nPassengerId\ncontinuous\nUnique passenger identifier\n\n\nSurvived\nbinary\n0 = died, 1 = survived\n\n\nPclass\nordinal\nTicket class: 1 = first, 2 = second, 3 = third\n\n\nName\ntext\nPassenger name\n\n\nSex\ncategorical\nPassenger sex\n\n\nAge\ncontinuous\nAge in years (some values missing)\n\n\nSibSp\ncount\nNumber of siblings/spouses aboard\n\n\nParch\ncount\nNumber of parents/children aboard\n\n\nTicket\ncategorical\nTicket number\n\n\nFare\ncontinuous\nPassenger fare\n\n\nCabin\ncategorical\nCabin number (mostly missing)\n\n\nEmbarked\ncategorical\nPort of embarkation: C, Q, or S"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#suggested-learning-objectives",
+    "href": "datasets/titanic-survival.html#suggested-learning-objectives",
+    "title": "Titanic Passenger Survival",
+    "section": "Suggested Learning Objectives",
+    "text": "Suggested Learning Objectives\n\nFit and interpret a logistic regression model\nRecognize confounding by passenger class and sex"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#suggested-classroom-activities",
+    "href": "datasets/titanic-survival.html#suggested-classroom-activities",
+    "title": "Titanic Passenger Survival",
+    "section": "Suggested Classroom Activities",
+    "text": "Suggested Classroom Activities\n\nCompare crude vs. adjusted survival odds by sex"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#common-student-misconceptions",
+    "href": "datasets/titanic-survival.html#common-student-misconceptions",
+    "title": "Titanic Passenger Survival",
+    "section": "Common Student Misconceptions",
+    "text": "Common Student Misconceptions\n\nTreating fare as a clean linear predictor without checking skew"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#load-this-dataset-in-r",
+    "href": "datasets/titanic-survival.html#load-this-dataset-in-r",
+    "title": "Titanic Passenger Survival",
+    "section": "Load This Dataset in R",
+    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"titanic-survival\")"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "StatsData Hub",
+    "section": "",
+    "text": "Most dataset repositories are built for finding data. StatsData Hub is built for teaching with data — helping instructors, TAs, and students find datasets aligned with specific statistical methods, teaching concepts, and course levels.\n\n\n\nBrowse datasets by statistical method, teaching concept, variable type, course level, and discipline\nView detailed dataset pages with variable dictionaries, suggested learning objectives, classroom activities, and example analyses\nLoad datasets directly in R using the companion statsdata package\n\n\n\n\n\nBrowse the dataset collection\nInstall the R package\nContribute a dataset"
+  },
+  {
+    "objectID": "index.html#a-dataset-repository-built-for-teaching-statistics",
+    "href": "index.html#a-dataset-repository-built-for-teaching-statistics",
+    "title": "StatsData Hub",
+    "section": "",
+    "text": "Most dataset repositories are built for finding data. StatsData Hub is built for teaching with data — helping instructors, TAs, and students find datasets aligned with specific statistical methods, teaching concepts, and course levels.\n\n\n\nBrowse datasets by statistical method, teaching concept, variable type, course level, and discipline\nView detailed dataset pages with variable dictionaries, suggested learning objectives, classroom activities, and example analyses\nLoad datasets directly in R using the companion statsdata package\n\n\n\n\n\nBrowse the dataset collection\nInstall the R package\nContribute a dataset"
+  },
+  {
+    "objectID": "browse.html",
+    "href": "browse.html",
+    "title": "Browse Datasets",
+    "section": "",
+    "text": "Use the filters below to find datasets for your course.\n\ndata = FileAttachment(\"datasets.json\").json()\n\n\n\n\n\n\n\nallMethods = [...new Set(data.flatMap(d =&gt; d.methods))]\nallConcepts = [...new Set(data.flatMap(d =&gt; d.concepts))]\nallDisciplines = [...new Set(data.flatMap(d =&gt; d.discipline))]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof selectedMethod = Inputs.select(\n  [\"(All)\", ...allMethods],\n  { label: \"Statistical method\" }\n)\n\n\n\n\n\n\n\nviewof selectedConcept = Inputs.select(\n  [\"(All)\", ...allConcepts],\n  { label: \"Teaching concept\" }\n)\n\n\n\n\n\n\n\nviewof selectedDiscipline = Inputs.select(\n  [\"(All)\", ...allDisciplines],\n  { label: \"Discipline\" }\n)\n\n\n\n\n\n\n\nfiltered = data.filter(d =&gt;\n  (selectedMethod === \"(All)\" || d.methods.includes(selectedMethod)) &&\n  (selectedConcept === \"(All)\" || d.concepts.includes(selectedConcept)) &&\n  (selectedDiscipline === \"(All)\" || d.discipline.includes(selectedDiscipline))\n)\n\n\n\n\n\n\n\nInputs.table(filtered, {\n  columns: [\"id\", \"title\", \"methods\", \"concepts\", \"course_level\", \"discipline\", \"n_obs\"],\n  format: {\n    title: (t, i) =&gt; html`&lt;a href=\"datasets/${filtered[i].id}.html\"&gt;${t}&lt;/a&gt;`\n  }\n})"
+  }
+]
