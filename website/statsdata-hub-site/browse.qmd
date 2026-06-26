@@ -52,6 +52,9 @@ filtered = data.filter(d =>
 ```{ojs}
 //| echo: false
 Inputs.table(filtered, {
-  columns: ["id", "title", "methods", "concepts", "course_level", "discipline", "n_obs"]
+  columns: ["id", "title", "methods", "concepts", "course_level", "discipline", "n_obs"],
+  format: {
+    title: (t, i) => html`<a href="datasets/${filtered[i].id}.html">${t}</a>`
+  }
 })
 ```

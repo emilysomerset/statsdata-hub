@@ -1,0 +1,55 @@
+---
+title: "Epilepsy Seizure Counts (Progabide Trial)"
+---
+
+Longitudinal data from a clinical trial of the anti-epileptic drug progabide. Each of 59 patients was observed over 4 follow-up periods, with seizure counts recorded at each visit, alongside baseline seizure count and age. Commonly used to teach Poisson regression for count data with repeated measurements on the same subject.
+
+
+## Source and Citation
+
+- **Citation**: Thall and Vail (1990), distributed in the MASS R package
+- **URL**: [https://cran.r-project.org/web/packages/MASS/](https://cran.r-project.org/web/packages/MASS/)
+- **License**: Available via the MASS package (part of base R distribution)
+
+## Dataset Characteristics
+
+- **Observations**: 236
+- **Variables**: 9
+- **Missingness present**: FALSE
+- **Longitudinal**: TRUE
+- **Hierarchical**: TRUE
+
+## Variable Dictionary
+
+| Variable | Type | Description |
+|----------|------|-------------|
+| TRUE | count | Number of seizures during the follow-up period |
+| trt | categorical | Treatment group: placebo or progabide |
+| base | count | Baseline seizure count (8 weeks prior to trial) |
+| age | continuous | Patient age in years |
+| V4 | binary | Indicator for the 4th (final) follow-up period |
+| subject | categorical | Patient identifier (1-59), repeated across 4 rows each |
+| period | ordinal | Follow-up period number (1 to 4) |
+| lbase | continuous | Log-transformed, centered baseline seizure count |
+| lage | continuous | Log-transformed, centered age |
+
+## Suggested Learning Objectives
+
+- Fit a Poisson regression model for count outcomes
+- Recognize the need to account for repeated measurements per subject
+- Compare naive Poisson models to overdispersion-corrected alternatives
+
+## Suggested Classroom Activities
+
+- Model seizure counts as a function of treatment and baseline rate, ignoring then accounting for repeated measures
+
+## Common Student Misconceptions
+
+- Treating each of the 4 visits per patient as an independent observation
+
+## Load This Dataset in R
+
+```r
+library(statsdata)
+data <- load_dataset("epilepsy-seizures")
+```

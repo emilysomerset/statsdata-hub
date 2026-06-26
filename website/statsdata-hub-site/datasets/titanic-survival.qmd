@@ -1,0 +1,57 @@
+---
+title: "Titanic Passenger Survival"
+---
+
+Passenger-level data on the 1912 Titanic disaster, including age, sex, ticket class, and survival outcome. Widely used to introduce logistic regression, classification, and discussions of confounding.
+
+
+## Source and Citation
+
+- **Citation**: Kaggle Titanic dataset, derived from Encyclopedia Titanica
+- **URL**: [https://www.kaggle.com/c/titanic](https://www.kaggle.com/c/titanic)
+- **License**: CC0-1.0
+
+## Dataset Characteristics
+
+- **Observations**: 891
+- **Variables**: 12
+- **Missingness present**: TRUE
+- **Longitudinal**: FALSE
+- **Hierarchical**: FALSE
+
+## Variable Dictionary
+
+| Variable | Type | Description |
+|----------|------|-------------|
+| PassengerId | continuous | Unique passenger identifier |
+| Survived | binary | 0 = died, 1 = survived |
+| Pclass | ordinal | Ticket class: 1 = first, 2 = second, 3 = third |
+| Name | text | Passenger name |
+| Sex | categorical | Passenger sex |
+| Age | continuous | Age in years (some values missing) |
+| SibSp | count | Number of siblings/spouses aboard |
+| Parch | count | Number of parents/children aboard |
+| Ticket | categorical | Ticket number |
+| Fare | continuous | Passenger fare |
+| Cabin | categorical | Cabin number (mostly missing) |
+| Embarked | categorical | Port of embarkation: C, Q, or S |
+
+## Suggested Learning Objectives
+
+- Fit and interpret a logistic regression model
+- Recognize confounding by passenger class and sex
+
+## Suggested Classroom Activities
+
+- Compare crude vs. adjusted survival odds by sex
+
+## Common Student Misconceptions
+
+- Treating fare as a clean linear predictor without checking skew
+
+## Load This Dataset in R
+
+```r
+library(statsdata)
+data <- load_dataset("titanic-survival")
+```
