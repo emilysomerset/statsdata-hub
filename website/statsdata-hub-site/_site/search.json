@@ -39,6 +39,6 @@
     "href": "browse.html",
     "title": "Browse Datasets",
     "section": "",
-    "text": "Filtering interface coming soon."
+    "text": "Use the filters below to find datasets for your course.\n\ndata = FileAttachment(\"datasets.json\").json()\n\n\n\n\n\n\n\nallMethods = [...new Set(data.flatMap(d =&gt; d.methods))]\nallConcepts = [...new Set(data.flatMap(d =&gt; d.concepts))]\nallDisciplines = [...new Set(data.flatMap(d =&gt; d.discipline))]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof selectedMethod = Inputs.select(\n  [\"(All)\", ...allMethods],\n  { label: \"Statistical method\" }\n)\n\n\n\n\n\n\n\nviewof selectedConcept = Inputs.select(\n  [\"(All)\", ...allConcepts],\n  { label: \"Teaching concept\" }\n)\n\n\n\n\n\n\n\nviewof selectedDiscipline = Inputs.select(\n  [\"(All)\", ...allDisciplines],\n  { label: \"Discipline\" }\n)\n\n\n\n\n\n\n\nfiltered = data.filter(d =&gt;\n  (selectedMethod === \"(All)\" || d.methods.includes(selectedMethod)) &&\n  (selectedConcept === \"(All)\" || d.concepts.includes(selectedConcept)) &&\n  (selectedDiscipline === \"(All)\" || d.discipline.includes(selectedDiscipline))\n)\n\n\n\n\n\n\n\nInputs.table(filtered, {\n  columns: [\"id\", \"title\", \"methods\", \"concepts\", \"course_level\", \"discipline\", \"n_obs\"]\n})"
   }
 ]

@@ -2,4 +2,56 @@
 title: "Browse Datasets"
 ---
 
-Filtering interface coming soon.
+Use the filters below to find datasets for your course.
+
+```{ojs}
+//| echo: false
+data = FileAttachment("datasets.json").json()
+```
+
+```{ojs}
+//| echo: false
+allMethods = [...new Set(data.flatMap(d => d.methods))]
+allConcepts = [...new Set(data.flatMap(d => d.concepts))]
+allDisciplines = [...new Set(data.flatMap(d => d.discipline))]
+```
+
+```{ojs}
+//| echo: false
+viewof selectedMethod = Inputs.select(
+  ["(All)", ...allMethods],
+  { label: "Statistical method" }
+)
+```
+
+```{ojs}
+//| echo: false
+viewof selectedConcept = Inputs.select(
+  ["(All)", ...allConcepts],
+  { label: "Teaching concept" }
+)
+```
+
+```{ojs}
+//| echo: false
+viewof selectedDiscipline = Inputs.select(
+  ["(All)", ...allDisciplines],
+  { label: "Discipline" }
+)
+```
+
+```{ojs}
+//| echo: false
+filtered = data.filter(d =>
+  (selectedMethod === "(All)" || d.methods.includes(selectedMethod)) &&
+  (selectedConcept === "(All)" || d.concepts.includes(selectedConcept)) &&
+  (selectedDiscipline === "(All)" || d.discipline.includes(selectedDiscipline))
+)
+```
+
+```{ojs}
+//| echo: false
+Inputs.table(filtered, {
+  columns: ["id", "title", "methods", "concepts", "course_level", "discipline", "n_obs"]
+})
+```
