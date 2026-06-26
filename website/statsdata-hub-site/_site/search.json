@@ -9,8 +9,36 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "statsdata-hub-site",
+    "title": "StatsData Hub",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Most dataset repositories are built for finding data. StatsData Hub is built for teaching with data — helping instructors, TAs, and students find datasets aligned with specific statistical methods, teaching concepts, and course levels.\n\n\n\nBrowse datasets by statistical method, teaching concept, variable type, course level, and discipline\nView detailed dataset pages with variable dictionaries, suggested learning objectives, classroom activities, and example analyses\nLoad datasets directly in R using the companion statsdata package\n\n\n\n\n\nBrowse the dataset collection\nInstall the R package\nContribute a dataset"
+  },
+  {
+    "objectID": "index.html#a-dataset-repository-built-for-teaching-statistics",
+    "href": "index.html#a-dataset-repository-built-for-teaching-statistics",
+    "title": "StatsData Hub",
+    "section": "",
+    "text": "Most dataset repositories are built for finding data. StatsData Hub is built for teaching with data — helping instructors, TAs, and students find datasets aligned with specific statistical methods, teaching concepts, and course levels.\n\n\n\nBrowse datasets by statistical method, teaching concept, variable type, course level, and discipline\nView detailed dataset pages with variable dictionaries, suggested learning objectives, classroom activities, and example analyses\nLoad datasets directly in R using the companion statsdata package\n\n\n\n\n\nBrowse the dataset collection\nInstall the R package\nContribute a dataset"
+  },
+  {
+    "objectID": "r-package.html",
+    "href": "r-package.html",
+    "title": "R Package",
+    "section": "",
+    "text": "Installation instructions coming soon."
+  },
+  {
+    "objectID": "contribute.html",
+    "href": "contribute.html",
+    "title": "Contribute a Dataset",
+    "section": "",
+    "text": "Contribution guide coming soon."
+  },
+  {
+    "objectID": "browse.html",
+    "href": "browse.html",
+    "title": "Browse Datasets",
+    "section": "",
+    "text": "Filtering interface coming soon."
   }
 ]

@@ -1,7 +1,24 @@
 ---
-title: "statsdata-hub-site"
+title: "StatsData Hub"
 ---
 
-This is a Quarto website.
+## A dataset repository built for teaching statistics
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Most dataset repositories are built for *finding* data. StatsData Hub is
+built for *teaching* with data — helping instructors, TAs, and students
+find datasets aligned with specific statistical methods, teaching
+concepts, and course levels.
+
+### What you can do here
+
+- **Browse datasets** by statistical method, teaching concept, variable
+  type, course level, and discipline
+- **View detailed dataset pages** with variable dictionaries, suggested
+  learning objectives, classroom activities, and example analyses
+- **Load datasets directly in R** using the companion `statsdata` package
+
+### Get started
+
+- [Browse the dataset collection](browse.qmd)
+- [Install the R package](r-package.qmd)
+- [Contribute a dataset](contribute.qmd)
