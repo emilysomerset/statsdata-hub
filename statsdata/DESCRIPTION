@@ -1,0 +1,14 @@
+Package: statsdata
+Title: Datasets for Teaching Statistics
+Version: 0.0.1
+Authors@R: person("Emily", "Somerset", email = "emily.somerset@mail.utoronto.ca", role = c("aut", "cre"))
+Description: A curated, searchable collection of datasets designed
+    specifically for teaching statistics, with metadata describing
+    relevant statistical methods, teaching concepts, variable types,
+    and course level. Companion to the statsdata-hub website.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports:
+    yaml
+Config/roxygen2/version: 8.0.0
