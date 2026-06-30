@@ -14,67 +14,60 @@
     "text": "About this site"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html",
-    "href": "datasets/epilepsy-seizures.html",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/busy-wellbeing.html",
+    "href": "datasets/busy-wellbeing.html",
+    "title": "Social Pressure to be Busy and Emotional Wellbeing",
     "section": "",
-    "text": "Longitudinal data from a clinical trial of the anti-epileptic drug progabide. Each of 59 patients was observed over 4 follow-up periods, with seizure counts recorded at each visit, alongside baseline seizure count and age. Commonly used to teach Poisson regression for count data with repeated measurements on the same subject."
+    "text": "A daily diary study examining how social pressure to appear busy relates to emotional wellbeing. Data were collected from 261 participants over approximately 7 days each, yielding 1,827 person-day observations. Participants reported daily busyness, positive affect, negative affect, anxiety, and depressive symptoms, alongside person-level demographics, socioeconomic status, Big Five personality traits, and emotional complexity measures. Ideal for teaching multilevel modeling, within-person centering, and longitudinal data analysis."
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#source-and-citation",
-    "href": "datasets/epilepsy-seizures.html#source-and-citation",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/busy-wellbeing.html#source-and-citation",
+    "href": "datasets/busy-wellbeing.html#source-and-citation",
+    "title": "Social Pressure to be Busy and Emotional Wellbeing",
     "section": "Source and Citation",
-    "text": "Source and Citation\n\nCitation: Thall and Vail (1990), distributed in the MASS R package\nURL: https://cran.r-project.org/web/packages/MASS/\nLicense: Available via the MASS package (part of base R distribution)"
+    "text": "Source and Citation\n\nCitation: Somerset et al. (in prep). Social pressure to be busy and emotional wellbeing.\nURL: https://researchbox.org\nLicense: CC0-1.0"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#dataset-characteristics",
-    "href": "datasets/epilepsy-seizures.html#dataset-characteristics",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/busy-wellbeing.html#dataset-characteristics",
+    "href": "datasets/busy-wellbeing.html#dataset-characteristics",
+    "title": "Social Pressure to be Busy and Emotional Wellbeing",
     "section": "Dataset Characteristics",
-    "text": "Dataset Characteristics\n\nObservations: 236\nVariables: 9\nMissingness present: FALSE\nLongitudinal: TRUE\nHierarchical: TRUE"
+    "text": "Dataset Characteristics\n\nObservations: 1827\nVariables: 114\nMissingness present: TRUE\nLongitudinal: TRUE\nHierarchical: TRUE"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#variable-dictionary",
-    "href": "datasets/epilepsy-seizures.html#variable-dictionary",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/busy-wellbeing.html#variable-dictionary",
+    "href": "datasets/busy-wellbeing.html#variable-dictionary",
+    "title": "Social Pressure to be Busy and Emotional Wellbeing",
     "section": "Variable Dictionary",
-    "text": "Variable Dictionary\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nTRUE\ncount\nNumber of seizures during the follow-up period\n\n\ntrt\ncategorical\nTreatment group: placebo or progabide\n\n\nbase\ncount\nBaseline seizure count (8 weeks prior to trial)\n\n\nage\ncontinuous\nPatient age in years\n\n\nV4\nbinary\nIndicator for the 4th (final) follow-up period\n\n\nsubject\ncategorical\nPatient identifier (1-59), repeated across 4 rows each\n\n\nperiod\nordinal\nFollow-up period number (1 to 4)\n\n\nlbase\ncontinuous\nLog-transformed, centered baseline seizure count\n\n\nlage\ncontinuous\nLog-transformed, centered age"
+    "text": "Variable Dictionary\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nparticipantID\ncategorical\nParticipant ID\n\n\nday\nordinal\nDay (Ranges from 1 to 8)\n\n\nmodifiedBusy\ncontinuous\nDaily perceived social pressure to be busy (3-item)\n\n\nmodifiedBusy_mn\ncontinuous\nPerson mean of modifiedBusy (between-person component)\n\n\nmodifiedBusy_dev\ncontinuous\nPerson mean centred modifiedBusy (within-person component)\n\n\nfouritemBusy\ncontinuous\nDaily perceived social pressure to be busy (4-item)\n\n\nfouritemBusy_mn\ncontinuous\nPerson mean of fouritemBusy (between-person component)\n\n\nfouritemBusy_dev\ncontinuous\nPerson mean centred fouritemBusy (within-person component)\n\n\ndayPA\ncontinuous\nDaily positive affect\n\n\ndayNA\ncontinuous\nDaily negative affect\n\n\ndayAnx\ncontinuous\nDaily anxiety\n\n\ndayDep\ncontinuous\nDaily depressive symptoms\n\n\ndemogAge\ncontinuous\nAge in years\n\n\ndemogAge.c\ncontinuous\nAge in years (Grand mean centered)\n\n\ndemogSex\nbinary\nGender (1 = Male, 0 = Female)\n\n\ndemogRace\nbinary\nRace (0 = Chinese, 1 = non-Chinese)\n\n\nsesIncomeHousehold\nordinal\nMonthly household income\n\n\nsesIncomeHousehold.c\ncontinuous\nMonthly household income (Grand mean centered)\n\n\nsesLadderCommunity\nordinal\nSubjective SES in community\n\n\nsesLadderCommunity.c\ncontinuous\nSubjective SES in community (Grand mean centered)\n\n\nb5a\ncontinuous\nBig 5 Agreeableness\n\n\nb5c\ncontinuous\nBig 5 Conscientiousness\n\n\nb5e\ncontinuous\nBig 5 Extraversion\n\n\nb5n\ncontinuous\nBig 5 Neuroticism\n\n\nb5o\ncontinuous\nBig 5 Open-mindedness\n\n\nb5a.c\ncontinuous\nBig 5 Agreeableness (Grand mean centered)\n\n\nb5c.c\ncontinuous\nBig 5 Conscientiousness (Grand mean centered)\n\n\nb5e.c\ncontinuous\nBig 5 Extraversion (Grand mean centered)\n\n\nb5n.c\ncontinuous\nBig 5 Neuroticism (Grand mean centered)\n\n\nb5o.c\ncontinuous\nBig 5 Open-mindedness (Grand mean centered)\n\n\nemoComplexAcceptPersonal\ncontinuous\nAcceptance of mixed emotions personal expectancies subscale\n\n\nemoComplexAcceptPersonal.c\ncontinuous\nAcceptance of mixed emotions personal expectancies subscale (Grand mean centered)\n\n\nemoComplexAcceptSocial\ncontinuous\nAcceptance of mixed emotions social expectancies subscale\n\n\nemoComplexAcceptSocial.c\ncontinuous\nAcceptance of mixed emotions social expectancies subscale (Grand mean centered)\n\n\nemoComplexAcceptOverall\ncontinuous\nAcceptance of mixed emotions\n\n\nemoComplexAcceptOverall.c\ncontinuous\nAcceptance of mixed emotions (Grand mean centered)\n\n\nSEDAS_B_1\nordinal\n[ITEM] Daily perceived social pressure to be busy: Today, I felt a great deal of pressure from others to always be busy doing something productive\n\n\nSEDAS_B_2\nordinal\n[ITEM] Daily perceived social pressure to be busy: Today, people expected me to always be busy doing something productive\n\n\nSEDAS_B_3_REVERSED\nordinal\n[ITEM] Daily perceived social pressure to be busy: People valued me today, even though I was not always busy doing something productive (Reversed: 8 - original score)\n\n\nSEDAS_B_4\nordinal\n[ITEM] Daily perceived social pressure to be busy: People were disapproving of me not always being busy doing something productive\n\n\nNA_H_1\nordinal\n[ITEM] Negative affect: Angry\n\n\nNA_H_2\nordinal\n[ITEM] Negative affect: Hostile\n\n\nNA_H_3\nordinal\n[ITEM] Negative affect: Irritable\n\n\nNA_M_4\nordinal\n[ITEM] Negative affect: Nervous\n\n\nNA_M_5\nordinal\n[ITEM] Negative affect: Anxious\n\n\nNA_M_6\nordinal\n[ITEM] Negative affect: Tense\n\n\nNA_L_7\nordinal\n[ITEM] Negative affect: Dejected\n\n\nNA_L_8\nordinal\n[ITEM] Negative affect: Sad\n\n\nNA_L_9\nordinal\n[ITEM] Negative affect: Unhappy\n\n\nPA_H_1\nordinal\n[ITEM] Positive affect: Energetic\n\n\nPA_H_2\nordinal\n[ITEM] Positive affect: Enthusiastic\n\n\nPA_H_3\nordinal\n[ITEM] Positive affect: Excited\n\n\nPA_M_4\nordinal\n[ITEM] Positive affect: Happy\n\n\nPA_M_5\nordinal\n[ITEM] Positive affect: Cheerful\n\n\nPA_M_6\nordinal\n[ITEM] Positive affect: Pleasant\n\n\nPA_L_7\nordinal\n[ITEM] Positive affect: Calm\n\n\nPA_L_8\nordinal\n[ITEM] Positive affect: Content\n\n\nPA_L_9\nordinal\n[ITEM] Positive affect: Relaxed\n\n\nSTAI_S_1\nordinal\n[ITEM] Anxiety: I feel upset today\n\n\nSTAI_S_2\nordinal\n[ITEM] Anxiety: I feel anxious today\n\n\nSTAI_S_3\nordinal\n[ITEM] Anxiety: I feel nervous today\n\n\nSTAI_S_4\nordinal\n[ITEM] Anxiety: I am jittery today\n\n\nSTAI_S_5\nordinal\n[ITEM] Anxiety: I feel over-excited and rattled today\n\n\nCES_D_R_1\nordinal\n[ITEM] Depression: I was bothered by things that usually don’t bother me.\n\n\nCES_D_R_2\nordinal\n[ITEM] Depression: I had trouble keeping my mind on what I was doing.\n\n\nCES_D_R_3\nordinal\n[ITEM] Depression: I felt depressed.\n\n\nCES_D_R_4\nordinal\n[ITEM] Depression: I felt that everything I did was an effort.\n\n\nCES_D_R_5\nordinal\n[ITEM] Depression: I felt hopeful about the future. (Reversed)\n\n\nCES_D_R_6\nordinal\n[ITEM] Depression: I felt fearful.\n\n\nCES_D_R_7\nordinal\n[ITEM] Depression: My sleep was restless.\n\n\nCES_D_R_8\nordinal\n[ITEM] Depression: I was happy. (Reversed)\n\n\nCES_D_R_9\nordinal\n[ITEM] Depression: I felt lonely.\n\n\nCES_D_R_10\nordinal\n[ITEM] Depression: I could not get going.\n\n\nECS_03\nordinal\n[ITEM] ECA: It is very important to me not to feel mixed emotions. (Reversed)\n\n\nECS_04\nordinal\n[ITEM] ECA: I would always try to avoid feeling mixed emotions. (Reversed)\n\n\nECS_05\nordinal\n[ITEM] ECA: I shouldn’t feel mixed emotions. (Reversed)\n\n\nECS_06\nordinal\n[ITEM] ECA: Feeling mixed emotions is normal.\n\n\nECS_07\nordinal\n[ITEM] ECA: Feeling mixed emotions is an important part of life.\n\n\nECS_08\nordinal\n[ITEM] ECA: It is important that others don’t see me as a person with mixed emotions. (Reversed)\n\n\nECS_09\nordinal\n[ITEM] ECA: Other people expect me not to feel mixed emotions. (Reversed)\n\n\nECS_10\nordinal\n[ITEM] ECA: People like me less when I feel mixed emotions. (Reversed)\n\n\nECS_11\nordinal\n[ITEM] ECA: I think society accepts people who feel mixed emotions.\n\n\nECS_12\nordinal\n[ITEM] ECA: I think it is socially acceptable to feel mixed emotions.\n\n\nECS_13\nordinal\n[ITEM] ECA: Society generally expects people not to feel mixed emotions. (Reversed)\n\n\nBFI_E_01\nordinal\n[ITEM] B5E: Tends to be quiet.\n\n\nBFI_A_02\nordinal\n[ITEM] B5A: Is compassionate, has a soft heart.\n\n\nBFI_C_03\nordinal\n[ITEM] B5C: Tends to be disorganized.\n\n\nBFI_N_04\nordinal\n[ITEM] B5N: Worries a lot.\n\n\nBFI_O_05\nordinal\n[ITEM] B5O: Is fascinated by art, music, or literature.\n\n\nBFI_E_06\nordinal\n[ITEM] B5E: Is dominant, acts as a leader.\n\n\nBFI_A_07\nordinal\n[ITEM] B5A: Is sometimes rude to others.\n\n\nBFI_C_08\nordinal\n[ITEM] B5C: Has difficulty getting started on tasks.\n\n\nBFI_N_09\nordinal\n[ITEM] B5N: Tends to feel depressed, blue.\n\n\nBFI_O_10\nordinal\n[ITEM] B5O: Has little interest in abstract ideas.\n\n\nBFI_E_11\nordinal\n[ITEM] B5E: Is full of energy.\n\n\nBFI_A_12\nordinal\n[ITEM] B5A: Assumes the best about people.\n\n\nBFI_C_13\nordinal\n[ITEM] B5C: Is reliable, can always be counted on.\n\n\nBFI_N_14\nordinal\n[ITEM] B5N: Is emotionally stable, not easily upset.\n\n\nBFI_O_15\nordinal\n[ITEM] B5O: Is original, comes up with new ideas.\n\n\nBFI_E_16\nordinal\n[ITEM] B5E: Is outgoing, sociable.\n\n\nBFI_A_17\nordinal\n[ITEM] B5A: Can be cold and uncaring.\n\n\nBFI_C_18\nordinal\n[ITEM] B5C: Keeps things neat and tidy.\n\n\nBFI_N_19\nordinal\n[ITEM] B5N: Is relaxed, handles stress well.\n\n\nBFI_O_20\nordinal\n[ITEM] B5O: Has few artistic interests.\n\n\nBFI_E_21\nordinal\n[ITEM] B5E: Prefers to have others take charge.\n\n\nBFI_A_22\nordinal\n[ITEM] B5A: Is respectful, treats others with respect.\n\n\nBFI_C_23\nordinal\n[ITEM] B5C: Is persistent, works until the task is finished.\n\n\nBFI_N_24\nordinal\n[ITEM] B5N: Feels secure, comfortable with self.\n\n\nBFI_O_25\nordinal\n[ITEM] B5O: Is complex, a deep thinker.\n\n\nBFI_E_26\nordinal\n[ITEM] B5E: Is less active than other people.\n\n\nBFI_A_27\nordinal\n[ITEM] B5A: Tends to find fault with others.\n\n\nBFI_C_28\nordinal\n[ITEM] B5C: Can be somewhat careless.\n\n\nBFI_N_29\nordinal\n[ITEM] B5N: Is temperamental, gets emotional easily.\n\n\nBFI_O_30\nordinal\n[ITEM] B5O: Has little creativity."
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
-    "href": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/busy-wellbeing.html#suggested-learning-objectives",
+    "href": "datasets/busy-wellbeing.html#suggested-learning-objectives",
+    "title": "Social Pressure to be Busy and Emotional Wellbeing",
     "section": "Suggested Learning Objectives",
-    "text": "Suggested Learning Objectives\n\nFit a Poisson regression model for count outcomes\nRecognize the need to account for repeated measurements per subject\nCompare naive Poisson models to overdispersion-corrected alternatives"
+    "text": "Suggested Learning Objectives\n\nExplain the difference between between-person and within-person effects\nApply group mean centering to separate within- and between-person variance\nFit a multilevel model with person-level and day-level predictors\nInterpret fixed and random effects in a longitudinal model"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
-    "href": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/busy-wellbeing.html#suggested-classroom-activities",
+    "href": "datasets/busy-wellbeing.html#suggested-classroom-activities",
+    "title": "Social Pressure to be Busy and Emotional Wellbeing",
     "section": "Suggested Classroom Activities",
-    "text": "Suggested Classroom Activities\n\nModel seizure counts as a function of treatment and baseline rate, ignoring then accounting for repeated measures"
+    "text": "Suggested Classroom Activities\n\nCompare a naive OLS regression ignoring clustering to a multilevel model, and discuss what changes\nVisualize within-person trajectories of busyness and affect across days"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#common-student-misconceptions",
-    "href": "datasets/epilepsy-seizures.html#common-student-misconceptions",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/busy-wellbeing.html#common-student-misconceptions",
+    "href": "datasets/busy-wellbeing.html#common-student-misconceptions",
+    "title": "Social Pressure to be Busy and Emotional Wellbeing",
     "section": "Common Student Misconceptions",
-    "text": "Common Student Misconceptions\n\nTreating each of the 4 visits per patient as an independent observation"
+    "text": "Common Student Misconceptions\n\nTreating repeated observations from the same person as independent\nConfusing within-person and between-person effects of busyness on wellbeing"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
-    "href": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/busy-wellbeing.html#load-this-dataset-in-r",
+    "href": "datasets/busy-wellbeing.html#load-this-dataset-in-r",
+    "title": "Social Pressure to be Busy and Emotional Wellbeing",
     "section": "Load This Dataset in R",
-    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"epilepsy-seizures\")"
-  },
-  {
-    "objectID": "contribute.html",
-    "href": "contribute.html",
-    "title": "Contribute a Dataset",
-    "section": "",
-    "text": "Contribution guide coming soon."
+    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"busy-wellbeing\")"
   },
   {
     "objectID": "datasets/titanic-survival.html",
@@ -131,6 +124,69 @@
     "title": "Titanic Passenger Survival",
     "section": "Load This Dataset in R",
     "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"titanic-survival\")"
+  },
+  {
+    "objectID": "contribute.html",
+    "href": "contribute.html",
+    "title": "Contribute a Dataset",
+    "section": "",
+    "text": "Contribution guide coming soon."
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html",
+    "href": "datasets/epilepsy-seizures.html",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "",
+    "text": "Longitudinal data from a clinical trial of the anti-epileptic drug progabide. Each of 59 patients was observed over 4 follow-up periods, with seizure counts recorded at each visit, alongside baseline seizure count and age. Commonly used to teach Poisson regression for count data with repeated measurements on the same subject."
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#source-and-citation",
+    "href": "datasets/epilepsy-seizures.html#source-and-citation",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Source and Citation",
+    "text": "Source and Citation\n\nCitation: Thall and Vail (1990), distributed in the MASS R package\nURL: https://cran.r-project.org/web/packages/MASS/\nLicense: Available via the MASS package (part of base R distribution)"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#dataset-characteristics",
+    "href": "datasets/epilepsy-seizures.html#dataset-characteristics",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Dataset Characteristics",
+    "text": "Dataset Characteristics\n\nObservations: 236\nVariables: 9\nMissingness present: FALSE\nLongitudinal: TRUE\nHierarchical: TRUE"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#variable-dictionary",
+    "href": "datasets/epilepsy-seizures.html#variable-dictionary",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Variable Dictionary",
+    "text": "Variable Dictionary\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nTRUE\ncount\nNumber of seizures during the follow-up period\n\n\ntrt\ncategorical\nTreatment group: placebo or progabide\n\n\nbase\ncount\nBaseline seizure count (8 weeks prior to trial)\n\n\nage\ncontinuous\nPatient age in years\n\n\nV4\nbinary\nIndicator for the 4th (final) follow-up period\n\n\nsubject\ncategorical\nPatient identifier (1-59), repeated across 4 rows each\n\n\nperiod\nordinal\nFollow-up period number (1 to 4)\n\n\nlbase\ncontinuous\nLog-transformed, centered baseline seizure count\n\n\nlage\ncontinuous\nLog-transformed, centered age"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
+    "href": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Suggested Learning Objectives",
+    "text": "Suggested Learning Objectives\n\nFit a Poisson regression model for count outcomes\nRecognize the need to account for repeated measurements per subject\nCompare naive Poisson models to overdispersion-corrected alternatives"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
+    "href": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Suggested Classroom Activities",
+    "text": "Suggested Classroom Activities\n\nModel seizure counts as a function of treatment and baseline rate, ignoring then accounting for repeated measures"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#common-student-misconceptions",
+    "href": "datasets/epilepsy-seizures.html#common-student-misconceptions",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Common Student Misconceptions",
+    "text": "Common Student Misconceptions\n\nTreating each of the 4 visits per patient as an independent observation"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
+    "href": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Load This Dataset in R",
+    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"epilepsy-seizures\")"
   },
   {
     "objectID": "index.html",

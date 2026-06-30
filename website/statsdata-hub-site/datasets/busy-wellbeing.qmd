@@ -1,0 +1,163 @@
+---
+title: "Social Pressure to be Busy and Emotional Wellbeing"
+---
+
+A daily diary study examining how social pressure to appear busy relates to emotional wellbeing. Data were collected from 261 participants over approximately 7 days each, yielding 1,827 person-day observations. Participants reported daily busyness, positive affect, negative affect, anxiety, and depressive symptoms, alongside person-level demographics, socioeconomic status, Big Five personality traits, and emotional complexity measures. Ideal for teaching multilevel modeling, within-person centering, and longitudinal data analysis.
+
+
+## Source and Citation
+
+- **Citation**: Somerset et al. (in prep). Social pressure to be busy and emotional wellbeing.
+- **URL**: [https://researchbox.org](https://researchbox.org)
+- **License**: CC0-1.0
+
+## Dataset Characteristics
+
+- **Observations**: 1827
+- **Variables**: 114
+- **Missingness present**: TRUE
+- **Longitudinal**: TRUE
+- **Hierarchical**: TRUE
+
+## Variable Dictionary
+
+| Variable | Type | Description |
+|----------|------|-------------|
+| participantID | categorical | Participant ID |
+| day | ordinal | Day (Ranges from 1 to 8) |
+| modifiedBusy | continuous | Daily perceived social pressure to be busy (3-item) |
+| modifiedBusy_mn | continuous | Person mean of modifiedBusy (between-person component) |
+| modifiedBusy_dev | continuous | Person mean centred modifiedBusy (within-person component) |
+| fouritemBusy | continuous | Daily perceived social pressure to be busy (4-item) |
+| fouritemBusy_mn | continuous | Person mean of fouritemBusy (between-person component) |
+| fouritemBusy_dev | continuous | Person mean centred fouritemBusy (within-person component) |
+| dayPA | continuous | Daily positive affect |
+| dayNA | continuous | Daily negative affect |
+| dayAnx | continuous | Daily anxiety |
+| dayDep | continuous | Daily depressive symptoms |
+| demogAge | continuous | Age in years |
+| demogAge.c | continuous | Age in years (Grand mean centered) |
+| demogSex | binary | Gender (1 = Male, 0 = Female) |
+| demogRace | binary | Race (0 = Chinese, 1 = non-Chinese) |
+| sesIncomeHousehold | ordinal | Monthly household income |
+| sesIncomeHousehold.c | continuous | Monthly household income (Grand mean centered) |
+| sesLadderCommunity | ordinal | Subjective SES in community |
+| sesLadderCommunity.c | continuous | Subjective SES in community (Grand mean centered) |
+| b5a | continuous | Big 5 Agreeableness |
+| b5c | continuous | Big 5 Conscientiousness |
+| b5e | continuous | Big 5 Extraversion |
+| b5n | continuous | Big 5 Neuroticism |
+| b5o | continuous | Big 5 Open-mindedness |
+| b5a.c | continuous | Big 5 Agreeableness (Grand mean centered) |
+| b5c.c | continuous | Big 5 Conscientiousness (Grand mean centered) |
+| b5e.c | continuous | Big 5 Extraversion (Grand mean centered) |
+| b5n.c | continuous | Big 5 Neuroticism (Grand mean centered) |
+| b5o.c | continuous | Big 5 Open-mindedness (Grand mean centered) |
+| emoComplexAcceptPersonal | continuous | Acceptance of mixed emotions personal expectancies subscale |
+| emoComplexAcceptPersonal.c | continuous | Acceptance of mixed emotions personal expectancies subscale (Grand mean centered) |
+| emoComplexAcceptSocial | continuous | Acceptance of mixed emotions social expectancies subscale |
+| emoComplexAcceptSocial.c | continuous | Acceptance of mixed emotions social expectancies subscale (Grand mean centered) |
+| emoComplexAcceptOverall | continuous | Acceptance of mixed emotions |
+| emoComplexAcceptOverall.c | continuous | Acceptance of mixed emotions (Grand mean centered) |
+| SEDAS_B_1 | ordinal | [ITEM] Daily perceived social pressure to be busy: Today, I felt a great deal of pressure from others to always be busy doing something productive |
+| SEDAS_B_2 | ordinal | [ITEM] Daily perceived social pressure to be busy: Today, people expected me to always be busy doing something productive |
+| SEDAS_B_3_REVERSED | ordinal | [ITEM] Daily perceived social pressure to be busy: People valued me today, even though I was not always busy doing something productive (Reversed: 8 - original score) |
+| SEDAS_B_4 | ordinal | [ITEM] Daily perceived social pressure to be busy: People were disapproving of me not always being busy doing something productive |
+| NA_H_1 | ordinal | [ITEM] Negative affect: Angry |
+| NA_H_2 | ordinal | [ITEM] Negative affect: Hostile |
+| NA_H_3 | ordinal | [ITEM] Negative affect: Irritable |
+| NA_M_4 | ordinal | [ITEM] Negative affect: Nervous |
+| NA_M_5 | ordinal | [ITEM] Negative affect: Anxious |
+| NA_M_6 | ordinal | [ITEM] Negative affect: Tense |
+| NA_L_7 | ordinal | [ITEM] Negative affect: Dejected |
+| NA_L_8 | ordinal | [ITEM] Negative affect: Sad |
+| NA_L_9 | ordinal | [ITEM] Negative affect: Unhappy |
+| PA_H_1 | ordinal | [ITEM] Positive affect: Energetic |
+| PA_H_2 | ordinal | [ITEM] Positive affect: Enthusiastic |
+| PA_H_3 | ordinal | [ITEM] Positive affect: Excited |
+| PA_M_4 | ordinal | [ITEM] Positive affect: Happy |
+| PA_M_5 | ordinal | [ITEM] Positive affect: Cheerful |
+| PA_M_6 | ordinal | [ITEM] Positive affect: Pleasant |
+| PA_L_7 | ordinal | [ITEM] Positive affect: Calm |
+| PA_L_8 | ordinal | [ITEM] Positive affect: Content |
+| PA_L_9 | ordinal | [ITEM] Positive affect: Relaxed |
+| STAI_S_1 | ordinal | [ITEM] Anxiety: I feel upset today |
+| STAI_S_2 | ordinal | [ITEM] Anxiety: I feel anxious today |
+| STAI_S_3 | ordinal | [ITEM] Anxiety: I feel nervous today |
+| STAI_S_4 | ordinal | [ITEM] Anxiety: I am jittery today |
+| STAI_S_5 | ordinal | [ITEM] Anxiety: I feel over-excited and rattled today |
+| CES_D_R_1 | ordinal | [ITEM] Depression: I was bothered by things that usually don't bother me. |
+| CES_D_R_2 | ordinal | [ITEM] Depression: I had trouble keeping my mind on what I was doing. |
+| CES_D_R_3 | ordinal | [ITEM] Depression: I felt depressed. |
+| CES_D_R_4 | ordinal | [ITEM] Depression: I felt that everything I did was an effort. |
+| CES_D_R_5 | ordinal | [ITEM] Depression: I felt hopeful about the future. (Reversed) |
+| CES_D_R_6 | ordinal | [ITEM] Depression: I felt fearful. |
+| CES_D_R_7 | ordinal | [ITEM] Depression: My sleep was restless. |
+| CES_D_R_8 | ordinal | [ITEM] Depression: I was happy. (Reversed) |
+| CES_D_R_9 | ordinal | [ITEM] Depression: I felt lonely. |
+| CES_D_R_10 | ordinal | [ITEM] Depression: I could not get going. |
+| ECS_03 | ordinal | [ITEM] ECA: It is very important to me not to feel mixed emotions. (Reversed) |
+| ECS_04 | ordinal | [ITEM] ECA: I would always try to avoid feeling mixed emotions. (Reversed) |
+| ECS_05 | ordinal | [ITEM] ECA: I shouldn't feel mixed emotions. (Reversed) |
+| ECS_06 | ordinal | [ITEM] ECA: Feeling mixed emotions is normal. |
+| ECS_07 | ordinal | [ITEM] ECA: Feeling mixed emotions is an important part of life. |
+| ECS_08 | ordinal | [ITEM] ECA: It is important that others don't see me as a person with mixed emotions. (Reversed) |
+| ECS_09 | ordinal | [ITEM] ECA: Other people expect me not to feel mixed emotions. (Reversed) |
+| ECS_10 | ordinal | [ITEM] ECA: People like me less when I feel mixed emotions. (Reversed) |
+| ECS_11 | ordinal | [ITEM] ECA: I think society accepts people who feel mixed emotions. |
+| ECS_12 | ordinal | [ITEM] ECA: I think it is socially acceptable to feel mixed emotions. |
+| ECS_13 | ordinal | [ITEM] ECA: Society generally expects people not to feel mixed emotions. (Reversed) |
+| BFI_E_01 | ordinal | [ITEM] B5E: Tends to be quiet. |
+| BFI_A_02 | ordinal | [ITEM] B5A: Is compassionate, has a soft heart. |
+| BFI_C_03 | ordinal | [ITEM] B5C: Tends to be disorganized. |
+| BFI_N_04 | ordinal | [ITEM] B5N: Worries a lot. |
+| BFI_O_05 | ordinal | [ITEM] B5O: Is fascinated by art, music, or literature. |
+| BFI_E_06 | ordinal | [ITEM] B5E: Is dominant, acts as a leader. |
+| BFI_A_07 | ordinal | [ITEM] B5A: Is sometimes rude to others. |
+| BFI_C_08 | ordinal | [ITEM] B5C: Has difficulty getting started on tasks. |
+| BFI_N_09 | ordinal | [ITEM] B5N: Tends to feel depressed, blue. |
+| BFI_O_10 | ordinal | [ITEM] B5O: Has little interest in abstract ideas. |
+| BFI_E_11 | ordinal | [ITEM] B5E: Is full of energy. |
+| BFI_A_12 | ordinal | [ITEM] B5A: Assumes the best about people. |
+| BFI_C_13 | ordinal | [ITEM] B5C: Is reliable, can always be counted on. |
+| BFI_N_14 | ordinal | [ITEM] B5N: Is emotionally stable, not easily upset. |
+| BFI_O_15 | ordinal | [ITEM] B5O: Is original, comes up with new ideas. |
+| BFI_E_16 | ordinal | [ITEM] B5E: Is outgoing, sociable. |
+| BFI_A_17 | ordinal | [ITEM] B5A: Can be cold and uncaring. |
+| BFI_C_18 | ordinal | [ITEM] B5C: Keeps things neat and tidy. |
+| BFI_N_19 | ordinal | [ITEM] B5N: Is relaxed, handles stress well. |
+| BFI_O_20 | ordinal | [ITEM] B5O: Has few artistic interests. |
+| BFI_E_21 | ordinal | [ITEM] B5E: Prefers to have others take charge. |
+| BFI_A_22 | ordinal | [ITEM] B5A: Is respectful, treats others with respect. |
+| BFI_C_23 | ordinal | [ITEM] B5C: Is persistent, works until the task is finished. |
+| BFI_N_24 | ordinal | [ITEM] B5N: Feels secure, comfortable with self. |
+| BFI_O_25 | ordinal | [ITEM] B5O: Is complex, a deep thinker. |
+| BFI_E_26 | ordinal | [ITEM] B5E: Is less active than other people. |
+| BFI_A_27 | ordinal | [ITEM] B5A: Tends to find fault with others. |
+| BFI_C_28 | ordinal | [ITEM] B5C: Can be somewhat careless. |
+| BFI_N_29 | ordinal | [ITEM] B5N: Is temperamental, gets emotional easily. |
+| BFI_O_30 | ordinal | [ITEM] B5O: Has little creativity. |
+
+## Suggested Learning Objectives
+
+- Explain the difference between between-person and within-person effects
+- Apply group mean centering to separate within- and between-person variance
+- Fit a multilevel model with person-level and day-level predictors
+- Interpret fixed and random effects in a longitudinal model
+
+## Suggested Classroom Activities
+
+- Compare a naive OLS regression ignoring clustering to a multilevel model, and discuss what changes
+- Visualize within-person trajectories of busyness and affect across days
+
+## Common Student Misconceptions
+
+- Treating repeated observations from the same person as independent
+- Confusing within-person and between-person effects of busyness on wellbeing
+
+## Load This Dataset in R
+
+```r
+library(statsdata)
+data <- load_dataset("busy-wellbeing")
+```

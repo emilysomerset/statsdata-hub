@@ -1,5 +1,17 @@
 [
   {
+    "id": "busy-wellbeing",
+    "title": "Social Pressure to be Busy and Emotional Wellbeing",
+    "description": "A daily diary study examining how social pressure to appear busy relates to emotional wellbeing. Data were collected from 261 participants over approximately 7 days each, yielding 1,827 person-day observations. Participants reported daily busyness, positive affect, negative affect, anxiety, and depressive symptoms, alongside person-level demographics, socioeconomic status, Big Five personality traits, and emotional complexity measures. Ideal for teaching multilevel modeling, within-person centering, and longitudinal data analysis.\n",
+    "methods": ["multilevel_modeling", "linear_regression"],
+    "concepts": ["clustered_observations", "missing_data", "multicollinearity"],
+    "variable_types": ["continuous", "ordinal", "binary", "count"],
+    "course_level": ["advanced_undergraduate", "graduate"],
+    "discipline": ["psychology"],
+    "n_obs": 1827,
+    "n_vars": 114
+  },
+  {
     "id": "epilepsy-seizures",
     "title": "Epilepsy Seizure Counts (Progabide Trial)",
     "description": "Longitudinal data from a clinical trial of the anti-epileptic drug progabide. Each of 59 patients was observed over 4 follow-up periods, with seizure counts recorded at each visit, alongside baseline seizure count and age. Commonly used to teach Poisson regression for count data with repeated measurements on the same subject.\n",

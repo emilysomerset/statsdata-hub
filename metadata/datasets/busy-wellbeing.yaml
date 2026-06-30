@@ -1,0 +1,418 @@
+id: busy-wellbeing
+title: "Social Pressure to be Busy and Emotional Wellbeing"
+description: >
+  A daily diary study examining how social pressure to appear busy relates
+  to emotional wellbeing. Data were collected from 261 participants over
+  approximately 7 days each, yielding 1,827 person-day observations.
+  Participants reported daily busyness, positive affect, negative affect,
+  anxiety, and depressive symptoms, alongside person-level demographics,
+  socioeconomic status, Big Five personality traits, and emotional
+  complexity measures. Ideal for teaching multilevel modeling, within-person
+  centering, and longitudinal data analysis.
+
+source:
+  citation: "Somerset et al. (in prep). Social pressure to be busy and emotional wellbeing."
+  url: "https://researchbox.org"
+  license: "CC0-1.0"
+
+file: "data/clean/busy_wellbeing/busy-wellbeing.csv"
+
+methods: [multilevel_modeling, linear_regression]
+concepts: [clustered_observations, missing_data, multicollinearity]
+variable_types: [continuous, ordinal, binary, count]
+course_level: [advanced_undergraduate, graduate]
+discipline: [psychology]
+
+characteristics:
+  n_obs: 1827
+  n_vars: 114
+  missingness: true
+  survey_weights: false
+  longitudinal: true
+  hierarchical: true
+  cross_sectional: false
+
+teaching:
+  learning_objectives:
+    - "Explain the difference between between-person and within-person effects"
+    - "Apply group mean centering to separate within- and between-person variance"
+    - "Fit a multilevel model with person-level and day-level predictors"
+    - "Interpret fixed and random effects in a longitudinal model"
+  classroom_activities:
+    - "Compare a naive OLS regression ignoring clustering to a multilevel model, and discuss what changes"
+    - "Visualize within-person trajectories of busyness and affect across days"
+  common_misconceptions:
+    - "Treating repeated observations from the same person as independent"
+    - "Confusing within-person and between-person effects of busyness on wellbeing"
+
+variables:
+  # --- Identifiers and study structure ---
+  - name: participantID
+    type: categorical
+    description: "Participant ID"
+  - name: day
+    type: ordinal
+    description: "Day (Ranges from 1 to 8)"
+
+  # --- Daily busyness (composites) ---
+  - name: modifiedBusy
+    type: continuous
+    description: "Daily perceived social pressure to be busy (3-item)"
+  - name: modifiedBusy_mn
+    type: continuous
+    description: "Person mean of modifiedBusy (between-person component)"
+  - name: modifiedBusy_dev
+    type: continuous
+    description: "Person mean centred modifiedBusy (within-person component)"
+  - name: fouritemBusy
+    type: continuous
+    description: "Daily perceived social pressure to be busy (4-item)"
+  - name: fouritemBusy_mn
+    type: continuous
+    description: "Person mean of fouritemBusy (between-person component)"
+  - name: fouritemBusy_dev
+    type: continuous
+    description: "Person mean centred fouritemBusy (within-person component)"
+
+  # --- Daily wellbeing outcomes ---
+  - name: dayPA
+    type: continuous
+    description: "Daily positive affect"
+  - name: dayNA
+    type: continuous
+    description: "Daily negative affect"
+  - name: dayAnx
+    type: continuous
+    description: "Daily anxiety"
+  - name: dayDep
+    type: continuous
+    description: "Daily depressive symptoms"
+
+  # --- Demographics ---
+  - name: demogAge
+    type: continuous
+    description: "Age in years"
+  - name: demogAge.c
+    type: continuous
+    description: "Age in years (Grand mean centered)"
+  - name: demogSex
+    type: binary
+    description: "Gender (1 = Male, 0 = Female)"
+  - name: demogRace
+    type: binary
+    description: "Race (0 = Chinese, 1 = non-Chinese)"
+
+  # --- Socioeconomic status ---
+  - name: sesIncomeHousehold
+    type: ordinal
+    description: "Monthly household income"
+  - name: sesIncomeHousehold.c
+    type: continuous
+    description: "Monthly household income (Grand mean centered)"
+  - name: sesLadderCommunity
+    type: ordinal
+    description: "Subjective SES in community"
+  - name: sesLadderCommunity.c
+    type: continuous
+    description: "Subjective SES in community (Grand mean centered)"
+
+  # --- Big Five personality (composites) ---
+  - name: b5a
+    type: continuous
+    description: "Big 5 Agreeableness"
+  - name: b5c
+    type: continuous
+    description: "Big 5 Conscientiousness"
+  - name: b5e
+    type: continuous
+    description: "Big 5 Extraversion"
+  - name: b5n
+    type: continuous
+    description: "Big 5 Neuroticism"
+  - name: b5o
+    type: continuous
+    description: "Big 5 Open-mindedness"
+  - name: b5a.c
+    type: continuous
+    description: "Big 5 Agreeableness (Grand mean centered)"
+  - name: b5c.c
+    type: continuous
+    description: "Big 5 Conscientiousness (Grand mean centered)"
+  - name: b5e.c
+    type: continuous
+    description: "Big 5 Extraversion (Grand mean centered)"
+  - name: b5n.c
+    type: continuous
+    description: "Big 5 Neuroticism (Grand mean centered)"
+  - name: b5o.c
+    type: continuous
+    description: "Big 5 Open-mindedness (Grand mean centered)"
+
+  # --- Emotional complexity acceptance (composites) ---
+  - name: emoComplexAcceptPersonal
+    type: continuous
+    description: "Acceptance of mixed emotions personal expectancies subscale"
+  - name: emoComplexAcceptPersonal.c
+    type: continuous
+    description: "Acceptance of mixed emotions personal expectancies subscale (Grand mean centered)"
+  - name: emoComplexAcceptSocial
+    type: continuous
+    description: "Acceptance of mixed emotions social expectancies subscale"
+  - name: emoComplexAcceptSocial.c
+    type: continuous
+    description: "Acceptance of mixed emotions social expectancies subscale (Grand mean centered)"
+  - name: emoComplexAcceptOverall
+    type: continuous
+    description: "Acceptance of mixed emotions"
+  - name: emoComplexAcceptOverall.c
+    type: continuous
+    description: "Acceptance of mixed emotions (Grand mean centered)"
+
+  # --- SEDAS busyness items ---
+  - name: SEDAS_B_1
+    type: ordinal
+    description: "[ITEM] Daily perceived social pressure to be busy: Today, I felt a great deal of pressure from others to always be busy doing something productive"
+  - name: SEDAS_B_2
+    type: ordinal
+    description: "[ITEM] Daily perceived social pressure to be busy: Today, people expected me to always be busy doing something productive"
+  - name: SEDAS_B_3_REVERSED
+    type: ordinal
+    description: "[ITEM] Daily perceived social pressure to be busy: People valued me today, even though I was not always busy doing something productive (Reversed: 8 - original score)"
+  - name: SEDAS_B_4
+    type: ordinal
+    description: "[ITEM] Daily perceived social pressure to be busy: People were disapproving of me not always being busy doing something productive"
+
+  # --- Negative affect items ---
+  - name: NA_H_1
+    type: ordinal
+    description: "[ITEM] Negative affect: Angry"
+  - name: NA_H_2
+    type: ordinal
+    description: "[ITEM] Negative affect: Hostile"
+  - name: NA_H_3
+    type: ordinal
+    description: "[ITEM] Negative affect: Irritable"
+  - name: NA_M_4
+    type: ordinal
+    description: "[ITEM] Negative affect: Nervous"
+  - name: NA_M_5
+    type: ordinal
+    description: "[ITEM] Negative affect: Anxious"
+  - name: NA_M_6
+    type: ordinal
+    description: "[ITEM] Negative affect: Tense"
+  - name: NA_L_7
+    type: ordinal
+    description: "[ITEM] Negative affect: Dejected"
+  - name: NA_L_8
+    type: ordinal
+    description: "[ITEM] Negative affect: Sad"
+  - name: NA_L_9
+    type: ordinal
+    description: "[ITEM] Negative affect: Unhappy"
+
+  # --- Positive affect items ---
+  - name: PA_H_1
+    type: ordinal
+    description: "[ITEM] Positive affect: Energetic"
+  - name: PA_H_2
+    type: ordinal
+    description: "[ITEM] Positive affect: Enthusiastic"
+  - name: PA_H_3
+    type: ordinal
+    description: "[ITEM] Positive affect: Excited"
+  - name: PA_M_4
+    type: ordinal
+    description: "[ITEM] Positive affect: Happy"
+  - name: PA_M_5
+    type: ordinal
+    description: "[ITEM] Positive affect: Cheerful"
+  - name: PA_M_6
+    type: ordinal
+    description: "[ITEM] Positive affect: Pleasant"
+  - name: PA_L_7
+    type: ordinal
+    description: "[ITEM] Positive affect: Calm"
+  - name: PA_L_8
+    type: ordinal
+    description: "[ITEM] Positive affect: Content"
+  - name: PA_L_9
+    type: ordinal
+    description: "[ITEM] Positive affect: Relaxed"
+
+  # --- Anxiety items (STAI state) ---
+  - name: STAI_S_1
+    type: ordinal
+    description: "[ITEM] Anxiety: I feel upset today"
+  - name: STAI_S_2
+    type: ordinal
+    description: "[ITEM] Anxiety: I feel anxious today"
+  - name: STAI_S_3
+    type: ordinal
+    description: "[ITEM] Anxiety: I feel nervous today"
+  - name: STAI_S_4
+    type: ordinal
+    description: "[ITEM] Anxiety: I am jittery today"
+  - name: STAI_S_5
+    type: ordinal
+    description: "[ITEM] Anxiety: I feel over-excited and rattled today"
+
+  # --- Depression items (CES-D) ---
+  - name: CES_D_R_1
+    type: ordinal
+    description: "[ITEM] Depression: I was bothered by things that usually don't bother me."
+  - name: CES_D_R_2
+    type: ordinal
+    description: "[ITEM] Depression: I had trouble keeping my mind on what I was doing."
+  - name: CES_D_R_3
+    type: ordinal
+    description: "[ITEM] Depression: I felt depressed."
+  - name: CES_D_R_4
+    type: ordinal
+    description: "[ITEM] Depression: I felt that everything I did was an effort."
+  - name: CES_D_R_5
+    type: ordinal
+    description: "[ITEM] Depression: I felt hopeful about the future. (Reversed)"
+  - name: CES_D_R_6
+    type: ordinal
+    description: "[ITEM] Depression: I felt fearful."
+  - name: CES_D_R_7
+    type: ordinal
+    description: "[ITEM] Depression: My sleep was restless."
+  - name: CES_D_R_8
+    type: ordinal
+    description: "[ITEM] Depression: I was happy. (Reversed)"
+  - name: CES_D_R_9
+    type: ordinal
+    description: "[ITEM] Depression: I felt lonely."
+  - name: CES_D_R_10
+    type: ordinal
+    description: "[ITEM] Depression: I could not get going."
+
+  # --- Emotional complexity acceptance items (ECS) ---
+  - name: ECS_03
+    type: ordinal
+    description: "[ITEM] ECA: It is very important to me not to feel mixed emotions. (Reversed)"
+  - name: ECS_04
+    type: ordinal
+    description: "[ITEM] ECA: I would always try to avoid feeling mixed emotions. (Reversed)"
+  - name: ECS_05
+    type: ordinal
+    description: "[ITEM] ECA: I shouldn't feel mixed emotions. (Reversed)"
+  - name: ECS_06
+    type: ordinal
+    description: "[ITEM] ECA: Feeling mixed emotions is normal."
+  - name: ECS_07
+    type: ordinal
+    description: "[ITEM] ECA: Feeling mixed emotions is an important part of life."
+  - name: ECS_08
+    type: ordinal
+    description: "[ITEM] ECA: It is important that others don't see me as a person with mixed emotions. (Reversed)"
+  - name: ECS_09
+    type: ordinal
+    description: "[ITEM] ECA: Other people expect me not to feel mixed emotions. (Reversed)"
+  - name: ECS_10
+    type: ordinal
+    description: "[ITEM] ECA: People like me less when I feel mixed emotions. (Reversed)"
+  - name: ECS_11
+    type: ordinal
+    description: "[ITEM] ECA: I think society accepts people who feel mixed emotions."
+  - name: ECS_12
+    type: ordinal
+    description: "[ITEM] ECA: I think it is socially acceptable to feel mixed emotions."
+  - name: ECS_13
+    type: ordinal
+    description: "[ITEM] ECA: Society generally expects people not to feel mixed emotions. (Reversed)"
+
+  # --- Big Five items (BFI) ---
+  - name: BFI_E_01
+    type: ordinal
+    description: "[ITEM] B5E: Tends to be quiet."
+  - name: BFI_A_02
+    type: ordinal
+    description: "[ITEM] B5A: Is compassionate, has a soft heart."
+  - name: BFI_C_03
+    type: ordinal
+    description: "[ITEM] B5C: Tends to be disorganized."
+  - name: BFI_N_04
+    type: ordinal
+    description: "[ITEM] B5N: Worries a lot."
+  - name: BFI_O_05
+    type: ordinal
+    description: "[ITEM] B5O: Is fascinated by art, music, or literature."
+  - name: BFI_E_06
+    type: ordinal
+    description: "[ITEM] B5E: Is dominant, acts as a leader."
+  - name: BFI_A_07
+    type: ordinal
+    description: "[ITEM] B5A: Is sometimes rude to others."
+  - name: BFI_C_08
+    type: ordinal
+    description: "[ITEM] B5C: Has difficulty getting started on tasks."
+  - name: BFI_N_09
+    type: ordinal
+    description: "[ITEM] B5N: Tends to feel depressed, blue."
+  - name: BFI_O_10
+    type: ordinal
+    description: "[ITEM] B5O: Has little interest in abstract ideas."
+  - name: BFI_E_11
+    type: ordinal
+    description: "[ITEM] B5E: Is full of energy."
+  - name: BFI_A_12
+    type: ordinal
+    description: "[ITEM] B5A: Assumes the best about people."
+  - name: BFI_C_13
+    type: ordinal
+    description: "[ITEM] B5C: Is reliable, can always be counted on."
+  - name: BFI_N_14
+    type: ordinal
+    description: "[ITEM] B5N: Is emotionally stable, not easily upset."
+  - name: BFI_O_15
+    type: ordinal
+    description: "[ITEM] B5O: Is original, comes up with new ideas."
+  - name: BFI_E_16
+    type: ordinal
+    description: "[ITEM] B5E: Is outgoing, sociable."
+  - name: BFI_A_17
+    type: ordinal
+    description: "[ITEM] B5A: Can be cold and uncaring."
+  - name: BFI_C_18
+    type: ordinal
+    description: "[ITEM] B5C: Keeps things neat and tidy."
+  - name: BFI_N_19
+    type: ordinal
+    description: "[ITEM] B5N: Is relaxed, handles stress well."
+  - name: BFI_O_20
+    type: ordinal
+    description: "[ITEM] B5O: Has few artistic interests."
+  - name: BFI_E_21
+    type: ordinal
+    description: "[ITEM] B5E: Prefers to have others take charge."
+  - name: BFI_A_22
+    type: ordinal
+    description: "[ITEM] B5A: Is respectful, treats others with respect."
+  - name: BFI_C_23
+    type: ordinal
+    description: "[ITEM] B5C: Is persistent, works until the task is finished."
+  - name: BFI_N_24
+    type: ordinal
+    description: "[ITEM] B5N: Feels secure, comfortable with self."
+  - name: BFI_O_25
+    type: ordinal
+    description: "[ITEM] B5O: Is complex, a deep thinker."
+  - name: BFI_E_26
+    type: ordinal
+    description: "[ITEM] B5E: Is less active than other people."
+  - name: BFI_A_27
+    type: ordinal
+    description: "[ITEM] B5A: Tends to find fault with others."
+  - name: BFI_C_28
+    type: ordinal
+    description: "[ITEM] B5C: Can be somewhat careless."
+  - name: BFI_N_29
+    type: ordinal
+    description: "[ITEM] B5N: Is temperamental, gets emotional easily."
+  - name: BFI_O_30
+    type: ordinal
+    description: "[ITEM] B5O: Has little creativity."
+    
