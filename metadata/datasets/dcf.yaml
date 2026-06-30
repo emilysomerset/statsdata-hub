@@ -19,7 +19,7 @@ source:
   url: "https://researchbox.org/450"
   license: "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
 
-file: "data/clean/discrimination_cognitive/discrimination-cognitive.csv"
+file: "data/clean/discrimination_cognitive_failures/dcf.csv"
 
 data_source_type: published_study
 
