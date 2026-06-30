@@ -2,4 +2,72 @@
 title: "R Package"
 ---
 
-Installation instructions coming soon.
+The `statsdata` R package gives you direct access to the StatsData Hub
+collection from within R — search for datasets by teaching criteria and
+load them straight into your analysis without leaving RStudio.
+
+## Installation
+
+The package is currently available from GitHub. To install it, you first
+need the `devtools` package:
+
+```r
+install.packages("devtools")
+devtools::install_github("emilysomerset/statsdata-hub/statsdata")
+```
+
+## Basic usage
+
+### Search for datasets
+
+Find datasets by statistical method, teaching concept, course level,
+or discipline:
+
+```r
+library(statsdata)
+
+# Browse all available datasets
+find_datasets()
+
+# Find datasets suitable for teaching logistic regression
+find_datasets(method = "logistic_regression")
+
+# Find datasets for a graduate course in psychology
+find_datasets(course_level = "graduate", discipline = "psychology")
+```
+
+### Search by specific criteria
+
+```r
+# Search by statistical method
+search_by_method("multilevel_modeling")
+
+# Search by teaching concept
+search_by_concept("confounding")
+
+# Search by variable type
+search_by_variable("count")
+```
+
+### Load a dataset
+
+```r
+# Load a dataset by its ID
+titanic <- load_dataset("titanic-survival")
+head(titanic)
+
+# Load and start analysing immediately
+library(statsdata)
+busy <- load_dataset("busy-wellbeing")
+```
+
+### Get information about a dataset
+
+Each dataset has a full metadata entry — you can see the available
+datasets and their IDs using `find_datasets()`, then load the one
+you want with `load_dataset()`.
+
+## Available datasets
+
+See the [Browse Datasets](browse.qmd) page for the full filterable collection.
+

@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -116,8 +151,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-makes-a-good-dataset-for-this-repository" id="toc-what-makes-a-good-dataset-for-this-repository" class="nav-link active" data-scroll-target="#what-makes-a-good-dataset-for-this-repository">What makes a good dataset for this repository?</a></li>
+  <li><a href="#step-by-step-contribution-guide" id="toc-step-by-step-contribution-guide" class="nav-link" data-scroll-target="#step-by-step-contribution-guide">Step-by-step contribution guide</a>
+  <ul class="collapse">
+  <li><a href="#fork-the-repository" id="toc-fork-the-repository" class="nav-link" data-scroll-target="#fork-the-repository">1. Fork the repository</a></li>
+  <li><a href="#add-the-data-file" id="toc-add-the-data-file" class="nav-link" data-scroll-target="#add-the-data-file">2. Add the data file</a></li>
+  <li><a href="#create-a-metadata-yaml-file" id="toc-create-a-metadata-yaml-file" class="nav-link" data-scroll-target="#create-a-metadata-yaml-file">3. Create a metadata YAML file</a></li>
+  <li><a href="#open-a-pull-request" id="toc-open-a-pull-request" class="nav-link" data-scroll-target="#open-a-pull-request">4. Open a pull request</a></li>
+  </ul></li>
+  <li><a href="#valid-metadata-values" id="toc-valid-metadata-values" class="nav-link" data-scroll-target="#valid-metadata-values">Valid metadata values</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions?</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -141,9 +191,99 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Contribution guide coming soon.</p>
+<p>StatsData Hub is an open community resource — contributions of new datasets are welcome and encouraged. Each dataset needs two things: a data file and a metadata description. Here’s how to add one.</p>
+<section id="what-makes-a-good-dataset-for-this-repository" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-a-good-dataset-for-this-repository">What makes a good dataset for this repository?</h2>
+<p>A good teaching dataset should:</p>
+<ul>
+<li>Illustrate one or more <strong>specific statistical methods</strong> clearly</li>
+<li>Have a meaningful <strong>real-world context</strong> students can engage with</li>
+<li>Be <strong>openly licensed</strong> (CC0, CC BY, or similar) so others can freely use it</li>
+<li>Be appropriate for <strong>classroom use</strong> (no sensitive personal data)</li>
+<li>Come with a <strong>citable source</strong> (published study, public repository, or well-known teaching dataset)</li>
+</ul>
+</section>
+<section id="step-by-step-contribution-guide" class="level2">
+<h2 class="anchored" data-anchor-id="step-by-step-contribution-guide">Step-by-step contribution guide</h2>
+<section id="fork-the-repository" class="level3">
+<h3 class="anchored" data-anchor-id="fork-the-repository">1. Fork the repository</h3>
+<p>Go to <a href="https://github.com/emilysomerset/statsdata-hub">github.com/emilysomerset/statsdata-hub</a> and click <strong>Fork</strong> (top right). This creates your own copy of the project to work in.</p>
+</section>
+<section id="add-the-data-file" class="level3">
+<h3 class="anchored" data-anchor-id="add-the-data-file">2. Add the data file</h3>
+<p>Place your cleaned dataset as a CSV file at:</p>
+<p>data/clean/<dataset-id>/<dataset-id>.csv</dataset-id></dataset-id></p>
+<p>For example:</p>
+<p>data/clean/titanic-survival/titanic-survival.csv</p>
+<p>If the data required cleaning or processing, add your processing script at:</p>
+<p>scripts/process-<dataset-id>.R</dataset-id></p>
+</section>
+<section id="create-a-metadata-yaml-file" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-metadata-yaml-file">3. Create a metadata YAML file</h3>
+<p>Copy the template below and save it as:</p>
+<p>metadata/datasets/<dataset-id>.yaml</dataset-id></p>
+<p>Fill in every field — the more complete the metadata, the more useful the dataset is for instructors searching for specific teaching needs.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">id</span><span class="kw">:</span><span class="at"> your-dataset-id</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Dataset Title"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">: </span><span class="ch">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  A clear description of what the dataset contains, where it came from,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  and what it is commonly used to teach.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span><span class="kw">:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">citation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Author(s) (Year). Title. Journal/Source."</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://link-to-source.com"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">license</span><span class="kw">:</span><span class="at"> </span><span class="st">"CC0-1.0"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">file</span><span class="kw">:</span><span class="at"> </span><span class="st">"data/clean/your-dataset-id/your-dataset-id.csv"</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">data_source_type</span><span class="kw">:</span><span class="at"> published_study</span><span class="co">  # or: classic_dataset, public_repository, simulated</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">methods</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">logistic_regression</span><span class="kw">]</span><span class="co">     # see full list below</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">concepts</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">confounding</span><span class="kw">]</span><span class="co">            # see full list below</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">variable_types</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">binary</span><span class="kw">,</span><span class="at"> continuous</span><span class="kw">]</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">course_level</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">introductory</span><span class="kw">]</span><span class="co">       # introductory, intermediate, advanced_undergraduate, graduate</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">discipline</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">health</span><span class="kw">]</span><span class="co">               # see full list below</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">characteristics</span><span class="kw">:</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">n_obs</span><span class="kw">:</span><span class="at"> </span><span class="dv">1000</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">n_vars</span><span class="kw">:</span><span class="at"> </span><span class="dv">10</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">missingness</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">survey_weights</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">longitudinal</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">hierarchical</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cross_sectional</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">teaching</span><span class="kw">:</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">learning_objectives</span><span class="kw">:</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Learning objective 1"</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Learning objective 2"</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">classroom_activities</span><span class="kw">:</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Suggested activity 1"</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">common_misconceptions</span><span class="kw">:</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Common misconception 1"</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">variables</span><span class="kw">:</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> column_name</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> continuous</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"What this variable measures"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="open-a-pull-request" class="level3">
+<h3 class="anchored" data-anchor-id="open-a-pull-request">4. Open a pull request</h3>
+<p>Once you’ve added the data file and YAML, open a pull request on GitHub. Describe what the dataset is and why it would be useful for teaching. A maintainer will review it and let you know if anything needs updating.</p>
+</section>
+</section>
+<section id="valid-metadata-values" class="level2">
+<h2 class="anchored" data-anchor-id="valid-metadata-values">Valid metadata values</h2>
+<p><strong>Statistical methods:</strong> <code>t_test</code>, <code>anova</code>, <code>linear_regression</code>, <code>logistic_regression</code>, <code>poisson_regression</code>, <code>survival_analysis</code>, <code>pca</code>, <code>clustering</code>, <code>survey_sampling</code>, <code>bayesian_methods</code>, <code>time_series</code>, <code>multilevel_modeling</code>, <code>factor_analysis</code>, <code>mixed_effects</code></p>
+<p><strong>Teaching concepts:</strong> <code>confounding</code>, <code>simpsons_paradox</code>, <code>missing_data</code>, <code>outliers</code>, <code>heteroskedasticity</code>, <code>multicollinearity</code>, <code>nonlinearity</code>, <code>selection_bias</code>, <code>clustered_observations</code>, <code>measurement_error</code>, <code>overdispersion</code></p>
+<p><strong>Disciplines:</strong> <code>health</code>, <code>biology</code>, <code>psychology</code>, <code>economics</code>, <code>sports</code>, <code>climate</code>, <code>education</code>, <code>survey_research</code>, <code>finance</code>, <code>politics</code></p>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions?</h2>
+<p>Open an issue on <a href="https://github.com/emilysomerset/statsdata-hub/issues">GitHub</a> and I’ll be happy to help.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

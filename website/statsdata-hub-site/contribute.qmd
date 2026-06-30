@@ -2,4 +2,123 @@
 title: "Contribute a Dataset"
 ---
 
-Contribution guide coming soon.
+StatsData Hub is an open community resource — contributions of new
+datasets are welcome and encouraged. Each dataset needs two things:
+a data file and a metadata description. Here's how to add one.
+
+## What makes a good dataset for this repository?
+
+A good teaching dataset should:
+
+- Illustrate one or more **specific statistical methods** clearly
+- Have a meaningful **real-world context** students can engage with
+- Be **openly licensed** (CC0, CC BY, or similar) so others can freely use it
+- Be appropriate for **classroom use** (no sensitive personal data)
+- Come with a **citable source** (published study, public repository, or well-known teaching dataset)
+
+## Step-by-step contribution guide
+
+### 1. Fork the repository
+
+Go to [github.com/emilysomerset/statsdata-hub](https://github.com/emilysomerset/statsdata-hub)
+and click **Fork** (top right). This creates your own copy of the project
+to work in.
+
+### 2. Add the data file
+
+Place your cleaned dataset as a CSV file at:
+
+data/clean/<dataset-id>/<dataset-id>.csv
+
+For example:
+
+data/clean/titanic-survival/titanic-survival.csv
+
+If the data required cleaning or processing, add your processing script at:
+
+scripts/process-<dataset-id>.R
+
+### 3. Create a metadata YAML file
+
+Copy the template below and save it as:
+
+metadata/datasets/<dataset-id>.yaml
+
+Fill in every field — the more complete the metadata, the more useful
+the dataset is for instructors searching for specific teaching needs.
+
+```yaml
+id: your-dataset-id
+title: "Your Dataset Title"
+description: >
+  A clear description of what the dataset contains, where it came from,
+  and what it is commonly used to teach.
+
+source:
+  citation: "Author(s) (Year). Title. Journal/Source."
+  url: "https://link-to-source.com"
+  license: "CC0-1.0"
+
+file: "data/clean/your-dataset-id/your-dataset-id.csv"
+
+data_source_type: published_study  # or: classic_dataset, public_repository, simulated
+
+methods: [logistic_regression]     # see full list below
+concepts: [confounding]            # see full list below
+variable_types: [binary, continuous]
+course_level: [introductory]       # introductory, intermediate, advanced_undergraduate, graduate
+discipline: [health]               # see full list below
+
+characteristics:
+  n_obs: 1000
+  n_vars: 10
+  missingness: false
+  survey_weights: false
+  longitudinal: false
+  hierarchical: false
+  cross_sectional: true
+
+teaching:
+  learning_objectives:
+    - "Learning objective 1"
+    - "Learning objective 2"
+  classroom_activities:
+    - "Suggested activity 1"
+  common_misconceptions:
+    - "Common misconception 1"
+
+variables:
+  - name: column_name
+    type: continuous
+    description: "What this variable measures"
+```
+
+### 4. Open a pull request
+
+Once you've added the data file and YAML, open a pull request on GitHub.
+Describe what the dataset is and why it would be useful for teaching.
+A maintainer will review it and let you know if anything needs updating.
+
+## Valid metadata values
+
+**Statistical methods:**
+`t_test`, `anova`, `linear_regression`, `logistic_regression`,
+`poisson_regression`, `survival_analysis`, `pca`, `clustering`,
+`survey_sampling`, `bayesian_methods`, `time_series`,
+`multilevel_modeling`, `factor_analysis`, `mixed_effects`
+
+**Teaching concepts:**
+`confounding`, `simpsons_paradox`, `missing_data`, `outliers`,
+`heteroskedasticity`, `multicollinearity`, `nonlinearity`,
+`selection_bias`, `clustered_observations`, `measurement_error`,
+`overdispersion`
+
+**Disciplines:**
+`health`, `biology`, `psychology`, `economics`, `sports`,
+`climate`, `education`, `survey_research`, `finance`, `politics`
+
+## Questions?
+
+Open an issue on [GitHub](https://github.com/emilysomerset/statsdata-hub/issues)
+and I'll be happy to help.
+

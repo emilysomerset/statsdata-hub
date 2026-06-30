@@ -4,7 +4,28 @@
     "href": "r-package.html",
     "title": "R Package",
     "section": "",
-    "text": "Installation instructions coming soon."
+    "text": "The statsdata R package gives you direct access to the StatsData Hub collection from within R — search for datasets by teaching criteria and load them straight into your analysis without leaving RStudio."
+  },
+  {
+    "objectID": "r-package.html#installation",
+    "href": "r-package.html#installation",
+    "title": "R Package",
+    "section": "Installation",
+    "text": "Installation\nThe package is currently available from GitHub. To install it, you first need the devtools package:\ninstall.packages(\"devtools\")\ndevtools::install_github(\"emilysomerset/statsdata-hub/statsdata\")"
+  },
+  {
+    "objectID": "r-package.html#basic-usage",
+    "href": "r-package.html#basic-usage",
+    "title": "R Package",
+    "section": "Basic usage",
+    "text": "Basic usage\n\nSearch for datasets\nFind datasets by statistical method, teaching concept, course level, or discipline:\nlibrary(statsdata)\n\n# Browse all available datasets\nfind_datasets()\n\n# Find datasets suitable for teaching logistic regression\nfind_datasets(method = \"logistic_regression\")\n\n# Find datasets for a graduate course in psychology\nfind_datasets(course_level = \"graduate\", discipline = \"psychology\")\n\n\nSearch by specific criteria\n# Search by statistical method\nsearch_by_method(\"multilevel_modeling\")\n\n# Search by teaching concept\nsearch_by_concept(\"confounding\")\n\n# Search by variable type\nsearch_by_variable(\"count\")\n\n\nLoad a dataset\n# Load a dataset by its ID\ntitanic &lt;- load_dataset(\"titanic-survival\")\nhead(titanic)\n\n# Load and start analysing immediately\nlibrary(statsdata)\nbusy &lt;- load_dataset(\"busy-wellbeing\")\n\n\nGet information about a dataset\nEach dataset has a full metadata entry — you can see the available datasets and their IDs using find_datasets(), then load the one you want with load_dataset()."
+  },
+  {
+    "objectID": "r-package.html#available-datasets",
+    "href": "r-package.html#available-datasets",
+    "title": "R Package",
+    "section": "Available datasets",
+    "text": "Available datasets\nSee the Browse Datasets page for the full filterable collection."
   },
   {
     "objectID": "about.html",
@@ -130,7 +151,35 @@
     "href": "contribute.html",
     "title": "Contribute a Dataset",
     "section": "",
-    "text": "Contribution guide coming soon."
+    "text": "StatsData Hub is an open community resource — contributions of new datasets are welcome and encouraged. Each dataset needs two things: a data file and a metadata description. Here’s how to add one."
+  },
+  {
+    "objectID": "contribute.html#what-makes-a-good-dataset-for-this-repository",
+    "href": "contribute.html#what-makes-a-good-dataset-for-this-repository",
+    "title": "Contribute a Dataset",
+    "section": "What makes a good dataset for this repository?",
+    "text": "What makes a good dataset for this repository?\nA good teaching dataset should:\n\nIllustrate one or more specific statistical methods clearly\nHave a meaningful real-world context students can engage with\nBe openly licensed (CC0, CC BY, or similar) so others can freely use it\nBe appropriate for classroom use (no sensitive personal data)\nCome with a citable source (published study, public repository, or well-known teaching dataset)"
+  },
+  {
+    "objectID": "contribute.html#step-by-step-contribution-guide",
+    "href": "contribute.html#step-by-step-contribution-guide",
+    "title": "Contribute a Dataset",
+    "section": "Step-by-step contribution guide",
+    "text": "Step-by-step contribution guide\n\n1. Fork the repository\nGo to github.com/emilysomerset/statsdata-hub and click Fork (top right). This creates your own copy of the project to work in.\n\n\n2. Add the data file\nPlace your cleaned dataset as a CSV file at:\ndata/clean//.csv\nFor example:\ndata/clean/titanic-survival/titanic-survival.csv\nIf the data required cleaning or processing, add your processing script at:\nscripts/process-.R\n\n\n3. Create a metadata YAML file\nCopy the template below and save it as:\nmetadata/datasets/.yaml\nFill in every field — the more complete the metadata, the more useful the dataset is for instructors searching for specific teaching needs.\nid: your-dataset-id\ntitle: \"Your Dataset Title\"\ndescription: &gt;\n  A clear description of what the dataset contains, where it came from,\n  and what it is commonly used to teach.\n\nsource:\n  citation: \"Author(s) (Year). Title. Journal/Source.\"\n  url: \"https://link-to-source.com\"\n  license: \"CC0-1.0\"\n\nfile: \"data/clean/your-dataset-id/your-dataset-id.csv\"\n\ndata_source_type: published_study  # or: classic_dataset, public_repository, simulated\n\nmethods: [logistic_regression]     # see full list below\nconcepts: [confounding]            # see full list below\nvariable_types: [binary, continuous]\ncourse_level: [introductory]       # introductory, intermediate, advanced_undergraduate, graduate\ndiscipline: [health]               # see full list below\n\ncharacteristics:\n  n_obs: 1000\n  n_vars: 10\n  missingness: false\n  survey_weights: false\n  longitudinal: false\n  hierarchical: false\n  cross_sectional: true\n\nteaching:\n  learning_objectives:\n    - \"Learning objective 1\"\n    - \"Learning objective 2\"\n  classroom_activities:\n    - \"Suggested activity 1\"\n  common_misconceptions:\n    - \"Common misconception 1\"\n\nvariables:\n  - name: column_name\n    type: continuous\n    description: \"What this variable measures\"\n\n\n4. Open a pull request\nOnce you’ve added the data file and YAML, open a pull request on GitHub. Describe what the dataset is and why it would be useful for teaching. A maintainer will review it and let you know if anything needs updating."
+  },
+  {
+    "objectID": "contribute.html#valid-metadata-values",
+    "href": "contribute.html#valid-metadata-values",
+    "title": "Contribute a Dataset",
+    "section": "Valid metadata values",
+    "text": "Valid metadata values\nStatistical methods: t_test, anova, linear_regression, logistic_regression, poisson_regression, survival_analysis, pca, clustering, survey_sampling, bayesian_methods, time_series, multilevel_modeling, factor_analysis, mixed_effects\nTeaching concepts: confounding, simpsons_paradox, missing_data, outliers, heteroskedasticity, multicollinearity, nonlinearity, selection_bias, clustered_observations, measurement_error, overdispersion\nDisciplines: health, biology, psychology, economics, sports, climate, education, survey_research, finance, politics"
+  },
+  {
+    "objectID": "contribute.html#questions",
+    "href": "contribute.html#questions",
+    "title": "Contribute a Dataset",
+    "section": "Questions?",
+    "text": "Questions?\nOpen an issue on GitHub and I’ll be happy to help."
   },
   {
     "objectID": "datasets/titanic-survival.html",
