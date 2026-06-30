@@ -2,14 +2,14 @@
 title: "Social Pressure to be Busy and Emotional Wellbeing"
 ---
 
-A daily diary study examining how social pressure to appear busy relates to emotional wellbeing. Data were collected from 261 participants over approximately 7 days each, yielding 1,827 person-day observations. Participants reported daily busyness, positive affect, negative affect, anxiety, and depressive symptoms, alongside person-level demographics, socioeconomic status, Big Five personality traits, and emotional complexity measures. Ideal for teaching multilevel modeling, within-person centering, and longitudinal data analysis.
+A seven-day daily diary study examining the relationship between daily perceived social pressure to be busy and emotional wellbeing across 261 participants. Multilevel modelling revealed that daily social pressure to be busy predicted daily negative affect, anxiety, and depressive symptoms at the within-person level. Trait emotional complexity acceptance moderated these relationships, with those lower on acceptance reporting significantly worse wellbeing on days they felt greater social pressure to be busy. Ideal for teaching multilevel modelling, within-person centering, and moderation in a longitudinal context.
 
 
 ## Source and Citation
 
-- **Citation**: Somerset et al. (in prep). Social pressure to be busy and emotional wellbeing.
-- **URL**: [https://researchbox.org](https://researchbox.org)
-- **License**: CC0-1.0
+- **Citation**: Lua VYQ, Majeed NM, Leung AK, Hartanto A. (2022). A daily within-person investigation on the link between social expectancies to be busy and emotional wellbeing: the moderating role of emotional complexity acceptance. Cognition and Emotion, 1-8. https://doi.org/10.1080/02699931.2022.2054778
+- **URL**: [https://researchbox.org/234](https://researchbox.org/234)
+- **License**: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
 
 ## Dataset Characteristics
 
