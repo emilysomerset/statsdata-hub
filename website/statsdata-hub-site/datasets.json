@@ -13,6 +13,19 @@
     "data_source_type": "published_study"
   },
   {
+    "id": "discrimination-cognitive",
+    "title": "Everyday Discrimination and Cognitive Failures (Singapore Daily Diary Study)",
+    "description": "A seven-day daily diary study examining the association between everyday discrimination and cognitive failures among 484 undergraduate students at Singapore universities (Study 1 from Majeed et al., 2023). Participants completed nightly questionnaires reporting daily discrimination experiences, cognitive failures, and daily stressor exposure, alongside person-level demographics and socioeconomic variables. Multilevel modelling revealed that experiencing discrimination was associated with poorer cognitive functioning at both within- and between-person levels, even after controlling for demographic covariates and daily stressor exposure. Ideal for teaching multilevel modelling, within-person centering, and the study of discrimination and cognitive health in a daily diary context.\n",
+    "methods": ["multilevel_modeling", "linear_regression"],
+    "concepts": ["clustered_observations", "confounding", "measurement_error"],
+    "variable_types": ["continuous", "binary", "ordinal", "count"],
+    "course_level": ["advanced_undergraduate", "graduate"],
+    "discipline": ["psychology"],
+    "n_obs": 3266,
+    "n_vars": 47,
+    "data_source_type": "published_study"
+  },
+  {
     "id": "epilepsy-seizures",
     "title": "Epilepsy Seizure Counts (Progabide Trial)",
     "description": "Longitudinal data from a clinical trial of the anti-epileptic drug progabide. Each of 59 patients was observed over 4 follow-up periods, with seizure counts recorded at each visit, alongside baseline seizure count and age. Commonly used to teach Poisson regression for count data with repeated measurements on the same subject.\n",

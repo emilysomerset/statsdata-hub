@@ -1,0 +1,207 @@
+id: discrimination-cognitive
+title: "Everyday Discrimination and Cognitive Failures (Singapore Daily Diary Study)"
+description: >
+  A seven-day daily diary study examining the association between everyday
+  discrimination and cognitive failures among 484 undergraduate students at
+  Singapore universities (Study 1 from Majeed et al., 2023). Participants
+  completed nightly questionnaires reporting daily discrimination experiences,
+  cognitive failures, and daily stressor exposure, alongside person-level
+  demographics and socioeconomic variables. Multilevel modelling revealed
+  that experiencing discrimination was associated with poorer cognitive
+  functioning at both within- and between-person levels, even after
+  controlling for demographic covariates and daily stressor exposure.
+  Ideal for teaching multilevel modelling, within-person centering, and
+  the study of discrimination and cognitive health in a daily diary context.
+
+source:
+  citation: "Majeed NM, Kasturiratna KS, Lua VY, Li MY, Hartanto A. (2023). Discrimination and cognitive failures in Singapore and the US: An investigation of between- and within-persons associations through multilevel modelling. International Journal of Intercultural Relations, 94, 101805. https://doi.org/10.1016/j.ijintrel.2023.101805"
+  researchbox: "Majeed, N., Kasturiratna, S., Lua, V., & Hartanto, A. (2025). ResearchBox 450, Discrimination & Cognitive Failures, https://ResearchBox.org/450. Zenodo. https://doi.org/10.5281/zenodo.15033000"
+  url: "https://researchbox.org/450"
+  license: "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+
+file: "data/clean/discrimination_cognitive/discrimination-cognitive.csv"
+
+data_source_type: published_study
+
+methods: [multilevel_modeling, linear_regression]
+concepts: [clustered_observations, confounding, measurement_error]
+variable_types: [continuous, binary, ordinal, count]
+course_level: [advanced_undergraduate, graduate]
+discipline: [psychology]
+
+characteristics:
+  n_obs: 3266
+  n_vars: 47
+  missingness: false
+  survey_weights: false
+  longitudinal: true
+  hierarchical: true
+  cross_sectional: false
+
+teaching:
+  learning_objectives:
+    - "Fit a multilevel model with both within- and between-person predictors"
+    - "Interpret fixed effects for discrimination on cognitive failures at the within- and between-person levels"
+    - "Explain the purpose of group mean centering in daily diary designs"
+    - "Control for confounds such as daily stressor exposure in a multilevel framework"
+  classroom_activities:
+    - "Compare a naive OLS regression ignoring clustering to a multilevel model and discuss what changes in the discrimination coefficient"
+    - "Visualize the within-person relationship between daily discrimination and daily cognitive failures across participants"
+  common_misconceptions:
+    - "Treating repeated daily observations from the same person as independent"
+    - "Confusing the within-person effect of discrimination (day-to-day fluctuations) with the between-person effect (average level across the study)"
+
+variables:
+  # --- Identifiers and study structure ---
+  - name: participantID
+    type: categorical
+    description: "Unique participant identifier"
+  - name: day
+    type: ordinal
+    description: "Study day number (1 to 7)"
+
+  # --- Demographics ---
+  - name: age
+    type: continuous
+    description: "Participant age in years"
+  - name: age.c10
+    type: continuous
+    description: "Age centered at 10-year intervals"
+  - name: female
+    type: binary
+    description: "Gender (1 = female, 0 = male)"
+  - name: female.f
+    type: categorical
+    description: "Gender as factor (YES = female, NO = male)"
+  - name: nonChinese
+    type: binary
+    description: "Ethnicity (0 = Chinese, 1 = non-Chinese)"
+  - name: nonChinese.f
+    type: categorical
+    description: "Ethnicity as factor (YES = non-Chinese, NO = Chinese)"
+
+  # --- Socioeconomic status ---
+  - name: sesInc
+    type: ordinal
+    description: "Household income bracket (1-6; higher values reflect higher household income)"
+  - name: sesInc.c
+    type: continuous
+    description: "Grand mean centred household income"
+  - name: sesLad
+    type: ordinal
+    description: "Subjective socioeconomic status in community (1 = lowest, 10 = highest)"
+  - name: sesLad.c
+    type: continuous
+    description: "Grand mean centred community ladder"
+
+  # --- Daily discrimination (composite and items) ---
+  - name: discrimination
+    type: continuous
+    description: "Daily discrimination composite score (mean of 9 items)"
+  - name: itemDisc1
+    type: ordinal
+    description: "[ITEM] Discrimination: You were treated with less courtesy or respect than other people"
+  - name: itemDisc2
+    type: ordinal
+    description: "[ITEM] Discrimination: You received poorer service than other people at restaurants or stores"
+  - name: itemDisc3
+    type: ordinal
+    description: "[ITEM] Discrimination: People acted as if they think you are not smart"
+  - name: itemDisc4
+    type: ordinal
+    description: "[ITEM] Discrimination: People acted as if they are afraid of you"
+  - name: itemDisc5
+    type: ordinal
+    description: "[ITEM] Discrimination: People acted as if they think you are dishonest"
+  - name: itemDisc6
+    type: ordinal
+    description: "[ITEM] Discrimination: People acted as if they are better than you"
+  - name: itemDisc7
+    type: ordinal
+    description: "[ITEM] Discrimination: You were called names or insulted"
+  - name: itemDisc8
+    type: ordinal
+    description: "[ITEM] Discrimination: You were threatened or harassed"
+  - name: itemDisc9
+    type: ordinal
+    description: "[ITEM] Discrimination: You were followed around in stores"
+
+  # --- Daily cognitive failures (composite and items) ---
+  - name: dayCogFail
+    type: continuous
+    description: "Daily cognitive failures composite score (mean of 13 items)"
+  - name: dayCogFail.m
+    type: continuous
+    description: "Person mean of dayCogFail (between-person component)"
+  - name: itemDayCogFail01
+    type: count
+    description: "[ITEM] Cognitive failure: Did not notice signposts when driving/walking"
+  - name: itemDayCogFail02
+    type: count
+    description: "[ITEM] Cognitive failure: Forgot the purpose of going somewhere"
+  - name: itemDayCogFail03
+    type: count
+    description: "[ITEM] Cognitive failure: Failed to notice something pointed out to you"
+  - name: itemDayCogFail04
+    type: count
+    description: "[ITEM] Cognitive failure: Accidentally threw away something you meant to keep"
+  - name: itemDayCogFail05
+    type: count
+    description: "[ITEM] Cognitive failure: Daydreamed when you should have been concentrating"
+  - name: itemDayCogFail06
+    type: count
+    description: "[ITEM] Cognitive failure: Forgot whether you had done something"
+  - name: itemDayCogFail07
+    type: count
+    description: "[ITEM] Cognitive failure: Failed to read information properly before proceeding"
+  - name: itemDayCogFail08
+    type: count
+    description: "[ITEM] Cognitive failure: Said something and later wondered if it made sense"
+  - name: itemDayCogFail09
+    type: count
+    description: "[ITEM] Cognitive failure: Failed to take notice of something on first reading"
+  - name: itemDayCogFail10
+    type: count
+    description: "[ITEM] Cognitive failure: Lost track of what you were saying mid-sentence"
+  - name: itemDayCogFail11
+    type: count
+    description: "[ITEM] Cognitive failure: Forgot an important appointment"
+  - name: itemDayCogFail12
+    type: count
+    description: "[ITEM] Cognitive failure: Had trouble concentrating on a task"
+  - name: itemDayCogFail13
+    type: count
+    description: "[ITEM] Cognitive failure: Forgot where you had put something"
+
+  # --- Daily stressor exposure (composite and items) ---
+  - name: dayStressorExp
+    type: binary
+    description: "Daily stressor exposure (1 = experienced at least one stressor, 0 = none)"
+  - name: dayStressorExp.m
+    type: continuous
+    description: "Person mean of dayStressorExp (between-person component)"
+  - name: dayStressorExp.f
+    type: categorical
+    description: "Daily stressor exposure as factor (YES/NO)"
+  - name: itemDayStressorArgue
+    type: binary
+    description: "[ITEM] Stressor: Had an argument or disagreement with someone"
+  - name: itemDayStressorAvoid
+    type: binary
+    description: "[ITEM] Stressor: Avoided someone to prevent an argument"
+  - name: itemDayStressorWork
+    type: binary
+    description: "[ITEM] Stressor: Had a work- or school-related stressor"
+  - name: itemDayStressorHome
+    type: binary
+    description: "[ITEM] Stressor: Had a home- or family-related stressor"
+  - name: itemDayStressorDiscrimination
+    type: binary
+    description: "[ITEM] Stressor: Experienced discrimination or prejudice"
+  - name: itemDayStressorNetwork
+    type: binary
+    description: "[ITEM] Stressor: Had a problem with a friend or member of your social network"
+  - name: itemDayStressorOther
+    type: binary
+    description: "[ITEM] Stressor: Experienced another stressor not listed above"
+  
