@@ -61,8 +61,3 @@ Each dataset needs:
 - `docs/` — built website (served by GitHub Pages)
 - `scripts/` — helper scripts (compile JSON, generate pages, rebuild)
 - `rebuild.R` — run this after adding or updating any dataset
-
-## 📄 License
-
-Code: [MIT License](LICENSE)  
-Dataset licenses vary — see each dataset's page for details.
