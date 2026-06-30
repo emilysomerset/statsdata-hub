@@ -14,6 +14,7 @@ data = FileAttachment("datasets.json").json()
 allMethods = [...new Set(data.flatMap(d => d.methods))]
 allConcepts = [...new Set(data.flatMap(d => d.concepts))]
 allDisciplines = [...new Set(data.flatMap(d => d.discipline))]
+allSourceTypes = [...new Set(data.flatMap(d => [d.data_source_type]))]
 ```
 
 ```{ojs}
@@ -42,10 +43,19 @@ viewof selectedDiscipline = Inputs.select(
 
 ```{ojs}
 //| echo: false
+viewof selectedSourceType = Inputs.select(
+  ["(All)", ...allSourceTypes],
+  { label: "Data source type" }
+)
+```
+
+```{ojs}
+//| echo: false
 filtered = data.filter(d =>
   (selectedMethod === "(All)" || d.methods.includes(selectedMethod)) &&
   (selectedConcept === "(All)" || d.concepts.includes(selectedConcept)) &&
-  (selectedDiscipline === "(All)" || d.discipline.includes(selectedDiscipline))
+  (selectedDiscipline === "(All)" || d.discipline.includes(selectedDiscipline)) &&
+  (selectedSourceType === "(All)" || d.data_source_type === selectedSourceType)
 )
 ```
 

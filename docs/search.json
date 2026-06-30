@@ -18,7 +18,7 @@
     "href": "datasets/busy-wellbeing.html",
     "title": "Social Pressure to be Busy and Emotional Wellbeing",
     "section": "",
-    "text": "A seven-day daily diary study examining the relationship between daily perceived social pressure to be busy and emotional wellbeing across 261 participants. Multilevel modelling revealed that daily social pressure to be busy predicted daily negative affect, anxiety, and depressive symptoms at the within-person level. Trait emotional complexity acceptance moderated these relationships, with those lower on acceptance reporting significantly worse wellbeing on days they felt greater social pressure to be busy. Ideal for teaching multilevel modelling, within-person centering, and moderation in a longitudinal context."
+    "text": "A daily diary study examining how social pressure to appear busy relates to emotional wellbeing. Data were collected from 261 participants over approximately 7 days each, yielding 1,827 person-day observations. Participants reported daily busyness, positive affect, negative affect, anxiety, and depressive symptoms, alongside person-level demographics, socioeconomic status, Big Five personality traits, and emotional complexity measures. Ideal for teaching multilevel modeling, within-person centering, and longitudinal data analysis."
   },
   {
     "objectID": "datasets/busy-wellbeing.html#source-and-citation",
@@ -60,7 +60,7 @@
     "href": "datasets/busy-wellbeing.html#common-student-misconceptions",
     "title": "Social Pressure to be Busy and Emotional Wellbeing",
     "section": "Common Student Misconceptions",
-    "text": "Common Student Misconceptions\n\nTreating repeated observations from the same person as independent\nConfusing within-person and between-person effects of busyness on wellbeing"
+    "text": "Common Student Misconceptions"
   },
   {
     "objectID": "datasets/busy-wellbeing.html#load-this-dataset-in-r",
@@ -207,6 +207,6 @@
     "href": "browse.html",
     "title": "Browse Datasets",
     "section": "",
-    "text": "Use the filters below to find datasets for your course.\n\ndata = FileAttachment(\"datasets.json\").json()\n\n\n\n\n\n\n\nallMethods = [...new Set(data.flatMap(d =&gt; d.methods))]\nallConcepts = [...new Set(data.flatMap(d =&gt; d.concepts))]\nallDisciplines = [...new Set(data.flatMap(d =&gt; d.discipline))]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof selectedMethod = Inputs.select(\n  [\"(All)\", ...allMethods],\n  { label: \"Statistical method\" }\n)\n\n\n\n\n\n\n\nviewof selectedConcept = Inputs.select(\n  [\"(All)\", ...allConcepts],\n  { label: \"Teaching concept\" }\n)\n\n\n\n\n\n\n\nviewof selectedDiscipline = Inputs.select(\n  [\"(All)\", ...allDisciplines],\n  { label: \"Discipline\" }\n)\n\n\n\n\n\n\n\nfiltered = data.filter(d =&gt;\n  (selectedMethod === \"(All)\" || d.methods.includes(selectedMethod)) &&\n  (selectedConcept === \"(All)\" || d.concepts.includes(selectedConcept)) &&\n  (selectedDiscipline === \"(All)\" || d.discipline.includes(selectedDiscipline))\n)\n\n\n\n\n\n\n\nInputs.table(filtered, {\n  columns: [\"id\", \"title\", \"methods\", \"concepts\", \"course_level\", \"discipline\", \"n_obs\"],\n  format: {\n    title: (t, i) =&gt; html`&lt;a href=\"datasets/${filtered[i].id}.html\"&gt;${t}&lt;/a&gt;`\n  }\n})"
+    "text": "Use the filters below to find datasets for your course.\n\ndata = FileAttachment(\"datasets.json\").json()\n\n\n\n\n\n\n\nallMethods = [...new Set(data.flatMap(d =&gt; d.methods))]\nallConcepts = [...new Set(data.flatMap(d =&gt; d.concepts))]\nallDisciplines = [...new Set(data.flatMap(d =&gt; d.discipline))]\nallSourceTypes = [...new Set(data.flatMap(d =&gt; [d.data_source_type]))]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof selectedMethod = Inputs.select(\n  [\"(All)\", ...allMethods],\n  { label: \"Statistical method\" }\n)\n\n\n\n\n\n\n\nviewof selectedConcept = Inputs.select(\n  [\"(All)\", ...allConcepts],\n  { label: \"Teaching concept\" }\n)\n\n\n\n\n\n\n\nviewof selectedDiscipline = Inputs.select(\n  [\"(All)\", ...allDisciplines],\n  { label: \"Discipline\" }\n)\n\n\n\n\n\n\n\nviewof selectedSourceType = Inputs.select(\n  [\"(All)\", ...allSourceTypes],\n  { label: \"Data source type\" }\n)\n\n\n\n\n\n\n\nfiltered = data.filter(d =&gt;\n  (selectedMethod === \"(All)\" || d.methods.includes(selectedMethod)) &&\n  (selectedConcept === \"(All)\" || d.concepts.includes(selectedConcept)) &&\n  (selectedDiscipline === \"(All)\" || d.discipline.includes(selectedDiscipline)) &&\n  (selectedSourceType === \"(All)\" || d.data_source_type === selectedSourceType)\n)\n\n\n\n\n\n\n\nInputs.table(filtered, {\n  columns: [\"id\", \"title\", \"methods\", \"concepts\", \"course_level\", \"discipline\", \"n_obs\"],\n  format: {\n    title: (t, i) =&gt; html`&lt;a href=\"datasets/${filtered[i].id}.html\"&gt;${t}&lt;/a&gt;`\n  }\n})"
   }
 ]

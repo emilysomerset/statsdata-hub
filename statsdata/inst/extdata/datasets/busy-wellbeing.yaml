@@ -1,15 +1,14 @@
 id: busy-wellbeing
 title: "Social Pressure to be Busy and Emotional Wellbeing"
 description: >
-  A seven-day daily diary study examining the relationship between daily
-  perceived social pressure to be busy and emotional wellbeing across 261
-  participants. Multilevel modelling revealed that daily social pressure to
-  be busy predicted daily negative affect, anxiety, and depressive symptoms
-  at the within-person level. Trait emotional complexity acceptance moderated
-  these relationships, with those lower on acceptance reporting significantly
-  worse wellbeing on days they felt greater social pressure to be busy.
-  Ideal for teaching multilevel modelling, within-person centering, and
-  moderation in a longitudinal context.
+  A daily diary study examining how social pressure to appear busy relates
+  to emotional wellbeing. Data were collected from 261 participants over
+  approximately 7 days each, yielding 1,827 person-day observations.
+  Participants reported daily busyness, positive affect, negative affect,
+  anxiety, and depressive symptoms, alongside person-level demographics,
+  socioeconomic status, Big Five personality traits, and emotional
+  complexity measures. Ideal for teaching multilevel modeling, within-person
+  centering, and longitudinal data analysis.
 
 source:
   citation: "Lua VYQ, Majeed NM, Leung AK, Hartanto A. (2022). A daily within-person investigation on the link between social expectancies to be busy and emotional wellbeing: the moderating role of emotional complexity acceptance. Cognition and Emotion, 1-8. https://doi.org/10.1080/02699931.2022.2054778"
@@ -24,6 +23,7 @@ concepts: [clustered_observations, missing_data, multicollinearity]
 variable_types: [continuous, ordinal, binary, count]
 course_level: [advanced_undergraduate, graduate]
 discipline: [psychology]
+data_source_type: published_study
 
 characteristics:
   n_obs: 1827
@@ -43,9 +43,6 @@ teaching:
   classroom_activities:
     - "Compare a naive OLS regression ignoring clustering to a multilevel model, and discuss what changes"
     - "Visualize within-person trajectories of busyness and affect across days"
-  common_misconceptions:
-    - "Treating repeated observations from the same person as independent"
-    - "Confusing within-person and between-person effects of busyness on wellbeing"
 
 variables:
   # --- Identifiers and study structure ---

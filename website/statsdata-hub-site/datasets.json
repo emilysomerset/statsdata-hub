@@ -2,14 +2,15 @@
   {
     "id": "busy-wellbeing",
     "title": "Social Pressure to be Busy and Emotional Wellbeing",
-    "description": "A seven-day daily diary study examining the relationship between daily perceived social pressure to be busy and emotional wellbeing across 261 participants. Multilevel modelling revealed that daily social pressure to be busy predicted daily negative affect, anxiety, and depressive symptoms at the within-person level. Trait emotional complexity acceptance moderated these relationships, with those lower on acceptance reporting significantly worse wellbeing on days they felt greater social pressure to be busy. Ideal for teaching multilevel modelling, within-person centering, and moderation in a longitudinal context.\n",
+    "description": "A daily diary study examining how social pressure to appear busy relates to emotional wellbeing. Data were collected from 261 participants over approximately 7 days each, yielding 1,827 person-day observations. Participants reported daily busyness, positive affect, negative affect, anxiety, and depressive symptoms, alongside person-level demographics, socioeconomic status, Big Five personality traits, and emotional complexity measures. Ideal for teaching multilevel modeling, within-person centering, and longitudinal data analysis.\n",
     "methods": ["multilevel_modeling", "linear_regression"],
     "concepts": ["clustered_observations", "missing_data", "multicollinearity"],
     "variable_types": ["continuous", "ordinal", "binary", "count"],
     "course_level": ["advanced_undergraduate", "graduate"],
     "discipline": ["psychology"],
     "n_obs": 1827,
-    "n_vars": 114
+    "n_vars": 114,
+    "data_source_type": "published_study"
   },
   {
     "id": "epilepsy-seizures",
@@ -21,7 +22,8 @@
     "course_level": ["intermediate", "advanced_undergraduate", "graduate"],
     "discipline": ["health"],
     "n_obs": 236,
-    "n_vars": 9
+    "n_vars": 9,
+    "data_source_type": "public_repository"
   },
   {
     "id": "titanic-survival",
@@ -33,6 +35,7 @@
     "course_level": ["introductory", "intermediate"],
     "discipline": ["health", "sports"],
     "n_obs": 891,
-    "n_vars": 12
+    "n_vars": 12,
+    "data_source_type": "classic_dataset"
   }
 ]

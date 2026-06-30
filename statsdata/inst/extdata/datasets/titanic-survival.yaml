@@ -17,6 +17,7 @@ concepts: [missing_data, confounding]
 variable_types: [binary, categorical, continuous, ordinal]
 course_level: [introductory, intermediate]
 discipline: [health, sports]
+data_source_type: classic_dataset
 
 characteristics:
   n_obs: 891

@@ -19,6 +19,7 @@ concepts: [clustered_observations, overdispersion]
 variable_types: [count, categorical, continuous]
 course_level: [intermediate, advanced_undergraduate, graduate]
 discipline: [health]
+data_source_type: public_repository
 
 characteristics:
   n_obs: 236

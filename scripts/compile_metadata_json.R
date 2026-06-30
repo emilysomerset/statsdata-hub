@@ -18,7 +18,8 @@ all_datasets <- lapply(files, function(f) {
     course_level = d$course_level,
     discipline = d$discipline,
     n_obs = unbox(d$characteristics$n_obs),
-    n_vars = unbox(d$characteristics$n_vars)
+    n_vars = unbox(d$characteristics$n_vars),
+    data_source_type = unbox(d$data_source_type)
   )
 })
 
