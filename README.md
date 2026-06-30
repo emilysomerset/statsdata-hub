@@ -51,16 +51,14 @@ Each dataset needs:
 
 ## 📁 Repository Structure
 
-statsdata-hub/
-├── metadata/datasets/    # one YAML file per dataset (the single source of truth)
-├── data/
-│   ├── raw/              # original unmodified data files
-│   └── clean/            # cleaned data files used by the package and website
-├── statsdata/            # R package source code
-├── website/              # Quarto website source
-├── docs/                 # built website (served by GitHub Pages)
-├── scripts/              # helper scripts (compile JSON, generate pages, rebuild)
-└── rebuild.R             # run this after adding/updating any dataset
+- `metadata/datasets/` — one YAML file per dataset (the single source of truth)
+- `data/raw/` — original unmodified data files
+- `data/clean/` — cleaned data files used by the package and website
+- `statsdata/` — R package source code
+- `website/` — Quarto website source
+- `docs/` — built website (served by GitHub Pages)
+- `scripts/` — helper scripts (compile JSON, generate pages, rebuild)
+- `rebuild.R` — run this after adding or updating any dataset
 
 ## 📄 License
 
