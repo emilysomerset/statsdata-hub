@@ -1,0 +1,91 @@
+id: gym-incentives
+title: "Friends with Health Benefits: Tandem vs. Individual Gym Incentives"
+description: >
+  Data from a field experiment (N=774) testing whether rewarding gym
+  attendance individually versus as a pair ("tandem") changes behavior.
+  In the standard condition, participants earned a cash reward for each
+  day they visited the gym. In the tandem condition, participants earned
+  the same reward only if they visited the gym together with an assigned
+  partner. Despite this extra hurdle, tandem-reward participants visited
+  the gym about 35% more frequently than those in the standard condition.
+  Data are in long format with weekly gym visit counts across a 10-week
+  pre-intervention baseline, 4-week intervention period, and 2-week
+  post-intervention follow-up. Ideal for teaching analysis of randomized
+  experiments, repeated measures, and pre/post intervention designs.
+
+source:
+  citation: "Gershon R, Cryder C, Milkman K. Friends with health benefits."
+  researchbox: "Gershon, R., & Milkman, K. (2025). ResearchBox 2266, Friends with Health Benefits, https://ResearchBox.org/2266. Zenodo. https://doi.org/10.5281/zenodo.15040048"
+  url: "https://researchbox.org/2266"
+  license: "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+
+file: "data/clean/gym_incentives/gym_incentives.csv"
+
+data_source_type: published_study
+
+methods: [t_test, anova, linear_regression, time_series]
+concepts: [clustered_observations, confounding]
+variable_types: [count, binary, categorical, ordinal]
+course_level: [intermediate, advanced_undergraduate]
+discipline: [health, economics]
+
+characteristics:
+  n_obs: 12384
+  n_vars: 12
+  missingness: false
+  survey_weights: false
+  longitudinal: true
+  hierarchical: true
+  cross_sectional: false
+
+teaching:
+  learning_objectives:
+    - "Analyze a randomized field experiment with a pre/during/post design"
+    - "Compare gym visit frequency between treatment conditions using a t-test or regression"
+    - "Account for repeated weekly observations within the same participant"
+    - "Use baseline (pre-intervention) behavior as a covariate to improve precision"
+  classroom_activities:
+    - "Compare average weekly visits between conditions during the intervention period only"
+    - "Plot weekly visit rates over time by condition to visualize the intervention effect"
+    - "Test whether the treatment effect differs by baseline exercise level (medianexer)"
+  common_misconceptions:
+    - "Ignoring that participants are paired (the 'pair' variable) within the tandem condition, which creates dependence between observations"
+    - "Comparing post-intervention averages without accounting for differences in baseline (pre-intervention) gym usage"
+
+variables:
+  - name: ppid
+    type: categorical
+    description: "Unique participant identifier"
+  - name: pair
+    type: categorical
+    description: "Identifier linking paired participants in the tandem condition"
+  - name: condition
+    type: categorical
+    description: "Assigned condition: standard (individual reward) or tandem (reward requires visiting with a partner)"
+  - name: week_char
+    type: categorical
+    description: "Original week label (e.g. pre10, pre1, 1-4, post1, post2)"
+  - name: week_visits
+    type: count
+    description: "Number of gym visits in that week"
+  - name: any_visit
+    type: binary
+    description: "Indicator for whether the participant visited the gym at all that week"
+  - name: week_num
+    type: ordinal
+    description: "Standardized week number: negative values are pre-intervention weeks (-10 to -1), 1-4 are intervention weeks, 5-6 are post-intervention weeks"
+  - name: pre_intervention
+    type: binary
+    description: "Indicator for the pre-intervention baseline period (10 weeks)"
+  - name: intervention
+    type: binary
+    description: "Indicator for the 4-week intervention period"
+  - name: post_intervention
+    type: binary
+    description: "Indicator for the 2-week post-intervention follow-up period"
+  - name: Gender
+    type: binary
+    description: "Participant gender"
+  - name: medianexer
+    type: categorical
+    description: "Whether the participant's pre-intervention average gym usage was above/equal to or below the sample median"

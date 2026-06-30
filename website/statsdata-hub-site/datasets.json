@@ -39,6 +39,19 @@
     "data_source_type": "public_repository"
   },
   {
+    "id": "gym-incentives",
+    "title": "Friends with Health Benefits: Tandem vs. Individual Gym Incentives",
+    "description": "Data from a field experiment (N=774) testing whether rewarding gym attendance individually versus as a pair (\"tandem\") changes behavior. In the standard condition, participants earned a cash reward for each day they visited the gym. In the tandem condition, participants earned the same reward only if they visited the gym together with an assigned partner. Despite this extra hurdle, tandem-reward participants visited the gym about 35% more frequently than those in the standard condition. Data are in long format with weekly gym visit counts across a 10-week pre-intervention baseline, 4-week intervention period, and 2-week post-intervention follow-up. Ideal for teaching analysis of randomized experiments, repeated measures, and pre/post intervention designs.\n",
+    "methods": ["t_test", "anova", "linear_regression", "time_series"],
+    "concepts": ["clustered_observations", "confounding"],
+    "variable_types": ["count", "binary", "categorical", "ordinal"],
+    "course_level": ["intermediate", "advanced_undergraduate"],
+    "discipline": ["health", "economics"],
+    "n_obs": 12384,
+    "n_vars": 12,
+    "data_source_type": "published_study"
+  },
+  {
     "id": "titanic-survival",
     "title": "Titanic Passenger Survival",
     "description": "Passenger-level data on the 1912 Titanic disaster, including age, sex, ticket class, and survival outcome. Widely used to introduce logistic regression, classification, and discussions of confounding.\n",

@@ -1,0 +1,62 @@
+---
+title: "Friends with Health Benefits: Tandem vs. Individual Gym Incentives"
+---
+
+Data from a field experiment (N=774) testing whether rewarding gym attendance individually versus as a pair ("tandem") changes behavior. In the standard condition, participants earned a cash reward for each day they visited the gym. In the tandem condition, participants earned the same reward only if they visited the gym together with an assigned partner. Despite this extra hurdle, tandem-reward participants visited the gym about 35% more frequently than those in the standard condition. Data are in long format with weekly gym visit counts across a 10-week pre-intervention baseline, 4-week intervention period, and 2-week post-intervention follow-up. Ideal for teaching analysis of randomized experiments, repeated measures, and pre/post intervention designs.
+
+
+## Source and Citation
+
+- **Citation**: Gershon R, Cryder C, Milkman K. Friends with health benefits.
+- **URL**: [https://researchbox.org/2266](https://researchbox.org/2266)
+- **License**: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+
+## Dataset Characteristics
+
+- **Observations**: 12384
+- **Variables**: 12
+- **Missingness present**: FALSE
+- **Longitudinal**: TRUE
+- **Hierarchical**: TRUE
+
+## Variable Dictionary
+
+| Variable | Type | Description |
+|----------|------|-------------|
+| ppid | categorical | Unique participant identifier |
+| pair | categorical | Identifier linking paired participants in the tandem condition |
+| condition | categorical | Assigned condition: standard (individual reward) or tandem (reward requires visiting with a partner) |
+| week_char | categorical | Original week label (e.g. pre10, pre1, 1-4, post1, post2) |
+| week_visits | count | Number of gym visits in that week |
+| any_visit | binary | Indicator for whether the participant visited the gym at all that week |
+| week_num | ordinal | Standardized week number: negative values are pre-intervention weeks (-10 to -1), 1-4 are intervention weeks, 5-6 are post-intervention weeks |
+| pre_intervention | binary | Indicator for the pre-intervention baseline period (10 weeks) |
+| intervention | binary | Indicator for the 4-week intervention period |
+| post_intervention | binary | Indicator for the 2-week post-intervention follow-up period |
+| Gender | binary | Participant gender |
+| medianexer | categorical | Whether the participant's pre-intervention average gym usage was above/equal to or below the sample median |
+
+## Suggested Learning Objectives
+
+- Analyze a randomized field experiment with a pre/during/post design
+- Compare gym visit frequency between treatment conditions using a t-test or regression
+- Account for repeated weekly observations within the same participant
+- Use baseline (pre-intervention) behavior as a covariate to improve precision
+
+## Suggested Classroom Activities
+
+- Compare average weekly visits between conditions during the intervention period only
+- Plot weekly visit rates over time by condition to visualize the intervention effect
+- Test whether the treatment effect differs by baseline exercise level (medianexer)
+
+## Common Student Misconceptions
+
+- Ignoring that participants are paired (the 'pair' variable) within the tandem condition, which creates dependence between observations
+- Comparing post-intervention averages without accounting for differences in baseline (pre-intervention) gym usage
+
+## Load This Dataset in R
+
+```r
+library(statsdata)
+data <- load_dataset("gym-incentives")
+```
