@@ -1,0 +1,75 @@
+---
+title: "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis"
+---
+
+A dataset of 3,915 Yelp reviews comparing consumer sentiment toward plant-based fast food menu items (e.g., "Impossible," "Beyond," "Sofritas") versus traditional meat-based controls (e.g., "Whopper," "Carnitas") within the same restaurant chains, spanning 7 fast-food chains and hundreds of unique locations. Reviews were scored using transformer-based sentiment analysis (RoBERTa) for sentiment valence, and a large language model extraction procedure flagged mentions of sensory attributes, texture, and environmental/ethical motivations. Using fixed-effects and linear mixed models to control for restaurant, user, and temporal heterogeneity, plant-based items were found to receive significantly higher star ratings (β=0.73) and more positive sentiment valence (β=0.33) than meat-based controls, an effect driven primarily by an "environmental halo" rather than superior sensory performance. Ideal for teaching mixed-effects models, fixed effects, text/sentiment data, and analysis of nested/clustered review data (reviews nested within users and within restaurant locations).
+
+
+## Source and Citation
+
+- **Citation**: Healey, P.M. (2026). Plant-based vs. meat-based: a comparative sentiment analysis of consumer reviews in fast food settings. Food Quality and Preference, 144, 105995. https://doi.org/10.1016/j.foodqual.2026.105995
+- **URL**: [https://www.sciencedirect.com/science/article/pii/S0950329326001497](https://www.sciencedirect.com/science/article/pii/S0950329326001497)
+- **License**: See publisher for reuse terms
+
+## Dataset Characteristics
+
+- **Observations**: 3915
+- **Variables**: 24
+- **Missingness present**: FALSE
+- **Longitudinal**: TRUE
+- **Hierarchical**: TRUE
+
+## Variable Dictionary
+
+| Variable | Type | Description |
+|----------|------|-------------|
+| review_id | categorical | A unique alphanumeric identifier assigned by Yelp to each individual review observation |
+| user_id | categorical | A unique identifier for the Yelp user, used as a random intercept in mixed-effects models to control for individual reviewer stringency or bias |
+| business_id | categorical | A unique identifier for the specific restaurant location, used to cluster standard errors and as a random intercept to account for store-level quality |
+| chain_key | categorical | A standardized, case-insensitive categorical variable used as a fixed effect to represent the parent restaurant franchise |
+| chain_name | categorical | The descriptive name of the restaurant chain (e.g., Burger King, Chipotle) |
+| city | categorical | The geographic city of the restaurant location, used as a high-dimensional fixed effect to control for local market heterogeneity |
+| state | spatial | The US state where the restaurant business is registered in the Yelp metadata |
+| stars | ordinal | The primary dependent variable: consumer's ordinal rating of the experience on a 1-to-5 scale |
+| date | date_time | Timestamp for the review (study window: January 1, 2010 to December 31, 2021) |
+| text | text | The raw prose of the review used for hierarchical keyword classification and transformer-based sentiment inference |
+| useful | count | Count of other users who voted the review as 'useful' |
+| funny | count | Count of other users who voted the review as 'funny' |
+| cool | count | Count of other users who voted the review as 'cool' |
+| item_label | categorical | Categorical assignment identifying whether a review belongs to the plant-based 'target' group or the meat-based 'control' group |
+| target_canonical | categorical | The specific plant-based term (e.g., 'impossible,' 'sofritas') detected in the text that triggered the target classification |
+| control_canonical | categorical | The specific meat-based term (e.g., 'chicken,' 'steak') detected when no target keywords were present |
+| sent_label | categorical | Discrete categorical sentiment output (Positive, Negative, or Neutral) from the RoBERTa sentiment classification model |
+| sent_score | continuous | Probability or confidence level associated with the sentiment label, ranging from 0 to 1 |
+| sent_valence | continuous | Continuous sentiment metric derived from the label and score, ranging from -1.0 to +1.0; the primary textual dependent variable |
+| sensory_mention | binary | Binary flag indicating presence of text related to physical food attributes (e.g., taste, flavor) |
+| texture_specific | binary | Binary flag identifying reviews that specifically discuss texture or mouthfeel (e.g., crispy, rubbery) |
+| environmental_mention | binary | Binary flag indicating mentions of sustainability, animal welfare, or ethical motivations; used to test the moral utility hypothesis |
+| target | binary | Binary numeric representation of item_label (1 = Target/plant-based, 0 = Control/meat-based), used as the primary independent variable |
+| month | date_time | Month and year of the review, used to control for seasonal shocks and longitudinal trends |
+
+## Suggested Learning Objectives
+
+- Fit a mixed-effects model with crossed random intercepts for user and restaurant location
+- Use fixed effects to control for chain, geography, and time
+- Work with text-derived sentiment scores as a continuous outcome variable
+- Test a mediation-style hypothesis: does an environmental mention explain the rating difference between plant-based and meat-based items?
+
+## Suggested Classroom Activities
+
+- Compare a naive regression of stars on item_label to a mixed-effects model accounting for user and restaurant clustering
+- Explore whether the plant-based rating advantage holds across different chains
+- Use environmental_mention and sensory_mention as predictors to test competing explanations for the rating gap
+
+## Common Student Misconceptions
+
+- Treating reviews from the same user or restaurant as independent observations
+- Assuming sentiment_score and sentiment_valence measure the same thing without checking how they are constructed
+- Interpreting a positive association between plant-based items and ratings as evidence of superior taste, without considering the environmental halo explanation
+
+## Load This Dataset in R
+
+```r
+library(statsdata)
+data <- load_dataset("plantbased-meat-reviews")
+```

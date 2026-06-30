@@ -1,0 +1,133 @@
+id: plantbased-meat-reviews
+title: "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis"
+description: >
+  A dataset of 3,915 Yelp reviews comparing consumer sentiment toward
+  plant-based fast food menu items (e.g., "Impossible," "Beyond,"
+  "Sofritas") versus traditional meat-based controls (e.g., "Whopper,"
+  "Carnitas") within the same restaurant chains, spanning 7 fast-food
+  chains and hundreds of unique locations. Reviews were scored using
+  transformer-based sentiment analysis (RoBERTa) for sentiment valence,
+  and a large language model extraction procedure flagged mentions of
+  sensory attributes, texture, and environmental/ethical motivations.
+  Using fixed-effects and linear mixed models to control for restaurant,
+  user, and temporal heterogeneity, plant-based items were found to
+  receive significantly higher star ratings (β=0.73) and more positive
+  sentiment valence (β=0.33) than meat-based controls, an effect driven
+  primarily by an "environmental halo" rather than superior sensory
+  performance. Ideal for teaching mixed-effects models, fixed effects,
+  text/sentiment data, and analysis of nested/clustered review data
+  (reviews nested within users and within restaurant locations).
+
+source:
+  citation: "Healey, P.M. (2026). Plant-based vs. meat-based: a comparative sentiment analysis of consumer reviews in fast food settings. Food Quality and Preference, 144, 105995. https://doi.org/10.1016/j.foodqual.2026.105995"
+  url: "https://www.sciencedirect.com/science/article/pii/S0950329326001497"
+  license: "See publisher for reuse terms"
+  researchbox: ResearchBox 4988
+
+file: "data/clean/plantbased_meat/final_analysis_dataset.csv"
+
+data_source_type: published_study
+
+methods: [mixed_effects, linear_regression, logistic_regression, time_series]
+concepts: [clustered_observations, confounding, nonlinearity]
+variable_types: [text, ordinal, binary, categorical, continuous, date_time, spatial]
+course_level: [advanced_undergraduate, graduate]
+discipline: [survey_research, economics]
+
+characteristics:
+  n_obs: 3915
+  n_vars: 24
+  missingness: false
+  survey_weights: false
+  longitudinal: true
+  hierarchical: true
+  cross_sectional: false
+
+teaching:
+  learning_objectives:
+    - "Fit a mixed-effects model with crossed random intercepts for user and restaurant location"
+    - "Use fixed effects to control for chain, geography, and time"
+    - "Work with text-derived sentiment scores as a continuous outcome variable"
+    - "Test a mediation-style hypothesis: does an environmental mention explain the rating difference between plant-based and meat-based items?"
+  classroom_activities:
+    - "Compare a naive regression of stars on item_label to a mixed-effects model accounting for user and restaurant clustering"
+    - "Explore whether the plant-based rating advantage holds across different chains"
+    - "Use environmental_mention and sensory_mention as predictors to test competing explanations for the rating gap"
+  common_misconceptions:
+    - "Treating reviews from the same user or restaurant as independent observations"
+    - "Assuming sentiment_score and sentiment_valence measure the same thing without checking how they are constructed"
+    - "Interpreting a positive association between plant-based items and ratings as evidence of superior taste, without considering the environmental halo explanation"
+
+variables:
+  - name: review_id
+    type: categorical
+    description: "A unique alphanumeric identifier assigned by Yelp to each individual review observation"
+  - name: user_id
+    type: categorical
+    description: "A unique identifier for the Yelp user, used as a random intercept in mixed-effects models to control for individual reviewer stringency or bias"
+  - name: business_id
+    type: categorical
+    description: "A unique identifier for the specific restaurant location, used to cluster standard errors and as a random intercept to account for store-level quality"
+  - name: chain_key
+    type: categorical
+    description: "A standardized, case-insensitive categorical variable used as a fixed effect to represent the parent restaurant franchise"
+  - name: chain_name
+    type: categorical
+    description: "The descriptive name of the restaurant chain (e.g., Burger King, Chipotle)"
+  - name: city
+    type: categorical
+    description: "The geographic city of the restaurant location, used as a high-dimensional fixed effect to control for local market heterogeneity"
+  - name: state
+    type: spatial
+    description: "The US state where the restaurant business is registered in the Yelp metadata"
+  - name: stars
+    type: ordinal
+    description: "The primary dependent variable: consumer's ordinal rating of the experience on a 1-to-5 scale"
+  - name: date
+    type: date_time
+    description: "Timestamp for the review (study window: January 1, 2010 to December 31, 2021)"
+  - name: text
+    type: text
+    description: "The raw prose of the review used for hierarchical keyword classification and transformer-based sentiment inference"
+  - name: useful
+    type: count
+    description: "Count of other users who voted the review as 'useful'"
+  - name: funny
+    type: count
+    description: "Count of other users who voted the review as 'funny'"
+  - name: cool
+    type: count
+    description: "Count of other users who voted the review as 'cool'"
+  - name: item_label
+    type: categorical
+    description: "Categorical assignment identifying whether a review belongs to the plant-based 'target' group or the meat-based 'control' group"
+  - name: target_canonical
+    type: categorical
+    description: "The specific plant-based term (e.g., 'impossible,' 'sofritas') detected in the text that triggered the target classification"
+  - name: control_canonical
+    type: categorical
+    description: "The specific meat-based term (e.g., 'chicken,' 'steak') detected when no target keywords were present"
+  - name: sent_label
+    type: categorical
+    description: "Discrete categorical sentiment output (Positive, Negative, or Neutral) from the RoBERTa sentiment classification model"
+  - name: sent_score
+    type: continuous
+    description: "Probability or confidence level associated with the sentiment label, ranging from 0 to 1"
+  - name: sent_valence
+    type: continuous
+    description: "Continuous sentiment metric derived from the label and score, ranging from -1.0 to +1.0; the primary textual dependent variable"
+  - name: sensory_mention
+    type: binary
+    description: "Binary flag indicating presence of text related to physical food attributes (e.g., taste, flavor)"
+  - name: texture_specific
+    type: binary
+    description: "Binary flag identifying reviews that specifically discuss texture or mouthfeel (e.g., crispy, rubbery)"
+  - name: environmental_mention
+    type: binary
+    description: "Binary flag indicating mentions of sustainability, animal welfare, or ethical motivations; used to test the moral utility hypothesis"
+  - name: target
+    type: binary
+    description: "Binary numeric representation of item_label (1 = Target/plant-based, 0 = Control/meat-based), used as the primary independent variable"
+  - name: month
+    type: date_time
+    description: "Month and year of the review, used to control for seasonal shocks and longitudinal trends"

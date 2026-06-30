@@ -52,6 +52,19 @@
     "data_source_type": "published_study"
   },
   {
+    "id": "plantbased-meat-reviews",
+    "title": "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis",
+    "description": "A dataset of 3,915 Yelp reviews comparing consumer sentiment toward plant-based fast food menu items (e.g., \"Impossible,\" \"Beyond,\" \"Sofritas\") versus traditional meat-based controls (e.g., \"Whopper,\" \"Carnitas\") within the same restaurant chains, spanning 7 fast-food chains and hundreds of unique locations. Reviews were scored using transformer-based sentiment analysis (RoBERTa) for sentiment valence, and a large language model extraction procedure flagged mentions of sensory attributes, texture, and environmental/ethical motivations. Using fixed-effects and linear mixed models to control for restaurant, user, and temporal heterogeneity, plant-based items were found to receive significantly higher star ratings (β=0.73) and more positive sentiment valence (β=0.33) than meat-based controls, an effect driven primarily by an \"environmental halo\" rather than superior sensory performance. Ideal for teaching mixed-effects models, fixed effects, text/sentiment data, and analysis of nested/clustered review data (reviews nested within users and within restaurant locations).\n",
+    "methods": ["mixed_effects", "linear_regression", "logistic_regression", "time_series"],
+    "concepts": ["clustered_observations", "confounding", "nonlinearity"],
+    "variable_types": ["text", "ordinal", "binary", "categorical", "continuous", "date_time", "spatial"],
+    "course_level": ["advanced_undergraduate", "graduate"],
+    "discipline": ["survey_research", "economics"],
+    "n_obs": 3915,
+    "n_vars": 24,
+    "data_source_type": "published_study"
+  },
+  {
     "id": "titanic-survival",
     "title": "Titanic Passenger Survival",
     "description": "Passenger-level data on the 1912 Titanic disaster, including age, sex, ticket class, and survival outcome. Widely used to introduce logistic regression, classification, and discussions of confounding.\n",

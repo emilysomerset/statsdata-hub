@@ -147,6 +147,97 @@
     "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"busy-wellbeing\")"
   },
   {
+    "objectID": "datasets/epilepsy-seizures.html",
+    "href": "datasets/epilepsy-seizures.html",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "",
+    "text": "Longitudinal data from a clinical trial of the anti-epileptic drug progabide. Each of 59 patients was observed over 4 follow-up periods, with seizure counts recorded at each visit, alongside baseline seizure count and age. Commonly used to teach Poisson regression for count data with repeated measurements on the same subject."
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#source-and-citation",
+    "href": "datasets/epilepsy-seizures.html#source-and-citation",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Source and Citation",
+    "text": "Source and Citation\n\nCitation: Thall and Vail (1990), distributed in the MASS R package\nURL: https://cran.r-project.org/web/packages/MASS/\nLicense: Available via the MASS package (part of base R distribution)"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#dataset-characteristics",
+    "href": "datasets/epilepsy-seizures.html#dataset-characteristics",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Dataset Characteristics",
+    "text": "Dataset Characteristics\n\nObservations: 236\nVariables: 9\nMissingness present: FALSE\nLongitudinal: TRUE\nHierarchical: TRUE"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#variable-dictionary",
+    "href": "datasets/epilepsy-seizures.html#variable-dictionary",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Variable Dictionary",
+    "text": "Variable Dictionary\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nTRUE\ncount\nNumber of seizures during the follow-up period\n\n\ntrt\ncategorical\nTreatment group: placebo or progabide\n\n\nbase\ncount\nBaseline seizure count (8 weeks prior to trial)\n\n\nage\ncontinuous\nPatient age in years\n\n\nV4\nbinary\nIndicator for the 4th (final) follow-up period\n\n\nsubject\ncategorical\nPatient identifier (1-59), repeated across 4 rows each\n\n\nperiod\nordinal\nFollow-up period number (1 to 4)\n\n\nlbase\ncontinuous\nLog-transformed, centered baseline seizure count\n\n\nlage\ncontinuous\nLog-transformed, centered age"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
+    "href": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Suggested Learning Objectives",
+    "text": "Suggested Learning Objectives\n\nFit a Poisson regression model for count outcomes\nRecognize the need to account for repeated measurements per subject\nCompare naive Poisson models to overdispersion-corrected alternatives"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
+    "href": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Suggested Classroom Activities",
+    "text": "Suggested Classroom Activities\n\nModel seizure counts as a function of treatment and baseline rate, ignoring then accounting for repeated measures"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#common-student-misconceptions",
+    "href": "datasets/epilepsy-seizures.html#common-student-misconceptions",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Common Student Misconceptions",
+    "text": "Common Student Misconceptions\n\nTreating each of the 4 visits per patient as an independent observation"
+  },
+  {
+    "objectID": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
+    "href": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "section": "Load This Dataset in R",
+    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"epilepsy-seizures\")"
+  },
+  {
+    "objectID": "contribute.html",
+    "href": "contribute.html",
+    "title": "Contribute a Dataset",
+    "section": "",
+    "text": "StatsData Hub is an open community resource — contributions of new datasets are welcome and encouraged. Each dataset needs two things: a data file and a metadata description. Here’s how to add one."
+  },
+  {
+    "objectID": "contribute.html#what-makes-a-good-dataset-for-this-repository",
+    "href": "contribute.html#what-makes-a-good-dataset-for-this-repository",
+    "title": "Contribute a Dataset",
+    "section": "What makes a good dataset for this repository?",
+    "text": "What makes a good dataset for this repository?\nA good teaching dataset should:\n\nIllustrate one or more specific statistical methods clearly\nHave a meaningful real-world context students can engage with\nBe openly licensed (CC0, CC BY, or similar) so others can freely use it\nBe appropriate for classroom use (no sensitive personal data)\nCome with a citable source (published study, public repository, or well-known teaching dataset)"
+  },
+  {
+    "objectID": "contribute.html#step-by-step-contribution-guide",
+    "href": "contribute.html#step-by-step-contribution-guide",
+    "title": "Contribute a Dataset",
+    "section": "Step-by-step contribution guide",
+    "text": "Step-by-step contribution guide\n\n1. Fork the repository\nGo to github.com/emilysomerset/statsdata-hub and click Fork (top right). This creates your own copy of the project to work in.\n\n\n2. Add the data file\nPlace your cleaned dataset as a CSV file at:\ndata/clean//.csv\nFor example:\ndata/clean/titanic-survival/titanic-survival.csv\nIf the data required cleaning or processing, add your processing script at:\nscripts/process-.R\n\n\n3. Create a metadata YAML file\nCopy the template below and save it as:\nmetadata/datasets/.yaml\nFill in every field — the more complete the metadata, the more useful the dataset is for instructors searching for specific teaching needs.\nid: your-dataset-id\ntitle: \"Your Dataset Title\"\ndescription: &gt;\n  A clear description of what the dataset contains, where it came from,\n  and what it is commonly used to teach.\n\nsource:\n  citation: \"Author(s) (Year). Title. Journal/Source.\"\n  url: \"https://link-to-source.com\"\n  license: \"CC0-1.0\"\n\nfile: \"data/clean/your-dataset-id/your-dataset-id.csv\"\n\ndata_source_type: published_study  # or: classic_dataset, public_repository, simulated\n\nmethods: [logistic_regression]     # see full list below\nconcepts: [confounding]            # see full list below\nvariable_types: [binary, continuous]\ncourse_level: [introductory]       # introductory, intermediate, advanced_undergraduate, graduate\ndiscipline: [health]               # see full list below\n\ncharacteristics:\n  n_obs: 1000\n  n_vars: 10\n  missingness: false\n  survey_weights: false\n  longitudinal: false\n  hierarchical: false\n  cross_sectional: true\n\nteaching:\n  learning_objectives:\n    - \"Learning objective 1\"\n    - \"Learning objective 2\"\n  classroom_activities:\n    - \"Suggested activity 1\"\n  common_misconceptions:\n    - \"Common misconception 1\"\n\nvariables:\n  - name: column_name\n    type: continuous\n    description: \"What this variable measures\"\n\n\n4. Open a pull request\nOnce you’ve added the data file and YAML, open a pull request on GitHub. Describe what the dataset is and why it would be useful for teaching. A maintainer will review it and let you know if anything needs updating."
+  },
+  {
+    "objectID": "contribute.html#valid-metadata-values",
+    "href": "contribute.html#valid-metadata-values",
+    "title": "Contribute a Dataset",
+    "section": "Valid metadata values",
+    "text": "Valid metadata values\nStatistical methods: t_test, anova, linear_regression, logistic_regression, poisson_regression, survival_analysis, pca, clustering, survey_sampling, bayesian_methods, time_series, multilevel_modeling, factor_analysis, mixed_effects\nTeaching concepts: confounding, simpsons_paradox, missing_data, outliers, heteroskedasticity, multicollinearity, nonlinearity, selection_bias, clustered_observations, measurement_error, overdispersion\nDisciplines: health, biology, psychology, economics, sports, climate, education, survey_research, finance, politics"
+  },
+  {
+    "objectID": "contribute.html#questions",
+    "href": "contribute.html#questions",
+    "title": "Contribute a Dataset",
+    "section": "Questions?",
+    "text": "Questions?\nOpen an issue on GitHub and I’ll be happy to help."
+  },
+  {
     "objectID": "datasets/titanic-survival.html",
     "href": "datasets/titanic-survival.html",
     "title": "Titanic Passenger Survival",
@@ -203,95 +294,60 @@
     "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"titanic-survival\")"
   },
   {
-    "objectID": "contribute.html",
-    "href": "contribute.html",
-    "title": "Contribute a Dataset",
+    "objectID": "datasets/plantbased-meat-reviews.html",
+    "href": "datasets/plantbased-meat-reviews.html",
+    "title": "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis",
     "section": "",
-    "text": "StatsData Hub is an open community resource — contributions of new datasets are welcome and encouraged. Each dataset needs two things: a data file and a metadata description. Here’s how to add one."
+    "text": "A dataset of 3,915 Yelp reviews comparing consumer sentiment toward plant-based fast food menu items (e.g., “Impossible,” “Beyond,” “Sofritas”) versus traditional meat-based controls (e.g., “Whopper,” “Carnitas”) within the same restaurant chains, spanning 7 fast-food chains and hundreds of unique locations. Reviews were scored using transformer-based sentiment analysis (RoBERTa) for sentiment valence, and a large language model extraction procedure flagged mentions of sensory attributes, texture, and environmental/ethical motivations. Using fixed-effects and linear mixed models to control for restaurant, user, and temporal heterogeneity, plant-based items were found to receive significantly higher star ratings (β=0.73) and more positive sentiment valence (β=0.33) than meat-based controls, an effect driven primarily by an “environmental halo” rather than superior sensory performance. Ideal for teaching mixed-effects models, fixed effects, text/sentiment data, and analysis of nested/clustered review data (reviews nested within users and within restaurant locations)."
   },
   {
-    "objectID": "contribute.html#what-makes-a-good-dataset-for-this-repository",
-    "href": "contribute.html#what-makes-a-good-dataset-for-this-repository",
-    "title": "Contribute a Dataset",
-    "section": "What makes a good dataset for this repository?",
-    "text": "What makes a good dataset for this repository?\nA good teaching dataset should:\n\nIllustrate one or more specific statistical methods clearly\nHave a meaningful real-world context students can engage with\nBe openly licensed (CC0, CC BY, or similar) so others can freely use it\nBe appropriate for classroom use (no sensitive personal data)\nCome with a citable source (published study, public repository, or well-known teaching dataset)"
-  },
-  {
-    "objectID": "contribute.html#step-by-step-contribution-guide",
-    "href": "contribute.html#step-by-step-contribution-guide",
-    "title": "Contribute a Dataset",
-    "section": "Step-by-step contribution guide",
-    "text": "Step-by-step contribution guide\n\n1. Fork the repository\nGo to github.com/emilysomerset/statsdata-hub and click Fork (top right). This creates your own copy of the project to work in.\n\n\n2. Add the data file\nPlace your cleaned dataset as a CSV file at:\ndata/clean//.csv\nFor example:\ndata/clean/titanic-survival/titanic-survival.csv\nIf the data required cleaning or processing, add your processing script at:\nscripts/process-.R\n\n\n3. Create a metadata YAML file\nCopy the template below and save it as:\nmetadata/datasets/.yaml\nFill in every field — the more complete the metadata, the more useful the dataset is for instructors searching for specific teaching needs.\nid: your-dataset-id\ntitle: \"Your Dataset Title\"\ndescription: &gt;\n  A clear description of what the dataset contains, where it came from,\n  and what it is commonly used to teach.\n\nsource:\n  citation: \"Author(s) (Year). Title. Journal/Source.\"\n  url: \"https://link-to-source.com\"\n  license: \"CC0-1.0\"\n\nfile: \"data/clean/your-dataset-id/your-dataset-id.csv\"\n\ndata_source_type: published_study  # or: classic_dataset, public_repository, simulated\n\nmethods: [logistic_regression]     # see full list below\nconcepts: [confounding]            # see full list below\nvariable_types: [binary, continuous]\ncourse_level: [introductory]       # introductory, intermediate, advanced_undergraduate, graduate\ndiscipline: [health]               # see full list below\n\ncharacteristics:\n  n_obs: 1000\n  n_vars: 10\n  missingness: false\n  survey_weights: false\n  longitudinal: false\n  hierarchical: false\n  cross_sectional: true\n\nteaching:\n  learning_objectives:\n    - \"Learning objective 1\"\n    - \"Learning objective 2\"\n  classroom_activities:\n    - \"Suggested activity 1\"\n  common_misconceptions:\n    - \"Common misconception 1\"\n\nvariables:\n  - name: column_name\n    type: continuous\n    description: \"What this variable measures\"\n\n\n4. Open a pull request\nOnce you’ve added the data file and YAML, open a pull request on GitHub. Describe what the dataset is and why it would be useful for teaching. A maintainer will review it and let you know if anything needs updating."
-  },
-  {
-    "objectID": "contribute.html#valid-metadata-values",
-    "href": "contribute.html#valid-metadata-values",
-    "title": "Contribute a Dataset",
-    "section": "Valid metadata values",
-    "text": "Valid metadata values\nStatistical methods: t_test, anova, linear_regression, logistic_regression, poisson_regression, survival_analysis, pca, clustering, survey_sampling, bayesian_methods, time_series, multilevel_modeling, factor_analysis, mixed_effects\nTeaching concepts: confounding, simpsons_paradox, missing_data, outliers, heteroskedasticity, multicollinearity, nonlinearity, selection_bias, clustered_observations, measurement_error, overdispersion\nDisciplines: health, biology, psychology, economics, sports, climate, education, survey_research, finance, politics"
-  },
-  {
-    "objectID": "contribute.html#questions",
-    "href": "contribute.html#questions",
-    "title": "Contribute a Dataset",
-    "section": "Questions?",
-    "text": "Questions?\nOpen an issue on GitHub and I’ll be happy to help."
-  },
-  {
-    "objectID": "datasets/epilepsy-seizures.html",
-    "href": "datasets/epilepsy-seizures.html",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
-    "section": "",
-    "text": "Longitudinal data from a clinical trial of the anti-epileptic drug progabide. Each of 59 patients was observed over 4 follow-up periods, with seizure counts recorded at each visit, alongside baseline seizure count and age. Commonly used to teach Poisson regression for count data with repeated measurements on the same subject."
-  },
-  {
-    "objectID": "datasets/epilepsy-seizures.html#source-and-citation",
-    "href": "datasets/epilepsy-seizures.html#source-and-citation",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/plantbased-meat-reviews.html#source-and-citation",
+    "href": "datasets/plantbased-meat-reviews.html#source-and-citation",
+    "title": "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis",
     "section": "Source and Citation",
-    "text": "Source and Citation\n\nCitation: Thall and Vail (1990), distributed in the MASS R package\nURL: https://cran.r-project.org/web/packages/MASS/\nLicense: Available via the MASS package (part of base R distribution)"
+    "text": "Source and Citation\n\nCitation: Healey, P.M. (2026). Plant-based vs. meat-based: a comparative sentiment analysis of consumer reviews in fast food settings. Food Quality and Preference, 144, 105995. https://doi.org/10.1016/j.foodqual.2026.105995\nURL: https://www.sciencedirect.com/science/article/pii/S0950329326001497\nLicense: See publisher for reuse terms"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#dataset-characteristics",
-    "href": "datasets/epilepsy-seizures.html#dataset-characteristics",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/plantbased-meat-reviews.html#dataset-characteristics",
+    "href": "datasets/plantbased-meat-reviews.html#dataset-characteristics",
+    "title": "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis",
     "section": "Dataset Characteristics",
-    "text": "Dataset Characteristics\n\nObservations: 236\nVariables: 9\nMissingness present: FALSE\nLongitudinal: TRUE\nHierarchical: TRUE"
+    "text": "Dataset Characteristics\n\nObservations: 3915\nVariables: 24\nMissingness present: FALSE\nLongitudinal: TRUE\nHierarchical: TRUE"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#variable-dictionary",
-    "href": "datasets/epilepsy-seizures.html#variable-dictionary",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/plantbased-meat-reviews.html#variable-dictionary",
+    "href": "datasets/plantbased-meat-reviews.html#variable-dictionary",
+    "title": "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis",
     "section": "Variable Dictionary",
-    "text": "Variable Dictionary\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nTRUE\ncount\nNumber of seizures during the follow-up period\n\n\ntrt\ncategorical\nTreatment group: placebo or progabide\n\n\nbase\ncount\nBaseline seizure count (8 weeks prior to trial)\n\n\nage\ncontinuous\nPatient age in years\n\n\nV4\nbinary\nIndicator for the 4th (final) follow-up period\n\n\nsubject\ncategorical\nPatient identifier (1-59), repeated across 4 rows each\n\n\nperiod\nordinal\nFollow-up period number (1 to 4)\n\n\nlbase\ncontinuous\nLog-transformed, centered baseline seizure count\n\n\nlage\ncontinuous\nLog-transformed, centered age"
+    "text": "Variable Dictionary\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nreview_id\ncategorical\nA unique alphanumeric identifier assigned by Yelp to each individual review observation\n\n\nuser_id\ncategorical\nA unique identifier for the Yelp user, used as a random intercept in mixed-effects models to control for individual reviewer stringency or bias\n\n\nbusiness_id\ncategorical\nA unique identifier for the specific restaurant location, used to cluster standard errors and as a random intercept to account for store-level quality\n\n\nchain_key\ncategorical\nA standardized, case-insensitive categorical variable used as a fixed effect to represent the parent restaurant franchise\n\n\nchain_name\ncategorical\nThe descriptive name of the restaurant chain (e.g., Burger King, Chipotle)\n\n\ncity\ncategorical\nThe geographic city of the restaurant location, used as a high-dimensional fixed effect to control for local market heterogeneity\n\n\nstate\nspatial\nThe US state where the restaurant business is registered in the Yelp metadata\n\n\nstars\nordinal\nThe primary dependent variable: consumer’s ordinal rating of the experience on a 1-to-5 scale\n\n\ndate\ndate_time\nTimestamp for the review (study window: January 1, 2010 to December 31, 2021)\n\n\ntext\ntext\nThe raw prose of the review used for hierarchical keyword classification and transformer-based sentiment inference\n\n\nuseful\ncount\nCount of other users who voted the review as ‘useful’\n\n\nfunny\ncount\nCount of other users who voted the review as ‘funny’\n\n\ncool\ncount\nCount of other users who voted the review as ‘cool’\n\n\nitem_label\ncategorical\nCategorical assignment identifying whether a review belongs to the plant-based ‘target’ group or the meat-based ‘control’ group\n\n\ntarget_canonical\ncategorical\nThe specific plant-based term (e.g., ‘impossible,’ ‘sofritas’) detected in the text that triggered the target classification\n\n\ncontrol_canonical\ncategorical\nThe specific meat-based term (e.g., ‘chicken,’ ‘steak’) detected when no target keywords were present\n\n\nsent_label\ncategorical\nDiscrete categorical sentiment output (Positive, Negative, or Neutral) from the RoBERTa sentiment classification model\n\n\nsent_score\ncontinuous\nProbability or confidence level associated with the sentiment label, ranging from 0 to 1\n\n\nsent_valence\ncontinuous\nContinuous sentiment metric derived from the label and score, ranging from -1.0 to +1.0; the primary textual dependent variable\n\n\nsensory_mention\nbinary\nBinary flag indicating presence of text related to physical food attributes (e.g., taste, flavor)\n\n\ntexture_specific\nbinary\nBinary flag identifying reviews that specifically discuss texture or mouthfeel (e.g., crispy, rubbery)\n\n\nenvironmental_mention\nbinary\nBinary flag indicating mentions of sustainability, animal welfare, or ethical motivations; used to test the moral utility hypothesis\n\n\ntarget\nbinary\nBinary numeric representation of item_label (1 = Target/plant-based, 0 = Control/meat-based), used as the primary independent variable\n\n\nmonth\ndate_time\nMonth and year of the review, used to control for seasonal shocks and longitudinal trends"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
-    "href": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/plantbased-meat-reviews.html#suggested-learning-objectives",
+    "href": "datasets/plantbased-meat-reviews.html#suggested-learning-objectives",
+    "title": "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis",
     "section": "Suggested Learning Objectives",
-    "text": "Suggested Learning Objectives\n\nFit a Poisson regression model for count outcomes\nRecognize the need to account for repeated measurements per subject\nCompare naive Poisson models to overdispersion-corrected alternatives"
+    "text": "Suggested Learning Objectives\n\nFit a mixed-effects model with crossed random intercepts for user and restaurant location\nUse fixed effects to control for chain, geography, and time\nWork with text-derived sentiment scores as a continuous outcome variable\nTest a mediation-style hypothesis: does an environmental mention explain the rating difference between plant-based and meat-based items?"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
-    "href": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/plantbased-meat-reviews.html#suggested-classroom-activities",
+    "href": "datasets/plantbased-meat-reviews.html#suggested-classroom-activities",
+    "title": "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis",
     "section": "Suggested Classroom Activities",
-    "text": "Suggested Classroom Activities\n\nModel seizure counts as a function of treatment and baseline rate, ignoring then accounting for repeated measures"
+    "text": "Suggested Classroom Activities\n\nCompare a naive regression of stars on item_label to a mixed-effects model accounting for user and restaurant clustering\nExplore whether the plant-based rating advantage holds across different chains\nUse environmental_mention and sensory_mention as predictors to test competing explanations for the rating gap"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#common-student-misconceptions",
-    "href": "datasets/epilepsy-seizures.html#common-student-misconceptions",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/plantbased-meat-reviews.html#common-student-misconceptions",
+    "href": "datasets/plantbased-meat-reviews.html#common-student-misconceptions",
+    "title": "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis",
     "section": "Common Student Misconceptions",
-    "text": "Common Student Misconceptions\n\nTreating each of the 4 visits per patient as an independent observation"
+    "text": "Common Student Misconceptions\n\nTreating reviews from the same user or restaurant as independent observations\nAssuming sentiment_score and sentiment_valence measure the same thing without checking how they are constructed\nInterpreting a positive association between plant-based items and ratings as evidence of superior taste, without considering the environmental halo explanation"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
-    "href": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/plantbased-meat-reviews.html#load-this-dataset-in-r",
+    "href": "datasets/plantbased-meat-reviews.html#load-this-dataset-in-r",
+    "title": "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis",
     "section": "Load This Dataset in R",
-    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"epilepsy-seizures\")"
+    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"plantbased-meat-reviews\")"
   },
   {
     "objectID": "datasets/discrimination-cognitive.html",
