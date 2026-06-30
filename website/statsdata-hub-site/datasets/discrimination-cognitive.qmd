@@ -36,40 +36,40 @@ A seven-day daily diary study examining the association between everyday discrim
 | sesLad | ordinal | Subjective socioeconomic status in community (1 = lowest, 10 = highest) |
 | sesLad.c | continuous | Grand mean centred community ladder |
 | discrimination | continuous | Daily discrimination composite score (mean of 9 items) |
-| itemDisc1 | ordinal | [ITEM] Discrimination: You were treated with less courtesy or respect than other people |
-| itemDisc2 | ordinal | [ITEM] Discrimination: You received poorer service than other people at restaurants or stores |
-| itemDisc3 | ordinal | [ITEM] Discrimination: People acted as if they think you are not smart |
-| itemDisc4 | ordinal | [ITEM] Discrimination: People acted as if they are afraid of you |
-| itemDisc5 | ordinal | [ITEM] Discrimination: People acted as if they think you are dishonest |
-| itemDisc6 | ordinal | [ITEM] Discrimination: People acted as if they are better than you |
-| itemDisc7 | ordinal | [ITEM] Discrimination: You were called names or insulted |
-| itemDisc8 | ordinal | [ITEM] Discrimination: You were threatened or harassed |
-| itemDisc9 | ordinal | [ITEM] Discrimination: You were followed around in stores |
+| itemDisc1 | ordinal | [ITEM] Discrimination (1=never, 4=often): You were treated with less courtesy or respect than other people |
+| itemDisc2 | ordinal | [ITEM] Discrimination (1=never, 4=often): You received poorer service than other people at restaurants or stores |
+| itemDisc3 | ordinal | [ITEM] Discrimination (1=never, 4=often): People acted as if they think you are not smart |
+| itemDisc4 | ordinal | [ITEM] Discrimination (1=never, 4=often): People acted as if they are afraid of you |
+| itemDisc5 | ordinal | [ITEM] Discrimination (1=never, 4=often): People acted as if they think you are dishonest |
+| itemDisc6 | ordinal | [ITEM] Discrimination (1=never, 4=often): People acted as if they are better than you |
+| itemDisc7 | ordinal | [ITEM] Discrimination (1=never, 4=often): You were called names or insulted |
+| itemDisc8 | ordinal | [ITEM] Discrimination (1=never, 4=often): You were threatened or harassed |
+| itemDisc9 | ordinal | [ITEM] Discrimination (1=never, 4=often): You were followed around in stores |
 | dayCogFail | continuous | Daily cognitive failures composite score (mean of 13 items) |
 | dayCogFail.m | continuous | Person mean of dayCogFail (between-person component) |
-| itemDayCogFail01 | count | [ITEM] Cognitive failure: Did not notice signposts when driving/walking |
-| itemDayCogFail02 | count | [ITEM] Cognitive failure: Forgot the purpose of going somewhere |
-| itemDayCogFail03 | count | [ITEM] Cognitive failure: Failed to notice something pointed out to you |
-| itemDayCogFail04 | count | [ITEM] Cognitive failure: Accidentally threw away something you meant to keep |
-| itemDayCogFail05 | count | [ITEM] Cognitive failure: Daydreamed when you should have been concentrating |
-| itemDayCogFail06 | count | [ITEM] Cognitive failure: Forgot whether you had done something |
-| itemDayCogFail07 | count | [ITEM] Cognitive failure: Failed to read information properly before proceeding |
-| itemDayCogFail08 | count | [ITEM] Cognitive failure: Said something and later wondered if it made sense |
-| itemDayCogFail09 | count | [ITEM] Cognitive failure: Failed to take notice of something on first reading |
-| itemDayCogFail10 | count | [ITEM] Cognitive failure: Lost track of what you were saying mid-sentence |
-| itemDayCogFail11 | count | [ITEM] Cognitive failure: Forgot an important appointment |
-| itemDayCogFail12 | count | [ITEM] Cognitive failure: Had trouble concentrating on a task |
-| itemDayCogFail13 | count | [ITEM] Cognitive failure: Forgot where you had put something |
+| itemDayCogFail01 | count | [ITEM] Cognitive failure (0=never, 3=many times): Did not notice signposts when driving/walking |
+| itemDayCogFail02 | count | [ITEM] Cognitive failure (0=never, 3=many times): Forgot the purpose of going somewhere |
+| itemDayCogFail03 | count | [ITEM] Cognitive failure (0=never, 3=many times): Failed to notice something pointed out to you |
+| itemDayCogFail04 | count | [ITEM] Cognitive failure (0=never, 3=many times): Accidentally threw away something you meant to keep |
+| itemDayCogFail05 | count | [ITEM] Cognitive failure (0=never, 3=many times): Daydreamed when you should have been concentrating |
+| itemDayCogFail06 | count | [ITEM] Cognitive failure (0=never, 3=many times): Forgot whether you had done something |
+| itemDayCogFail07 | count | [ITEM] Cognitive failure (0=never, 3=many times): Failed to read information properly before proceeding |
+| itemDayCogFail08 | count | [ITEM] Cognitive failure (0=never, 3=many times): Said something and later wondered if it made sense |
+| itemDayCogFail09 | count | [ITEM] Cognitive failure (0=never, 3=many times): Failed to take notice of something on first reading |
+| itemDayCogFail10 | count | [ITEM] Cognitive failure (0=never, 3=many times): Lost track of what you were saying mid-sentence |
+| itemDayCogFail11 | count | [ITEM] Cognitive failure (0=never, 3=many times): Forgot an important appointment |
+| itemDayCogFail12 | count | [ITEM] Cognitive failure (0=never, 3=many times): Had trouble concentrating on a task |
+| itemDayCogFail13 | count | [ITEM] Cognitive failure (0=never, 3=many times): Forgot where you had put something |
 | dayStressorExp | binary | Daily stressor exposure (1 = experienced at least one stressor, 0 = none) |
 | dayStressorExp.m | continuous | Person mean of dayStressorExp (between-person component) |
 | dayStressorExp.f | categorical | Daily stressor exposure as factor (YES/NO) |
-| itemDayStressorArgue | binary | [ITEM] Stressor: Had an argument or disagreement with someone |
-| itemDayStressorAvoid | binary | [ITEM] Stressor: Avoided someone to prevent an argument |
-| itemDayStressorWork | binary | [ITEM] Stressor: Had a work- or school-related stressor |
-| itemDayStressorHome | binary | [ITEM] Stressor: Had a home- or family-related stressor |
-| itemDayStressorDiscrimination | binary | [ITEM] Stressor: Experienced discrimination or prejudice |
-| itemDayStressorNetwork | binary | [ITEM] Stressor: Had a problem with a friend or member of your social network |
-| itemDayStressorOther | binary | [ITEM] Stressor: Experienced another stressor not listed above |
+| itemDayStressorArgue | binary | [ITEM] Stressor (0=no, 1=yes): Had an argument or disagreement with someone |
+| itemDayStressorAvoid | binary | [ITEM] Stressor (0=no, 1=yes): Avoided someone to prevent an argument |
+| itemDayStressorWork | binary | [ITEM] Stressor (0=no, 1=yes): Had a work- or school-related stressor |
+| itemDayStressorHome | binary | [ITEM] Stressor (0=no, 1=yes): Had a home- or family-related stressor |
+| itemDayStressorDiscrimination | binary | [ITEM] Stressor (0=no, 1=yes): Experienced discrimination or prejudice |
+| itemDayStressorNetwork | binary | [ITEM] Stressor (0=no, 1=yes): Had a problem with a friend or member of your social network |
+| itemDayStressorOther | binary | [ITEM] Stressor (0=no, 1=yes): Experienced another stressor not listed above |
 
 ## Suggested Learning Objectives
 

@@ -100,31 +100,31 @@ variables:
     description: "Daily discrimination composite score (mean of 9 items)"
   - name: itemDisc1
     type: ordinal
-    description: "[ITEM] Discrimination: You were treated with less courtesy or respect than other people"
+    description: "[ITEM] Discrimination (1=never, 4=often): You were treated with less courtesy or respect than other people"
   - name: itemDisc2
     type: ordinal
-    description: "[ITEM] Discrimination: You received poorer service than other people at restaurants or stores"
+    description: "[ITEM] Discrimination (1=never, 4=often): You received poorer service than other people at restaurants or stores"
   - name: itemDisc3
     type: ordinal
-    description: "[ITEM] Discrimination: People acted as if they think you are not smart"
+    description: "[ITEM] Discrimination (1=never, 4=often): People acted as if they think you are not smart"
   - name: itemDisc4
     type: ordinal
-    description: "[ITEM] Discrimination: People acted as if they are afraid of you"
+    description: "[ITEM] Discrimination (1=never, 4=often): People acted as if they are afraid of you"
   - name: itemDisc5
     type: ordinal
-    description: "[ITEM] Discrimination: People acted as if they think you are dishonest"
+    description: "[ITEM] Discrimination (1=never, 4=often): People acted as if they think you are dishonest"
   - name: itemDisc6
     type: ordinal
-    description: "[ITEM] Discrimination: People acted as if they are better than you"
+    description: "[ITEM] Discrimination (1=never, 4=often): People acted as if they are better than you"
   - name: itemDisc7
     type: ordinal
-    description: "[ITEM] Discrimination: You were called names or insulted"
+    description: "[ITEM] Discrimination (1=never, 4=often): You were called names or insulted"
   - name: itemDisc8
     type: ordinal
-    description: "[ITEM] Discrimination: You were threatened or harassed"
+    description: "[ITEM] Discrimination (1=never, 4=often): You were threatened or harassed"
   - name: itemDisc9
     type: ordinal
-    description: "[ITEM] Discrimination: You were followed around in stores"
+    description: "[ITEM] Discrimination (1=never, 4=often): You were followed around in stores"
 
   # --- Daily cognitive failures (composite and items) ---
   - name: dayCogFail
@@ -135,43 +135,43 @@ variables:
     description: "Person mean of dayCogFail (between-person component)"
   - name: itemDayCogFail01
     type: count
-    description: "[ITEM] Cognitive failure: Did not notice signposts when driving/walking"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Did not notice signposts when driving/walking"
   - name: itemDayCogFail02
     type: count
-    description: "[ITEM] Cognitive failure: Forgot the purpose of going somewhere"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Forgot the purpose of going somewhere"
   - name: itemDayCogFail03
     type: count
-    description: "[ITEM] Cognitive failure: Failed to notice something pointed out to you"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Failed to notice something pointed out to you"
   - name: itemDayCogFail04
     type: count
-    description: "[ITEM] Cognitive failure: Accidentally threw away something you meant to keep"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Accidentally threw away something you meant to keep"
   - name: itemDayCogFail05
     type: count
-    description: "[ITEM] Cognitive failure: Daydreamed when you should have been concentrating"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Daydreamed when you should have been concentrating"
   - name: itemDayCogFail06
     type: count
-    description: "[ITEM] Cognitive failure: Forgot whether you had done something"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Forgot whether you had done something"
   - name: itemDayCogFail07
     type: count
-    description: "[ITEM] Cognitive failure: Failed to read information properly before proceeding"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Failed to read information properly before proceeding"
   - name: itemDayCogFail08
     type: count
-    description: "[ITEM] Cognitive failure: Said something and later wondered if it made sense"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Said something and later wondered if it made sense"
   - name: itemDayCogFail09
     type: count
-    description: "[ITEM] Cognitive failure: Failed to take notice of something on first reading"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Failed to take notice of something on first reading"
   - name: itemDayCogFail10
     type: count
-    description: "[ITEM] Cognitive failure: Lost track of what you were saying mid-sentence"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Lost track of what you were saying mid-sentence"
   - name: itemDayCogFail11
     type: count
-    description: "[ITEM] Cognitive failure: Forgot an important appointment"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Forgot an important appointment"
   - name: itemDayCogFail12
     type: count
-    description: "[ITEM] Cognitive failure: Had trouble concentrating on a task"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Had trouble concentrating on a task"
   - name: itemDayCogFail13
     type: count
-    description: "[ITEM] Cognitive failure: Forgot where you had put something"
+    description: "[ITEM] Cognitive failure (0=never, 3=many times): Forgot where you had put something"
 
   # --- Daily stressor exposure (composite and items) ---
   - name: dayStressorExp
@@ -185,22 +185,22 @@ variables:
     description: "Daily stressor exposure as factor (YES/NO)"
   - name: itemDayStressorArgue
     type: binary
-    description: "[ITEM] Stressor: Had an argument or disagreement with someone"
+    description: "[ITEM] Stressor (0=no, 1=yes): Had an argument or disagreement with someone"
   - name: itemDayStressorAvoid
     type: binary
-    description: "[ITEM] Stressor: Avoided someone to prevent an argument"
+    description: "[ITEM] Stressor (0=no, 1=yes): Avoided someone to prevent an argument"
   - name: itemDayStressorWork
     type: binary
-    description: "[ITEM] Stressor: Had a work- or school-related stressor"
+    description: "[ITEM] Stressor (0=no, 1=yes): Had a work- or school-related stressor"
   - name: itemDayStressorHome
     type: binary
-    description: "[ITEM] Stressor: Had a home- or family-related stressor"
+    description: "[ITEM] Stressor (0=no, 1=yes): Had a home- or family-related stressor"
   - name: itemDayStressorDiscrimination
     type: binary
-    description: "[ITEM] Stressor: Experienced discrimination or prejudice"
+    description: "[ITEM] Stressor (0=no, 1=yes): Experienced discrimination or prejudice"
   - name: itemDayStressorNetwork
     type: binary
-    description: "[ITEM] Stressor: Had a problem with a friend or member of your social network"
+    description: "[ITEM] Stressor (0=no, 1=yes): Had a problem with a friend or member of your social network"
   - name: itemDayStressorOther
     type: binary
-    description: "[ITEM] Stressor: Experienced another stressor not listed above"
+    description: "[ITEM] Stressor (0=no, 1=yes): Experienced another stressor not listed above"
