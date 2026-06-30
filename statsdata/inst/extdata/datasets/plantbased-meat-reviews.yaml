@@ -13,9 +13,8 @@ description: >
   user, and temporal heterogeneity, plant-based items were found to
   receive significantly higher star ratings (β=0.73) and more positive
   sentiment valence (β=0.33) than meat-based controls, an effect driven
-  primarily by an "environmental halo" rather than superior sensory
-  performance. Ideal for teaching mixed-effects models, fixed effects,
-  text/sentiment data, and analysis of nested/clustered review data
+  primarily by moral utility rather than superior sensory
+  performance. Ideal for teaching mixed-effects models, text/sentiment data, and analysis of nested/clustered review data
   (reviews nested within users and within restaurant locations).
 
 source:

@@ -14,6 +14,11 @@ cat("Step 2: Generating dataset pages...\n")
 source("scripts/generate_dataset_pages.R")
 cat("Done.\n\n")
 
+# --- Step 2b: Generate R documentation for datasets ---
+cat("Step 2b: Generating R help pages for datasets...\n")
+source("scripts/generate_dataset_docs.R")
+cat("Done.\n\n")
+
 # --- Step 3: Copy all YAMLs into package ---
 cat("Step 3: Copying metadata into R package...\n")
 yaml_files <- list.files(
