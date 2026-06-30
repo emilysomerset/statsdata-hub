@@ -40,6 +40,8 @@ titanic <- load_dataset("titanic-survival")
 | [Epilepsy Seizure Counts](https://emilysomerset.github.io/statsdata-hub/datasets/epilepsy-seizures.html) | Poisson regression | Intermediate | Public repository |
 | [Social Pressure to be Busy and Emotional Wellbeing](https://emilysomerset.github.io/statsdata-hub/datasets/busy-wellbeing.html) | Multilevel modelling | Graduate | Published study |
 | [Everyday Discrimination and Cognitive Failures](https://emilysomerset.github.io/statsdata-hub/datasets/discrimination-cognitive.html) | Multilevel modelling | Graduate | Published study |
+| [Friends with Health Benefits (Gym Incentives)](https://emilysomerset.github.io/statsdata-hub/datasets/gym-incentives.html) | t-test, ANOVA, time series | Intermediate / Adv. UG | Published study |
+| [Plant-Based vs. Meat-Based Yelp Reviews](https://emilysomerset.github.io/statsdata-hub/datasets/plantbased-meat-reviews.html) | Mixed-effects models | Advanced UG / Graduate | Published study |
 
 ## 🤝 Contributing
 
