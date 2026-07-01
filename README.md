@@ -42,6 +42,8 @@ titanic <- load_dataset("titanic-survival")
 | [Everyday Discrimination and Cognitive Failures](https://emilysomerset.github.io/statsdata-hub/datasets/discrimination-cognitive.html) | Multilevel modelling | Graduate | Published study |
 | [Friends with Health Benefits (Gym Incentives)](https://emilysomerset.github.io/statsdata-hub/datasets/gym-incentives.html) | t-test, ANOVA, time series | Intermediate / Adv. UG | Published study |
 | [Plant-Based vs. Meat-Based Yelp Reviews](https://emilysomerset.github.io/statsdata-hub/datasets/plantbased-meat-reviews.html) | Mixed-effects models | Advanced UG / Graduate | Published study |
+| [VR vs. Video vs. Paper Business Case Studies](https://emilysomerset.github.io/statsdata-hub/datasets/vr-business-education.html) | ANOVA, t-test | Intermediate / Adv. UG | Published study |
+| [From Me to We: Generic Pronouns and Children's Generosity Judgments](https://emilysomerset.github.io/statsdata-hub/datasets/me-to-we.html) | Multilevel logistic regression | Intermediate / Graduate | Published study |
 
 ## 🤝 Contributing
 
