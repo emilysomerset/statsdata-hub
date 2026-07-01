@@ -1,0 +1,630 @@
+id: vr-business-education
+title: "Virtual Reality vs. Video vs. Paper Business Case Studies: Learning Outcomes"
+description: >
+  Data from a randomized experiment (N=148) comparing learning outcomes
+  across three business case study formats: paper-based, video-based, and
+  virtual reality (VR). Participants were randomly assigned to one
+  condition and completed a business case study, then responded to
+  measures of presence (IPQ), motivation (IMMS), task load (TLI),
+  technology adoption intentions, and a knowledge recall quiz. VR
+  participants demonstrated superior recall of both factual and visual
+  details compared to paper and video conditions. Missingness in adoption
+  items is structural: participants only rated adoption intentions for
+  their assigned medium. Ideal for teaching one-way ANOVA, planned
+  contrasts, structural missing data, and analysis of experimental
+  between-subjects designs with multiple outcome measures.
+
+source:
+  citation: "Hubbard TD. (2025). Transforming business education: the impact of virtual reality on learning outcomes in case studies. Frontiers in Virtual Reality, 6. https://doi.org/10.3389/frvir.2025.1461690"
+  researchbox: "Gershon, R., & Milkman, K. (2025). ResearchBox 3216, Virtual Reality Business Education, https://ResearchBox.org/3216. Zenodo."
+  url: "https://researchbox.org/3216"
+  license: "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+
+file: "data/clean/vr_business_education/Dataset.dta"
+
+data_source_type: published_study
+
+methods: [anova, linear_regression, t_test]
+concepts: [missing_data, confounding, selection_bias]
+variable_types: [ordinal, categorical, continuous, binary, count, text]
+course_level: [intermediate, advanced_undergraduate]
+discipline: [education, psychology]
+
+characteristics:
+  n_obs: 148
+  n_vars: 181
+  missingness: true
+  survey_weights: false
+  longitudinal: false
+  hierarchical: false
+  cross_sectional: true
+
+teaching:
+  learning_objectives:
+    - "Conduct a one-way ANOVA comparing three experimental conditions"
+    - "Use planned contrasts to test specific hypotheses about VR vs. paper and video"
+    - "Distinguish between structural missingness (by design) and problematic missingness"
+    - "Interpret multiple dependent variables from a single experiment"
+  classroom_activities:
+    - "Compare mean knowledge recall scores across conditions and test for significant differences"
+    - "Discuss why adoption items are missing for non-assigned conditions and whether this is a problem"
+    - "Explore whether presence (IPQ) mediates the effect of condition on learning outcomes"
+  common_misconceptions:
+    - "Treating structural NAs in condition-specific adoption items as data quality problems"
+    - "Ignoring multiple comparisons when testing all pairwise differences between three conditions"
+
+variables:
+  # --- Survey duration ---
+  - name: Duration__in_seconds_
+    type: continuous
+    description: "Survey completion time in seconds"
+
+  # --- Igroup Presence Questionnaire (IPQ) composite ---
+  - name: ipq
+    type: continuous
+    description: "Igroup Presence Questionnaire composite score (sense of presence in the case environment)"
+
+  # --- IPQ items ---
+  - name: ipq1_1
+    type: ordinal
+    description: "[ITEM] IPQ (1=strongly disagree, 5=strongly agree): I had a sense of being there in the case environment"
+  - name: ipq1_2
+    type: ordinal
+    description: "[ITEM] IPQ (1=strongly disagree, 5=strongly agree): Somehow I felt that the virtual world surrounded me"
+  - name: ipq1_3
+    type: ordinal
+    description: "[ITEM] IPQ (1=strongly disagree, 5=strongly agree): I felt like I was just perceiving pictures (reversed)"
+  - name: ipq1_4
+    type: ordinal
+    description: "[ITEM] IPQ (1=strongly disagree, 5=strongly agree): I did not feel present in the virtual space (reversed)"
+  - name: ipq1_5
+    type: ordinal
+    description: "[ITEM] IPQ (1=strongly disagree, 5=strongly agree): I had a sense of acting in the virtual space"
+  - name: ipq1_6
+    type: ordinal
+    description: "[ITEM] IPQ (1=strongly disagree, 5=strongly agree): I felt present in the case"
+  - name: ipq2
+    type: ordinal
+    description: "[ITEM] IPQ awareness of real world (1=not aware of real environment, 2=still paid attention, 3=completely captivated)"
+  - name: ipq3_1
+    type: ordinal
+    description: "[ITEM] IPQ realism: How real did the case seem to you? (1=none at all, 5=completely)"
+  - name: ipq3_2
+    type: ordinal
+    description: "[ITEM] IPQ realism: How real did the virtual world seem to you? (1=none at all, 5=completely)"
+  - name: ipq4_1
+    type: ordinal
+    description: "[ITEM] IPQ involvement: How much did your experience in the case environment seem consistent with your real world experience? (1=not at all, 5=completely)"
+
+  # --- Instructional Materials Motivation Survey (IMMS) composite ---
+  - name: imms
+    type: continuous
+    description: "Instructional Materials Motivation Survey composite score (motivation to engage with the case)"
+
+  # --- IMMS items (1=strongly disagree, 5=strongly agree) ---
+  - name: imms_1
+    type: ordinal
+    description: "[ITEM] IMMS: When I first looked at this case, I had the impression that it would be easy for me"
+  - name: imms_2
+    type: ordinal
+    description: "[ITEM] IMMS: This material was more difficult to understand than I would like it to be (reversed)"
+  - name: imms_3
+    type: ordinal
+    description: "[ITEM] IMMS: After the case, I felt confident that I knew the material"
+  - name: imms_4
+    type: ordinal
+    description: "[ITEM] IMMS: Much of the case had so much information that it was hard to pick out and remember important points (reversed)"
+  - name: imms_5
+    type: ordinal
+    description: "[ITEM] IMMS: As I worked on this case, I was confident that I could learn the content"
+  - name: imms_6
+    type: ordinal
+    description: "[ITEM] IMMS: The case was too difficult (reversed)"
+  - name: imms_7
+    type: ordinal
+    description: "[ITEM] IMMS: After working on this case for a while, I was confident that I understood the material"
+  - name: imms_8
+    type: ordinal
+    description: "[ITEM] IMMS: I could not really understand the material in this case (reversed)"
+  - name: imms_9
+    type: ordinal
+    description: "[ITEM] IMMS: The good organization of the content helped me be confident I would learn this material"
+  - name: imms_10
+    type: ordinal
+    description: "[ITEM] IMMS: There was something interesting at the beginning of the case that got my attention"
+  - name: imms_11
+    type: ordinal
+    description: "[ITEM] IMMS: These materials are eye-catching"
+  - name: imms_12
+    type: ordinal
+    description: "[ITEM] IMMS: The quality of the case helped to hold my attention"
+  - name: imms_13
+    type: ordinal
+    description: "[ITEM] IMMS: This case is so abstract that it was hard to keep my attention on it (reversed)"
+  - name: imms_14
+    type: ordinal
+    description: "[ITEM] IMMS: The case was dry and unappealing (reversed)"
+  - name: imms_15
+    type: ordinal
+    description: "[ITEM] IMMS: The way the information is arranged on the pages helped me stay attentive"
+  - name: imms_16
+    type: ordinal
+    description: "[ITEM] IMMS: This case has things that stimulated my curiosity"
+  - name: imms_17
+    type: ordinal
+    description: "[ITEM] IMMS: The amount of repetition in this case caused me to get bored sometimes (reversed)"
+  - name: imms_18
+    type: ordinal
+    description: "[ITEM] IMMS: I learned some things that were surprising or unexpected"
+  - name: imms_19
+    type: ordinal
+    description: "[ITEM] IMMS: The variety of materials helped me stay attentive"
+  - name: imms_20
+    type: ordinal
+    description: "[ITEM] IMMS: The style of the case is boring (reversed)"
+  - name: imms_21
+    type: ordinal
+    description: "[ITEM] IMMS: There was so much content that it was hard to stay focused (reversed)"
+  - name: imms_22
+    type: ordinal
+    description: "[ITEM] IMMS: Completing the case gave me a satisfying feeling of accomplishment"
+  - name: imms_23
+    type: ordinal
+    description: "[ITEM] IMMS: I enjoyed this case so much that I would like to know more about this topic"
+  - name: imms_24
+    type: ordinal
+    description: "[ITEM] IMMS: I really enjoyed studying this case"
+  - name: imms_25
+    type: ordinal
+    description: "[ITEM] IMMS: It felt good to successfully complete this case"
+  - name: imms_26
+    type: ordinal
+    description: "[ITEM] IMMS: It was a pleasure to work on such a well-designed case"
+  - name: imms_27
+    type: ordinal
+    description: "[ITEM] IMMS: It is clear to me how the content of this case is related to things I already know"
+  - name: imms_28
+    type: ordinal
+    description: "[ITEM] IMMS: Completing this case successfully was important to me"
+  - name: imms_29
+    type: ordinal
+    description: "[ITEM] IMMS: The content of this case is relevant to my interests"
+  - name: imms_30
+    type: ordinal
+    description: "[ITEM] IMMS: The content in this case will be useful to me"
+  - name: imms_31
+    type: ordinal
+    description: "[ITEM] IMMS: This case was not relevant to my needs (reversed)"
+  - name: imms_32
+    type: ordinal
+    description: "[ITEM] IMMS: I could relate the content of this case to things I have seen in my own life"
+  - name: imms_33
+    type: ordinal
+    description: "[ITEM] IMMS: The content of this case will be useful in my future career"
+
+  # --- Task Load Index (TLI) composite ---
+  - name: tli
+    type: continuous
+    description: "Task Load Index composite score (perceived cognitive load during the case)"
+
+  # --- TLI items (1=low, 5=high) ---
+  - name: tli1_1
+    type: ordinal
+    description: "[ITEM] TLI: Mental demand while participating in the case (1=low, 5=high)"
+  - name: tli1_2
+    type: ordinal
+    description: "[ITEM] TLI: Physical demand while participating in the case (1=low, 5=high)"
+  - name: tli1_3
+    type: ordinal
+    description: "[ITEM] TLI: Temporal demand (time pressure) while participating in the case (1=low, 5=high)"
+  - name: tli1_4
+    type: ordinal
+    description: "[ITEM] TLI: Effort required while participating in the case (1=low, 5=high)"
+  - name: tli1_5
+    type: ordinal
+    description: "[ITEM] TLI: Frustration while participating in the case (1=low, 5=high)"
+  - name: tli2
+    type: ordinal
+    description: "[ITEM] TLI: Self-rated performance during the case (1=low, 5=high)"
+
+  # --- Condition ---
+  - name: condition
+    type: categorical
+    description: "Assigned case medium: 0=paper, 1=video, 2=VR (from administrative data)"
+  - name: condition_survey
+    type: categorical
+    description: "Self-reported case medium: 1=paper, 2=video, 3=VR (from survey)"
+  - name: cond_paper
+    type: binary
+    description: "Indicator for paper condition"
+  - name: cond_video
+    type: binary
+    description: "Indicator for video condition"
+  - name: cond_vr
+    type: binary
+    description: "Indicator for VR condition"
+
+  # --- Technology adoption items: Paper ---
+  - name: paperadopt1_1
+    type: ordinal
+    description: "[ITEM] Paper adoption - usefulness (1=strongly disagree, 5=strongly agree): Using paper-based cases improves my learning performance"
+  - name: paperadopt1_2
+    type: ordinal
+    description: "[ITEM] Paper adoption - usefulness: I find paper-based cases to be useful for learning"
+  - name: paperadopt1_3
+    type: ordinal
+    description: "[ITEM] Paper adoption - usefulness: Studying with paper-based cases enhances my learning effectiveness"
+  - name: paperadopt1_4
+    type: ordinal
+    description: "[ITEM] Paper adoption - usefulness: Paper-based cases help me learn business concepts more quickly"
+  - name: paperadopt1_5
+    type: ordinal
+    description: "[ITEM] Paper adoption - usefulness: I believe that using paper-based cases is beneficial for my education"
+  - name: paperadopt2_1
+    type: ordinal
+    description: "[ITEM] Paper adoption - ease of use: I think learning to use paper-based cases is easy"
+  - name: paperadopt2_2
+    type: ordinal
+    description: "[ITEM] Paper adoption - ease of use: I find paper-based cases easy to interact with"
+  - name: paperadopt2_3
+    type: ordinal
+    description: "[ITEM] Paper adoption - ease of use: I believe I can efficiently use paper-based cases"
+  - name: paperadopt2_4
+    type: ordinal
+    description: "[ITEM] Paper adoption - ease of use: Reading and understanding paper-based cases is straightforward"
+  - name: paperadopt2_5
+    type: ordinal
+    description: "[ITEM] Paper adoption - ease of use: I find it convenient to use paper-based cases for studying"
+  - name: paperadopt3_1
+    type: ordinal
+    description: "[ITEM] Paper adoption - simplicity: I think using paper-based cases is simple"
+  - name: paperadopt3_2
+    type: ordinal
+    description: "[ITEM] Paper adoption - simplicity: I find working with paper-based cases straightforward"
+  - name: paperadopt3_3
+    type: ordinal
+    description: "[ITEM] Paper adoption - simplicity: I value the simplicity and accessibility of paper-based cases"
+  - name: paperadopt4_1
+    type: ordinal
+    description: "[ITEM] Paper adoption - intention: I plan to use paper-based cases in my future studies"
+  - name: paperadopt4_2
+    type: ordinal
+    description: "[ITEM] Paper adoption - intention: I would choose paper-based cases for my business education"
+  - name: paperadopt4_3
+    type: ordinal
+    description: "[ITEM] Paper adoption - intention: I intend to advocate for paper-based cases in my academic program"
+
+  # --- Technology adoption items: Video ---
+  - name: videoadopt1_1
+    type: ordinal
+    description: "[ITEM] Video adoption - usefulness (1=strongly disagree, 5=strongly agree): Using video-based cases improves my learning performance"
+  - name: videoadopt1_2
+    type: ordinal
+    description: "[ITEM] Video adoption - usefulness: I find video-based cases to be useful for learning"
+  - name: videoadopt1_3
+    type: ordinal
+    description: "[ITEM] Video adoption - usefulness: Studying with video-based cases enhances my learning effectiveness"
+  - name: videoadopt1_4
+    type: ordinal
+    description: "[ITEM] Video adoption - usefulness: Video-based cases help me visualize business scenarios"
+  - name: videoadopt1_5
+    type: ordinal
+    description: "[ITEM] Video adoption - usefulness: I believe that using video-based cases is beneficial for my education"
+  - name: videoadopt2_1
+    type: ordinal
+    description: "[ITEM] Video adoption - ease of use: I think learning to use video-based cases is easy"
+  - name: videoadopt2_2
+    type: ordinal
+    description: "[ITEM] Video adoption - ease of use: I find video-based cases easy to interact with"
+  - name: videoadopt2_3
+    type: ordinal
+    description: "[ITEM] Video adoption - ease of use: I believe I can efficiently use video-based cases"
+  - name: videoadopt2_4
+    type: ordinal
+    description: "[ITEM] Video adoption - ease of use: Interacting with video-based cases requires little mental effort"
+  - name: videoadopt2_5
+    type: ordinal
+    description: "[ITEM] Video adoption - ease of use: I find it convenient to use video-based cases for studying"
+  - name: videopadopt3_1
+    type: ordinal
+    description: "[ITEM] Video adoption - simplicity: I think using video-based cases is simple"
+  - name: videopadopt3_2
+    type: ordinal
+    description: "[ITEM] Video adoption - simplicity: I find working with video-based cases straightforward"
+  - name: videopadopt3_3
+    type: ordinal
+    description: "[ITEM] Video adoption - simplicity: I value the simplicity and accessibility of video-based cases"
+  - name: videoadopt4_1
+    type: ordinal
+    description: "[ITEM] Video adoption - intention: I plan to use video-based cases in my future studies"
+  - name: videoadopt4_2
+    type: ordinal
+    description: "[ITEM] Video adoption - intention: I would choose video-based cases for my business education"
+  - name: videoadopt4_3
+    type: ordinal
+    description: "[ITEM] Video adoption - intention: I intend to advocate for video-based cases in my academic program"
+
+  # --- Technology adoption items: VR ---
+  - name: vradopt1_1
+    type: ordinal
+    description: "[ITEM] VR adoption - usefulness (1=strongly disagree, 5=strongly agree): Using VR technology improves my learning performance"
+  - name: vradopt1_2
+    type: ordinal
+    description: "[ITEM] VR adoption - usefulness: I find VR technology to be useful for learning"
+  - name: vradopt1_3
+    type: ordinal
+    description: "[ITEM] VR adoption - usefulness: Using VR technology improves my learning effectiveness"
+  - name: vradopt1_4
+    type: ordinal
+    description: "[ITEM] VR adoption - usefulness: VR technology helps me visualize business scenarios"
+  - name: vradopt1_5
+    type: ordinal
+    description: "[ITEM] VR adoption - usefulness: I believe that using VR technology is beneficial for my education"
+  - name: vradopt2_1
+    type: ordinal
+    description: "[ITEM] VR adoption - ease of use: I think learning to operate VR technology is easy"
+  - name: vradopt2_2
+    type: ordinal
+    description: "[ITEM] VR adoption - ease of use: I find VR technology for educational purposes easy to use"
+  - name: vradopt2_3
+    type: ordinal
+    description: "[ITEM] VR adoption - ease of use: I believe I could become proficient in using VR technology"
+  - name: vradopt2_4
+    type: ordinal
+    description: "[ITEM] VR adoption - ease of use: Interacting with educational VR technology is easy for me"
+  - name: vradopt2_5
+    type: ordinal
+    description: "[ITEM] VR adoption - ease of use: It is easy for me to become skillful at using VR technology"
+  - name: vradopt3_1
+    type: ordinal
+    description: "[ITEM] VR adoption - simplicity: I think using VR technology for education is simple"
+  - name: vradopt3_2
+    type: ordinal
+    description: "[ITEM] VR adoption - simplicity: Using VR technology for education is uncomplicated"
+  - name: vradopt3_3
+    type: ordinal
+    description: "[ITEM] VR adoption - simplicity: I find the experience of using VR technology for learning to be straightforward"
+  - name: vradopt4_1
+    type: ordinal
+    description: "[ITEM] VR adoption - intention: I plan to use VR technology in my future studies"
+  - name: vradopt4_2
+    type: ordinal
+    description: "[ITEM] VR adoption - intention: If given a choice, I would choose VR-based cases for business education"
+  - name: vradopt4_3
+    type: ordinal
+    description: "[ITEM] VR adoption - intention: I intend to recommend the use of VR technology in business education"
+
+  # --- Condition-specific adoption composites ---
+  - name: adopt
+    type: continuous
+    description: "Interest in adoption composite score for participant's assigned medium"
+  - name: adopt1_1
+    type: ordinal
+    description: "Adoption usefulness item 1 (recoded to participant's condition)"
+  - name: adopt1_2
+    type: ordinal
+    description: "Adoption usefulness item 2 (recoded to participant's condition)"
+  - name: adopt1_3
+    type: ordinal
+    description: "Adoption usefulness item 3 (recoded to participant's condition)"
+  - name: adopt1_4
+    type: ordinal
+    description: "Adoption usefulness item 4 (recoded to participant's condition)"
+  - name: adopt1_5
+    type: ordinal
+    description: "Adoption usefulness item 5 (recoded to participant's condition)"
+  - name: adopt2_1
+    type: ordinal
+    description: "Adoption ease-of-use item 1 (recoded to participant's condition)"
+  - name: adopt2_2
+    type: ordinal
+    description: "Adoption ease-of-use item 2 (recoded to participant's condition)"
+  - name: adopt2_3
+    type: ordinal
+    description: "Adoption ease-of-use item 3 (recoded to participant's condition)"
+  - name: adopt2_4
+    type: ordinal
+    description: "Adoption ease-of-use item 4 (recoded to participant's condition)"
+  - name: adopt2_5
+    type: ordinal
+    description: "Adoption ease-of-use item 5 (recoded to participant's condition)"
+  - name: adopt3_1
+    type: ordinal
+    description: "Adoption simplicity item 1 (recoded to participant's condition)"
+  - name: adopt3_2
+    type: ordinal
+    description: "Adoption simplicity item 2 (recoded to participant's condition)"
+  - name: adopt3_3
+    type: ordinal
+    description: "Adoption simplicity item 3 (recoded to participant's condition)"
+  - name: adopt4_1
+    type: ordinal
+    description: "Adoption intention item 1 (recoded to participant's condition)"
+  - name: adopt4_2
+    type: ordinal
+    description: "Adoption intention item 2 (recoded to participant's condition)"
+  - name: adopt4_3
+    type: ordinal
+    description: "Adoption intention item 3 (recoded to participant's condition)"
+
+  # --- Knowledge recall outcomes ---
+  - name: whathappening
+    type: text
+    description: "Open-ended recall: Please describe what is happening in the business case"
+  - name: product
+    type: text
+    description: "Open-ended recall: What product do they sell?"
+  - name: priorrev
+    type: text
+    description: "Open-ended recall: What was the revenue last quarter?"
+  - name: priorprofit
+    type: text
+    description: "Open-ended recall: What was the profitability last quarter?"
+  - name: currentrev
+    type: text
+    description: "Open-ended recall: What was the revenue this quarter?"
+  - name: currentprofit
+    type: text
+    description: "Open-ended recall: What was the profitability this quarter?"
+  - name: factory
+    type: text
+    description: "Open-ended recall: Describe the factory"
+  - name: cycletimeprior
+    type: text
+    description: "Open-ended recall: What was the cycle time last quarter?"
+  - name: cycletimecurrent
+    type: text
+    description: "Open-ended recall: What was the cycle time this quarter?"
+  - name: floorfactorycolor
+    type: text
+    description: "Open-ended visual recall: What color was the factory floor?"
+  - name: storeceilingcolor
+    type: text
+    description: "Open-ended visual recall: What color was the store ceiling?"
+  - name: pricedecrease
+    type: text
+    description: "Open-ended recall: By how much does the sales team want to decrease the price?"
+  - name: currentfeaturesmonth
+    type: text
+    description: "Open-ended recall: How many features does the sales team currently provide to engineering per month?"
+  - name: officedescription
+    type: text
+    description: "Open-ended visual recall: Describe the corporate offices where the case discussion ended"
+  - name: floor
+    type: text
+    description: "Open-ended recall: On what floor of the building were the offices?"
+  - name: confroom
+    type: text
+    description: "Open-ended visual recall: Describe the conference room where the case began"
+  - name: height
+    type: text
+    description: "Open-ended visual recall: How tall was the CEO?"
+
+  # --- Coded recall outcomes ---
+  - name: total_recall
+    type: count
+    description: "Total recollection of facts (composite of all recall items)"
+  - name: num_recall
+    type: count
+    description: "Total numbers recalled correctly"
+  - name: try_visual_recall
+    type: count
+    description: "Number of visual dimensions participants attempted to describe"
+  - name: visual_recall
+    type: count
+    description: "Count of accurate visual details recalled"
+  - name: len_whathappening
+    type: continuous
+    description: "Written length of the overall case description response"
+  - name: len_factory
+    type: continuous
+    description: "Written length of factory description response"
+  - name: len_officedescription
+    type: continuous
+    description: "Written length of office description response"
+  - name: len_confroom_info
+    type: continuous
+    description: "Written length of conference room description response"
+  - name: len_all_descriptions
+    type: continuous
+    description: "Total written length across all open-ended description responses"
+  - name: if_product
+    type: binary
+    description: "Correctly recalled what product the company sells (0=no, 1=yes)"
+  - name: if_prior_rev
+    type: binary
+    description: "Correctly recalled prior quarter revenue (0=no, 1=yes)"
+  - name: if_prior_profit
+    type: binary
+    description: "Correctly recalled prior quarter profitability (0=no, 1=yes)"
+  - name: if_current_rev
+    type: binary
+    description: "Correctly recalled current quarter revenue (0=no, 1=yes)"
+  - name: if_current_profit
+    type: binary
+    description: "Correctly recalled current quarter profitability (0=no, 1=yes)"
+  - name: if_prior_cycle
+    type: binary
+    description: "Correctly recalled prior cycle time (0=no, 1=yes)"
+  - name: if_current_cycle
+    type: binary
+    description: "Correctly recalled current cycle time (0=no, 1=yes)"
+  - name: if_factory_floor_color
+    type: binary
+    description: "Correctly recalled factory floor color (0=no, 1=yes)"
+  - name: if_store_color
+    type: binary
+    description: "Correctly recalled store ceiling color (0=no, 1=yes)"
+  - name: if_price_decrease
+    type: binary
+    description: "Correctly recalled price decrease amount (0=no, 1=yes)"
+  - name: if_current_features
+    type: binary
+    description: "Correctly recalled number of features provided per month (0=no, 1=yes)"
+  - name: if_confroom_info
+    type: binary
+    description: "Correctly described the conference room (0=no, 1=yes)"
+  - name: if_try_floor_number
+    type: binary
+    description: "Attempted to answer the floor number question (0=no, 1=yes)"
+  - name: if_responded_height
+    type: binary
+    description: "Attempted to estimate the CEO's height (0=no, 1=yes)"
+  - name: floor_number
+    type: continuous
+    description: "Numeric floor number provided by participant"
+  - name: total_inches
+    type: continuous
+    description: "Total estimated CEO height in inches"
+  - name: height_diff
+    type: continuous
+    description: "Signed difference between estimated and actual CEO height (inches)"
+  - name: abs_height_diff
+    type: continuous
+    description: "Absolute difference between estimated and actual CEO height (inches)"
+
+  # --- Demographics ---
+  - name: gender
+    type: categorical
+    description: "Self-described gender (selected choice)"
+  - name: gender_4_TEXT
+    type: text
+    description: "Self-described gender (free text, for those who chose 'prefer to self-describe')"
+  - name: if_female
+    type: binary
+    description: "Female participant indicator (0=no, 1=yes)"
+  - name: race_1
+    type: binary
+    description: "Race: White or Caucasian (0=no, 1=yes)"
+  - name: race_2
+    type: binary
+    description: "Race: Black or African American (0=no, 1=yes)"
+  - name: race_3
+    type: binary
+    description: "Race: American Indian/Native (0=no, 1=yes)"
+  - name: race_4
+    type: binary
+    description: "Race: Asian (0=no, 1=yes)"
+  - name: race_5
+    type: binary
+    description: "Race: Native Hawaiian or Other Pacific Islander (0=no, 1=yes)"
+  - name: race_6
+    type: binary
+    description: "Race: Other (0=no, 1=yes)"
+  - name: race_7
+    type: binary
+    description: "Race: Prefer not to say (0=no, 1=yes)"
+  - name: if_non_white
+    type: binary
+    description: "Non-white participant indicator (0=no, 1=yes)"
+  - name: hispanic
+    type: binary
+    description: "Spanish, Hispanic, or Latino origin (0=no, 1=yes)"
+  - name: age
+    type: continuous
+    description: "Participant age in years"
+
+  # --- Data quality ---
+  - name: _merge
+    type: categorical
+    description: "Matching result from data merge (Stata merge indicator)"

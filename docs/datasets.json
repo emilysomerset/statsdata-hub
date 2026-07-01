@@ -76,5 +76,18 @@
     "n_obs": 891,
     "n_vars": 12,
     "data_source_type": "classic_dataset"
+  },
+  {
+    "id": "vr-business-education",
+    "title": "Virtual Reality vs. Video vs. Paper Business Case Studies: Learning Outcomes",
+    "description": "Data from a randomized experiment (N=148) comparing learning outcomes across three business case study formats: paper-based, video-based, and virtual reality (VR). Participants were randomly assigned to one condition and completed a business case study, then responded to measures of presence (IPQ), motivation (IMMS), task load (TLI), technology adoption intentions, and a knowledge recall quiz. VR participants demonstrated superior recall of both factual and visual details compared to paper and video conditions. Missingness in adoption items is structural: participants only rated adoption intentions for their assigned medium. Ideal for teaching one-way ANOVA, planned contrasts, structural missing data, and analysis of experimental between-subjects designs with multiple outcome measures.\n",
+    "methods": ["anova", "linear_regression", "t_test"],
+    "concepts": ["missing_data", "confounding", "selection_bias"],
+    "variable_types": ["ordinal", "categorical", "continuous", "binary", "count", "text"],
+    "course_level": ["intermediate", "advanced_undergraduate"],
+    "discipline": ["education", "psychology"],
+    "n_obs": 148,
+    "n_vars": 181,
+    "data_source_type": "published_study"
   }
 ]

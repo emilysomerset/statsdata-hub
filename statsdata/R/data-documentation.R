@@ -282,3 +282,195 @@ NULL
 #' @name titanic-survival
 NULL
 
+#' Virtual Reality vs. Video vs. Paper Business Case Studies: Learning Outcomes
+#'
+#' Data from a randomized experiment (N=148) comparing learning outcomes across three business case study formats: paper-based, video-based, and virtual reality (VR). Participants were randomly assigned to one condition and completed a business case study, then responded to measures of presence (IPQ), motivation (IMMS), task load (TLI), technology adoption intentions, and a knowledge recall quiz. VR participants demonstrated superior recall of both factual and visual details compared to paper and video conditions. Missingness in adoption items is structural: participants only rated adoption intentions for their assigned medium. Ideal for teaching one-way ANOVA, planned contrasts, structural missing data, and analysis of experimental between-subjects designs with multiple outcome measures. 
+#'
+#' @format A data frame with variables:
+#' \describe{
+#'   \item{Duration__in_seconds_}{continuous. Survey completion time in seconds}
+#'   \item{ipq}{continuous. Igroup Presence Questionnaire composite score (sense of presence in the case environment)}
+#'   \item{ipq1_1}{ordinal. \[ITEM\] IPQ (1=strongly disagree, 5=strongly agree): I had a sense of being there in the case environment}
+#'   \item{ipq1_2}{ordinal. \[ITEM\] IPQ (1=strongly disagree, 5=strongly agree): Somehow I felt that the virtual world surrounded me}
+#'   \item{ipq1_3}{ordinal. \[ITEM\] IPQ (1=strongly disagree, 5=strongly agree): I felt like I was just perceiving pictures (reversed)}
+#'   \item{ipq1_4}{ordinal. \[ITEM\] IPQ (1=strongly disagree, 5=strongly agree): I did not feel present in the virtual space (reversed)}
+#'   \item{ipq1_5}{ordinal. \[ITEM\] IPQ (1=strongly disagree, 5=strongly agree): I had a sense of acting in the virtual space}
+#'   \item{ipq1_6}{ordinal. \[ITEM\] IPQ (1=strongly disagree, 5=strongly agree): I felt present in the case}
+#'   \item{ipq2}{ordinal. \[ITEM\] IPQ awareness of real world (1=not aware of real environment, 2=still paid attention, 3=completely captivated)}
+#'   \item{ipq3_1}{ordinal. \[ITEM\] IPQ realism: How real did the case seem to you? (1=none at all, 5=completely)}
+#'   \item{ipq3_2}{ordinal. \[ITEM\] IPQ realism: How real did the virtual world seem to you? (1=none at all, 5=completely)}
+#'   \item{ipq4_1}{ordinal. \[ITEM\] IPQ involvement: How much did your experience in the case environment seem consistent with your real world experience? (1=not at all, 5=completely)}
+#'   \item{imms}{continuous. Instructional Materials Motivation Survey composite score (motivation to engage with the case)}
+#'   \item{imms_1}{ordinal. \[ITEM\] IMMS: When I first looked at this case, I had the impression that it would be easy for me}
+#'   \item{imms_2}{ordinal. \[ITEM\] IMMS: This material was more difficult to understand than I would like it to be (reversed)}
+#'   \item{imms_3}{ordinal. \[ITEM\] IMMS: After the case, I felt confident that I knew the material}
+#'   \item{imms_4}{ordinal. \[ITEM\] IMMS: Much of the case had so much information that it was hard to pick out and remember important points (reversed)}
+#'   \item{imms_5}{ordinal. \[ITEM\] IMMS: As I worked on this case, I was confident that I could learn the content}
+#'   \item{imms_6}{ordinal. \[ITEM\] IMMS: The case was too difficult (reversed)}
+#'   \item{imms_7}{ordinal. \[ITEM\] IMMS: After working on this case for a while, I was confident that I understood the material}
+#'   \item{imms_8}{ordinal. \[ITEM\] IMMS: I could not really understand the material in this case (reversed)}
+#'   \item{imms_9}{ordinal. \[ITEM\] IMMS: The good organization of the content helped me be confident I would learn this material}
+#'   \item{imms_10}{ordinal. \[ITEM\] IMMS: There was something interesting at the beginning of the case that got my attention}
+#'   \item{imms_11}{ordinal. \[ITEM\] IMMS: These materials are eye-catching}
+#'   \item{imms_12}{ordinal. \[ITEM\] IMMS: The quality of the case helped to hold my attention}
+#'   \item{imms_13}{ordinal. \[ITEM\] IMMS: This case is so abstract that it was hard to keep my attention on it (reversed)}
+#'   \item{imms_14}{ordinal. \[ITEM\] IMMS: The case was dry and unappealing (reversed)}
+#'   \item{imms_15}{ordinal. \[ITEM\] IMMS: The way the information is arranged on the pages helped me stay attentive}
+#'   \item{imms_16}{ordinal. \[ITEM\] IMMS: This case has things that stimulated my curiosity}
+#'   \item{imms_17}{ordinal. \[ITEM\] IMMS: The amount of repetition in this case caused me to get bored sometimes (reversed)}
+#'   \item{imms_18}{ordinal. \[ITEM\] IMMS: I learned some things that were surprising or unexpected}
+#'   \item{imms_19}{ordinal. \[ITEM\] IMMS: The variety of materials helped me stay attentive}
+#'   \item{imms_20}{ordinal. \[ITEM\] IMMS: The style of the case is boring (reversed)}
+#'   \item{imms_21}{ordinal. \[ITEM\] IMMS: There was so much content that it was hard to stay focused (reversed)}
+#'   \item{imms_22}{ordinal. \[ITEM\] IMMS: Completing the case gave me a satisfying feeling of accomplishment}
+#'   \item{imms_23}{ordinal. \[ITEM\] IMMS: I enjoyed this case so much that I would like to know more about this topic}
+#'   \item{imms_24}{ordinal. \[ITEM\] IMMS: I really enjoyed studying this case}
+#'   \item{imms_25}{ordinal. \[ITEM\] IMMS: It felt good to successfully complete this case}
+#'   \item{imms_26}{ordinal. \[ITEM\] IMMS: It was a pleasure to work on such a well-designed case}
+#'   \item{imms_27}{ordinal. \[ITEM\] IMMS: It is clear to me how the content of this case is related to things I already know}
+#'   \item{imms_28}{ordinal. \[ITEM\] IMMS: Completing this case successfully was important to me}
+#'   \item{imms_29}{ordinal. \[ITEM\] IMMS: The content of this case is relevant to my interests}
+#'   \item{imms_30}{ordinal. \[ITEM\] IMMS: The content in this case will be useful to me}
+#'   \item{imms_31}{ordinal. \[ITEM\] IMMS: This case was not relevant to my needs (reversed)}
+#'   \item{imms_32}{ordinal. \[ITEM\] IMMS: I could relate the content of this case to things I have seen in my own life}
+#'   \item{imms_33}{ordinal. \[ITEM\] IMMS: The content of this case will be useful in my future career}
+#'   \item{tli}{continuous. Task Load Index composite score (perceived cognitive load during the case)}
+#'   \item{tli1_1}{ordinal. \[ITEM\] TLI: Mental demand while participating in the case (1=low, 5=high)}
+#'   \item{tli1_2}{ordinal. \[ITEM\] TLI: Physical demand while participating in the case (1=low, 5=high)}
+#'   \item{tli1_3}{ordinal. \[ITEM\] TLI: Temporal demand (time pressure) while participating in the case (1=low, 5=high)}
+#'   \item{tli1_4}{ordinal. \[ITEM\] TLI: Effort required while participating in the case (1=low, 5=high)}
+#'   \item{tli1_5}{ordinal. \[ITEM\] TLI: Frustration while participating in the case (1=low, 5=high)}
+#'   \item{tli2}{ordinal. \[ITEM\] TLI: Self-rated performance during the case (1=low, 5=high)}
+#'   \item{condition}{categorical. Assigned case medium: 0=paper, 1=video, 2=VR (from administrative data)}
+#'   \item{condition_survey}{categorical. Self-reported case medium: 1=paper, 2=video, 3=VR (from survey)}
+#'   \item{cond_paper}{binary. Indicator for paper condition}
+#'   \item{cond_video}{binary. Indicator for video condition}
+#'   \item{cond_vr}{binary. Indicator for VR condition}
+#'   \item{paperadopt1_1}{ordinal. \[ITEM\] Paper adoption - usefulness (1=strongly disagree, 5=strongly agree): Using paper-based cases improves my learning performance}
+#'   \item{paperadopt1_2}{ordinal. \[ITEM\] Paper adoption - usefulness: I find paper-based cases to be useful for learning}
+#'   \item{paperadopt1_3}{ordinal. \[ITEM\] Paper adoption - usefulness: Studying with paper-based cases enhances my learning effectiveness}
+#'   \item{paperadopt1_4}{ordinal. \[ITEM\] Paper adoption - usefulness: Paper-based cases help me learn business concepts more quickly}
+#'   \item{paperadopt1_5}{ordinal. \[ITEM\] Paper adoption - usefulness: I believe that using paper-based cases is beneficial for my education}
+#'   \item{paperadopt2_1}{ordinal. \[ITEM\] Paper adoption - ease of use: I think learning to use paper-based cases is easy}
+#'   \item{paperadopt2_2}{ordinal. \[ITEM\] Paper adoption - ease of use: I find paper-based cases easy to interact with}
+#'   \item{paperadopt2_3}{ordinal. \[ITEM\] Paper adoption - ease of use: I believe I can efficiently use paper-based cases}
+#'   \item{paperadopt2_4}{ordinal. \[ITEM\] Paper adoption - ease of use: Reading and understanding paper-based cases is straightforward}
+#'   \item{paperadopt2_5}{ordinal. \[ITEM\] Paper adoption - ease of use: I find it convenient to use paper-based cases for studying}
+#'   \item{paperadopt3_1}{ordinal. \[ITEM\] Paper adoption - simplicity: I think using paper-based cases is simple}
+#'   \item{paperadopt3_2}{ordinal. \[ITEM\] Paper adoption - simplicity: I find working with paper-based cases straightforward}
+#'   \item{paperadopt3_3}{ordinal. \[ITEM\] Paper adoption - simplicity: I value the simplicity and accessibility of paper-based cases}
+#'   \item{paperadopt4_1}{ordinal. \[ITEM\] Paper adoption - intention: I plan to use paper-based cases in my future studies}
+#'   \item{paperadopt4_2}{ordinal. \[ITEM\] Paper adoption - intention: I would choose paper-based cases for my business education}
+#'   \item{paperadopt4_3}{ordinal. \[ITEM\] Paper adoption - intention: I intend to advocate for paper-based cases in my academic program}
+#'   \item{videoadopt1_1}{ordinal. \[ITEM\] Video adoption - usefulness (1=strongly disagree, 5=strongly agree): Using video-based cases improves my learning performance}
+#'   \item{videoadopt1_2}{ordinal. \[ITEM\] Video adoption - usefulness: I find video-based cases to be useful for learning}
+#'   \item{videoadopt1_3}{ordinal. \[ITEM\] Video adoption - usefulness: Studying with video-based cases enhances my learning effectiveness}
+#'   \item{videoadopt1_4}{ordinal. \[ITEM\] Video adoption - usefulness: Video-based cases help me visualize business scenarios}
+#'   \item{videoadopt1_5}{ordinal. \[ITEM\] Video adoption - usefulness: I believe that using video-based cases is beneficial for my education}
+#'   \item{videoadopt2_1}{ordinal. \[ITEM\] Video adoption - ease of use: I think learning to use video-based cases is easy}
+#'   \item{videoadopt2_2}{ordinal. \[ITEM\] Video adoption - ease of use: I find video-based cases easy to interact with}
+#'   \item{videoadopt2_3}{ordinal. \[ITEM\] Video adoption - ease of use: I believe I can efficiently use video-based cases}
+#'   \item{videoadopt2_4}{ordinal. \[ITEM\] Video adoption - ease of use: Interacting with video-based cases requires little mental effort}
+#'   \item{videoadopt2_5}{ordinal. \[ITEM\] Video adoption - ease of use: I find it convenient to use video-based cases for studying}
+#'   \item{videopadopt3_1}{ordinal. \[ITEM\] Video adoption - simplicity: I think using video-based cases is simple}
+#'   \item{videopadopt3_2}{ordinal. \[ITEM\] Video adoption - simplicity: I find working with video-based cases straightforward}
+#'   \item{videopadopt3_3}{ordinal. \[ITEM\] Video adoption - simplicity: I value the simplicity and accessibility of video-based cases}
+#'   \item{videoadopt4_1}{ordinal. \[ITEM\] Video adoption - intention: I plan to use video-based cases in my future studies}
+#'   \item{videoadopt4_2}{ordinal. \[ITEM\] Video adoption - intention: I would choose video-based cases for my business education}
+#'   \item{videoadopt4_3}{ordinal. \[ITEM\] Video adoption - intention: I intend to advocate for video-based cases in my academic program}
+#'   \item{vradopt1_1}{ordinal. \[ITEM\] VR adoption - usefulness (1=strongly disagree, 5=strongly agree): Using VR technology improves my learning performance}
+#'   \item{vradopt1_2}{ordinal. \[ITEM\] VR adoption - usefulness: I find VR technology to be useful for learning}
+#'   \item{vradopt1_3}{ordinal. \[ITEM\] VR adoption - usefulness: Using VR technology improves my learning effectiveness}
+#'   \item{vradopt1_4}{ordinal. \[ITEM\] VR adoption - usefulness: VR technology helps me visualize business scenarios}
+#'   \item{vradopt1_5}{ordinal. \[ITEM\] VR adoption - usefulness: I believe that using VR technology is beneficial for my education}
+#'   \item{vradopt2_1}{ordinal. \[ITEM\] VR adoption - ease of use: I think learning to operate VR technology is easy}
+#'   \item{vradopt2_2}{ordinal. \[ITEM\] VR adoption - ease of use: I find VR technology for educational purposes easy to use}
+#'   \item{vradopt2_3}{ordinal. \[ITEM\] VR adoption - ease of use: I believe I could become proficient in using VR technology}
+#'   \item{vradopt2_4}{ordinal. \[ITEM\] VR adoption - ease of use: Interacting with educational VR technology is easy for me}
+#'   \item{vradopt2_5}{ordinal. \[ITEM\] VR adoption - ease of use: It is easy for me to become skillful at using VR technology}
+#'   \item{vradopt3_1}{ordinal. \[ITEM\] VR adoption - simplicity: I think using VR technology for education is simple}
+#'   \item{vradopt3_2}{ordinal. \[ITEM\] VR adoption - simplicity: Using VR technology for education is uncomplicated}
+#'   \item{vradopt3_3}{ordinal. \[ITEM\] VR adoption - simplicity: I find the experience of using VR technology for learning to be straightforward}
+#'   \item{vradopt4_1}{ordinal. \[ITEM\] VR adoption - intention: I plan to use VR technology in my future studies}
+#'   \item{vradopt4_2}{ordinal. \[ITEM\] VR adoption - intention: If given a choice, I would choose VR-based cases for business education}
+#'   \item{vradopt4_3}{ordinal. \[ITEM\] VR adoption - intention: I intend to recommend the use of VR technology in business education}
+#'   \item{adopt}{continuous. Interest in adoption composite score for participant's assigned medium}
+#'   \item{adopt1_1}{ordinal. Adoption usefulness item 1 (recoded to participant's condition)}
+#'   \item{adopt1_2}{ordinal. Adoption usefulness item 2 (recoded to participant's condition)}
+#'   \item{adopt1_3}{ordinal. Adoption usefulness item 3 (recoded to participant's condition)}
+#'   \item{adopt1_4}{ordinal. Adoption usefulness item 4 (recoded to participant's condition)}
+#'   \item{adopt1_5}{ordinal. Adoption usefulness item 5 (recoded to participant's condition)}
+#'   \item{adopt2_1}{ordinal. Adoption ease-of-use item 1 (recoded to participant's condition)}
+#'   \item{adopt2_2}{ordinal. Adoption ease-of-use item 2 (recoded to participant's condition)}
+#'   \item{adopt2_3}{ordinal. Adoption ease-of-use item 3 (recoded to participant's condition)}
+#'   \item{adopt2_4}{ordinal. Adoption ease-of-use item 4 (recoded to participant's condition)}
+#'   \item{adopt2_5}{ordinal. Adoption ease-of-use item 5 (recoded to participant's condition)}
+#'   \item{adopt3_1}{ordinal. Adoption simplicity item 1 (recoded to participant's condition)}
+#'   \item{adopt3_2}{ordinal. Adoption simplicity item 2 (recoded to participant's condition)}
+#'   \item{adopt3_3}{ordinal. Adoption simplicity item 3 (recoded to participant's condition)}
+#'   \item{adopt4_1}{ordinal. Adoption intention item 1 (recoded to participant's condition)}
+#'   \item{adopt4_2}{ordinal. Adoption intention item 2 (recoded to participant's condition)}
+#'   \item{adopt4_3}{ordinal. Adoption intention item 3 (recoded to participant's condition)}
+#'   \item{whathappening}{text. Open-ended recall: Please describe what is happening in the business case}
+#'   \item{product}{text. Open-ended recall: What product do they sell?}
+#'   \item{priorrev}{text. Open-ended recall: What was the revenue last quarter?}
+#'   \item{priorprofit}{text. Open-ended recall: What was the profitability last quarter?}
+#'   \item{currentrev}{text. Open-ended recall: What was the revenue this quarter?}
+#'   \item{currentprofit}{text. Open-ended recall: What was the profitability this quarter?}
+#'   \item{factory}{text. Open-ended recall: Describe the factory}
+#'   \item{cycletimeprior}{text. Open-ended recall: What was the cycle time last quarter?}
+#'   \item{cycletimecurrent}{text. Open-ended recall: What was the cycle time this quarter?}
+#'   \item{floorfactorycolor}{text. Open-ended visual recall: What color was the factory floor?}
+#'   \item{storeceilingcolor}{text. Open-ended visual recall: What color was the store ceiling?}
+#'   \item{pricedecrease}{text. Open-ended recall: By how much does the sales team want to decrease the price?}
+#'   \item{currentfeaturesmonth}{text. Open-ended recall: How many features does the sales team currently provide to engineering per month?}
+#'   \item{officedescription}{text. Open-ended visual recall: Describe the corporate offices where the case discussion ended}
+#'   \item{floor}{text. Open-ended recall: On what floor of the building were the offices?}
+#'   \item{confroom}{text. Open-ended visual recall: Describe the conference room where the case began}
+#'   \item{height}{text. Open-ended visual recall: How tall was the CEO?}
+#'   \item{total_recall}{count. Total recollection of facts (composite of all recall items)}
+#'   \item{num_recall}{count. Total numbers recalled correctly}
+#'   \item{try_visual_recall}{count. Number of visual dimensions participants attempted to describe}
+#'   \item{visual_recall}{count. Count of accurate visual details recalled}
+#'   \item{len_whathappening}{continuous. Written length of the overall case description response}
+#'   \item{len_factory}{continuous. Written length of factory description response}
+#'   \item{len_officedescription}{continuous. Written length of office description response}
+#'   \item{len_confroom_info}{continuous. Written length of conference room description response}
+#'   \item{len_all_descriptions}{continuous. Total written length across all open-ended description responses}
+#'   \item{if_product}{binary. Correctly recalled what product the company sells (0=no, 1=yes)}
+#'   \item{if_prior_rev}{binary. Correctly recalled prior quarter revenue (0=no, 1=yes)}
+#'   \item{if_prior_profit}{binary. Correctly recalled prior quarter profitability (0=no, 1=yes)}
+#'   \item{if_current_rev}{binary. Correctly recalled current quarter revenue (0=no, 1=yes)}
+#'   \item{if_current_profit}{binary. Correctly recalled current quarter profitability (0=no, 1=yes)}
+#'   \item{if_prior_cycle}{binary. Correctly recalled prior cycle time (0=no, 1=yes)}
+#'   \item{if_current_cycle}{binary. Correctly recalled current cycle time (0=no, 1=yes)}
+#'   \item{if_factory_floor_color}{binary. Correctly recalled factory floor color (0=no, 1=yes)}
+#'   \item{if_store_color}{binary. Correctly recalled store ceiling color (0=no, 1=yes)}
+#'   \item{if_price_decrease}{binary. Correctly recalled price decrease amount (0=no, 1=yes)}
+#'   \item{if_current_features}{binary. Correctly recalled number of features provided per month (0=no, 1=yes)}
+#'   \item{if_confroom_info}{binary. Correctly described the conference room (0=no, 1=yes)}
+#'   \item{if_try_floor_number}{binary. Attempted to answer the floor number question (0=no, 1=yes)}
+#'   \item{if_responded_height}{binary. Attempted to estimate the CEO's height (0=no, 1=yes)}
+#'   \item{floor_number}{continuous. Numeric floor number provided by participant}
+#'   \item{total_inches}{continuous. Total estimated CEO height in inches}
+#'   \item{height_diff}{continuous. Signed difference between estimated and actual CEO height (inches)}
+#'   \item{abs_height_diff}{continuous. Absolute difference between estimated and actual CEO height (inches)}
+#'   \item{gender}{categorical. Self-described gender (selected choice)}
+#'   \item{gender_4_TEXT}{text. Self-described gender (free text, for those who chose 'prefer to self-describe')}
+#'   \item{if_female}{binary. Female participant indicator (0=no, 1=yes)}
+#'   \item{race_1}{binary. Race: White or Caucasian (0=no, 1=yes)}
+#'   \item{race_2}{binary. Race: Black or African American (0=no, 1=yes)}
+#'   \item{race_3}{binary. Race: American Indian/Native (0=no, 1=yes)}
+#'   \item{race_4}{binary. Race: Asian (0=no, 1=yes)}
+#'   \item{race_5}{binary. Race: Native Hawaiian or Other Pacific Islander (0=no, 1=yes)}
+#'   \item{race_6}{binary. Race: Other (0=no, 1=yes)}
+#'   \item{race_7}{binary. Race: Prefer not to say (0=no, 1=yes)}
+#'   \item{if_non_white}{binary. Non-white participant indicator (0=no, 1=yes)}
+#'   \item{hispanic}{binary. Spanish, Hispanic, or Latino origin (0=no, 1=yes)}
+#'   \item{age}{continuous. Participant age in years}
+#'   \item{_merge}{categorical. Matching result from data merge (Stata merge indicator)}
+#' }
+#' @source Hubbard TD. (2025). Transforming business education: the impact of virtual reality on learning outcomes in case studies. Frontiers in Virtual Reality, 6. https://doi.org/10.3389/frvir.2025.1461690
+#' @name vr-business-education
+NULL
+

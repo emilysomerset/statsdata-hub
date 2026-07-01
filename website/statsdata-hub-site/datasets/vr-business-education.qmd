@@ -1,0 +1,231 @@
+---
+title: "Virtual Reality vs. Video vs. Paper Business Case Studies: Learning Outcomes"
+---
+
+Data from a randomized experiment (N=148) comparing learning outcomes across three business case study formats: paper-based, video-based, and virtual reality (VR). Participants were randomly assigned to one condition and completed a business case study, then responded to measures of presence (IPQ), motivation (IMMS), task load (TLI), technology adoption intentions, and a knowledge recall quiz. VR participants demonstrated superior recall of both factual and visual details compared to paper and video conditions. Missingness in adoption items is structural: participants only rated adoption intentions for their assigned medium. Ideal for teaching one-way ANOVA, planned contrasts, structural missing data, and analysis of experimental between-subjects designs with multiple outcome measures.
+
+
+## Source and Citation
+
+- **Citation**: Hubbard TD. (2025). Transforming business education: the impact of virtual reality on learning outcomes in case studies. Frontiers in Virtual Reality, 6. https://doi.org/10.3389/frvir.2025.1461690
+- **URL**: [https://researchbox.org/3216](https://researchbox.org/3216)
+- **License**: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+
+## Dataset Characteristics
+
+- **Observations**: 148
+- **Variables**: 181
+- **Missingness present**: TRUE
+- **Longitudinal**: FALSE
+- **Hierarchical**: FALSE
+
+## Variable Dictionary
+
+| Variable | Type | Description |
+|----------|------|-------------|
+| Duration__in_seconds_ | continuous | Survey completion time in seconds |
+| ipq | continuous | Igroup Presence Questionnaire composite score (sense of presence in the case environment) |
+| ipq1_1 | ordinal | [ITEM] IPQ (1=strongly disagree, 5=strongly agree): I had a sense of being there in the case environment |
+| ipq1_2 | ordinal | [ITEM] IPQ (1=strongly disagree, 5=strongly agree): Somehow I felt that the virtual world surrounded me |
+| ipq1_3 | ordinal | [ITEM] IPQ (1=strongly disagree, 5=strongly agree): I felt like I was just perceiving pictures (reversed) |
+| ipq1_4 | ordinal | [ITEM] IPQ (1=strongly disagree, 5=strongly agree): I did not feel present in the virtual space (reversed) |
+| ipq1_5 | ordinal | [ITEM] IPQ (1=strongly disagree, 5=strongly agree): I had a sense of acting in the virtual space |
+| ipq1_6 | ordinal | [ITEM] IPQ (1=strongly disagree, 5=strongly agree): I felt present in the case |
+| ipq2 | ordinal | [ITEM] IPQ awareness of real world (1=not aware of real environment, 2=still paid attention, 3=completely captivated) |
+| ipq3_1 | ordinal | [ITEM] IPQ realism: How real did the case seem to you? (1=none at all, 5=completely) |
+| ipq3_2 | ordinal | [ITEM] IPQ realism: How real did the virtual world seem to you? (1=none at all, 5=completely) |
+| ipq4_1 | ordinal | [ITEM] IPQ involvement: How much did your experience in the case environment seem consistent with your real world experience? (1=not at all, 5=completely) |
+| imms | continuous | Instructional Materials Motivation Survey composite score (motivation to engage with the case) |
+| imms_1 | ordinal | [ITEM] IMMS: When I first looked at this case, I had the impression that it would be easy for me |
+| imms_2 | ordinal | [ITEM] IMMS: This material was more difficult to understand than I would like it to be (reversed) |
+| imms_3 | ordinal | [ITEM] IMMS: After the case, I felt confident that I knew the material |
+| imms_4 | ordinal | [ITEM] IMMS: Much of the case had so much information that it was hard to pick out and remember important points (reversed) |
+| imms_5 | ordinal | [ITEM] IMMS: As I worked on this case, I was confident that I could learn the content |
+| imms_6 | ordinal | [ITEM] IMMS: The case was too difficult (reversed) |
+| imms_7 | ordinal | [ITEM] IMMS: After working on this case for a while, I was confident that I understood the material |
+| imms_8 | ordinal | [ITEM] IMMS: I could not really understand the material in this case (reversed) |
+| imms_9 | ordinal | [ITEM] IMMS: The good organization of the content helped me be confident I would learn this material |
+| imms_10 | ordinal | [ITEM] IMMS: There was something interesting at the beginning of the case that got my attention |
+| imms_11 | ordinal | [ITEM] IMMS: These materials are eye-catching |
+| imms_12 | ordinal | [ITEM] IMMS: The quality of the case helped to hold my attention |
+| imms_13 | ordinal | [ITEM] IMMS: This case is so abstract that it was hard to keep my attention on it (reversed) |
+| imms_14 | ordinal | [ITEM] IMMS: The case was dry and unappealing (reversed) |
+| imms_15 | ordinal | [ITEM] IMMS: The way the information is arranged on the pages helped me stay attentive |
+| imms_16 | ordinal | [ITEM] IMMS: This case has things that stimulated my curiosity |
+| imms_17 | ordinal | [ITEM] IMMS: The amount of repetition in this case caused me to get bored sometimes (reversed) |
+| imms_18 | ordinal | [ITEM] IMMS: I learned some things that were surprising or unexpected |
+| imms_19 | ordinal | [ITEM] IMMS: The variety of materials helped me stay attentive |
+| imms_20 | ordinal | [ITEM] IMMS: The style of the case is boring (reversed) |
+| imms_21 | ordinal | [ITEM] IMMS: There was so much content that it was hard to stay focused (reversed) |
+| imms_22 | ordinal | [ITEM] IMMS: Completing the case gave me a satisfying feeling of accomplishment |
+| imms_23 | ordinal | [ITEM] IMMS: I enjoyed this case so much that I would like to know more about this topic |
+| imms_24 | ordinal | [ITEM] IMMS: I really enjoyed studying this case |
+| imms_25 | ordinal | [ITEM] IMMS: It felt good to successfully complete this case |
+| imms_26 | ordinal | [ITEM] IMMS: It was a pleasure to work on such a well-designed case |
+| imms_27 | ordinal | [ITEM] IMMS: It is clear to me how the content of this case is related to things I already know |
+| imms_28 | ordinal | [ITEM] IMMS: Completing this case successfully was important to me |
+| imms_29 | ordinal | [ITEM] IMMS: The content of this case is relevant to my interests |
+| imms_30 | ordinal | [ITEM] IMMS: The content in this case will be useful to me |
+| imms_31 | ordinal | [ITEM] IMMS: This case was not relevant to my needs (reversed) |
+| imms_32 | ordinal | [ITEM] IMMS: I could relate the content of this case to things I have seen in my own life |
+| imms_33 | ordinal | [ITEM] IMMS: The content of this case will be useful in my future career |
+| tli | continuous | Task Load Index composite score (perceived cognitive load during the case) |
+| tli1_1 | ordinal | [ITEM] TLI: Mental demand while participating in the case (1=low, 5=high) |
+| tli1_2 | ordinal | [ITEM] TLI: Physical demand while participating in the case (1=low, 5=high) |
+| tli1_3 | ordinal | [ITEM] TLI: Temporal demand (time pressure) while participating in the case (1=low, 5=high) |
+| tli1_4 | ordinal | [ITEM] TLI: Effort required while participating in the case (1=low, 5=high) |
+| tli1_5 | ordinal | [ITEM] TLI: Frustration while participating in the case (1=low, 5=high) |
+| tli2 | ordinal | [ITEM] TLI: Self-rated performance during the case (1=low, 5=high) |
+| condition | categorical | Assigned case medium: 0=paper, 1=video, 2=VR (from administrative data) |
+| condition_survey | categorical | Self-reported case medium: 1=paper, 2=video, 3=VR (from survey) |
+| cond_paper | binary | Indicator for paper condition |
+| cond_video | binary | Indicator for video condition |
+| cond_vr | binary | Indicator for VR condition |
+| paperadopt1_1 | ordinal | [ITEM] Paper adoption - usefulness (1=strongly disagree, 5=strongly agree): Using paper-based cases improves my learning performance |
+| paperadopt1_2 | ordinal | [ITEM] Paper adoption - usefulness: I find paper-based cases to be useful for learning |
+| paperadopt1_3 | ordinal | [ITEM] Paper adoption - usefulness: Studying with paper-based cases enhances my learning effectiveness |
+| paperadopt1_4 | ordinal | [ITEM] Paper adoption - usefulness: Paper-based cases help me learn business concepts more quickly |
+| paperadopt1_5 | ordinal | [ITEM] Paper adoption - usefulness: I believe that using paper-based cases is beneficial for my education |
+| paperadopt2_1 | ordinal | [ITEM] Paper adoption - ease of use: I think learning to use paper-based cases is easy |
+| paperadopt2_2 | ordinal | [ITEM] Paper adoption - ease of use: I find paper-based cases easy to interact with |
+| paperadopt2_3 | ordinal | [ITEM] Paper adoption - ease of use: I believe I can efficiently use paper-based cases |
+| paperadopt2_4 | ordinal | [ITEM] Paper adoption - ease of use: Reading and understanding paper-based cases is straightforward |
+| paperadopt2_5 | ordinal | [ITEM] Paper adoption - ease of use: I find it convenient to use paper-based cases for studying |
+| paperadopt3_1 | ordinal | [ITEM] Paper adoption - simplicity: I think using paper-based cases is simple |
+| paperadopt3_2 | ordinal | [ITEM] Paper adoption - simplicity: I find working with paper-based cases straightforward |
+| paperadopt3_3 | ordinal | [ITEM] Paper adoption - simplicity: I value the simplicity and accessibility of paper-based cases |
+| paperadopt4_1 | ordinal | [ITEM] Paper adoption - intention: I plan to use paper-based cases in my future studies |
+| paperadopt4_2 | ordinal | [ITEM] Paper adoption - intention: I would choose paper-based cases for my business education |
+| paperadopt4_3 | ordinal | [ITEM] Paper adoption - intention: I intend to advocate for paper-based cases in my academic program |
+| videoadopt1_1 | ordinal | [ITEM] Video adoption - usefulness (1=strongly disagree, 5=strongly agree): Using video-based cases improves my learning performance |
+| videoadopt1_2 | ordinal | [ITEM] Video adoption - usefulness: I find video-based cases to be useful for learning |
+| videoadopt1_3 | ordinal | [ITEM] Video adoption - usefulness: Studying with video-based cases enhances my learning effectiveness |
+| videoadopt1_4 | ordinal | [ITEM] Video adoption - usefulness: Video-based cases help me visualize business scenarios |
+| videoadopt1_5 | ordinal | [ITEM] Video adoption - usefulness: I believe that using video-based cases is beneficial for my education |
+| videoadopt2_1 | ordinal | [ITEM] Video adoption - ease of use: I think learning to use video-based cases is easy |
+| videoadopt2_2 | ordinal | [ITEM] Video adoption - ease of use: I find video-based cases easy to interact with |
+| videoadopt2_3 | ordinal | [ITEM] Video adoption - ease of use: I believe I can efficiently use video-based cases |
+| videoadopt2_4 | ordinal | [ITEM] Video adoption - ease of use: Interacting with video-based cases requires little mental effort |
+| videoadopt2_5 | ordinal | [ITEM] Video adoption - ease of use: I find it convenient to use video-based cases for studying |
+| videopadopt3_1 | ordinal | [ITEM] Video adoption - simplicity: I think using video-based cases is simple |
+| videopadopt3_2 | ordinal | [ITEM] Video adoption - simplicity: I find working with video-based cases straightforward |
+| videopadopt3_3 | ordinal | [ITEM] Video adoption - simplicity: I value the simplicity and accessibility of video-based cases |
+| videoadopt4_1 | ordinal | [ITEM] Video adoption - intention: I plan to use video-based cases in my future studies |
+| videoadopt4_2 | ordinal | [ITEM] Video adoption - intention: I would choose video-based cases for my business education |
+| videoadopt4_3 | ordinal | [ITEM] Video adoption - intention: I intend to advocate for video-based cases in my academic program |
+| vradopt1_1 | ordinal | [ITEM] VR adoption - usefulness (1=strongly disagree, 5=strongly agree): Using VR technology improves my learning performance |
+| vradopt1_2 | ordinal | [ITEM] VR adoption - usefulness: I find VR technology to be useful for learning |
+| vradopt1_3 | ordinal | [ITEM] VR adoption - usefulness: Using VR technology improves my learning effectiveness |
+| vradopt1_4 | ordinal | [ITEM] VR adoption - usefulness: VR technology helps me visualize business scenarios |
+| vradopt1_5 | ordinal | [ITEM] VR adoption - usefulness: I believe that using VR technology is beneficial for my education |
+| vradopt2_1 | ordinal | [ITEM] VR adoption - ease of use: I think learning to operate VR technology is easy |
+| vradopt2_2 | ordinal | [ITEM] VR adoption - ease of use: I find VR technology for educational purposes easy to use |
+| vradopt2_3 | ordinal | [ITEM] VR adoption - ease of use: I believe I could become proficient in using VR technology |
+| vradopt2_4 | ordinal | [ITEM] VR adoption - ease of use: Interacting with educational VR technology is easy for me |
+| vradopt2_5 | ordinal | [ITEM] VR adoption - ease of use: It is easy for me to become skillful at using VR technology |
+| vradopt3_1 | ordinal | [ITEM] VR adoption - simplicity: I think using VR technology for education is simple |
+| vradopt3_2 | ordinal | [ITEM] VR adoption - simplicity: Using VR technology for education is uncomplicated |
+| vradopt3_3 | ordinal | [ITEM] VR adoption - simplicity: I find the experience of using VR technology for learning to be straightforward |
+| vradopt4_1 | ordinal | [ITEM] VR adoption - intention: I plan to use VR technology in my future studies |
+| vradopt4_2 | ordinal | [ITEM] VR adoption - intention: If given a choice, I would choose VR-based cases for business education |
+| vradopt4_3 | ordinal | [ITEM] VR adoption - intention: I intend to recommend the use of VR technology in business education |
+| adopt | continuous | Interest in adoption composite score for participant's assigned medium |
+| adopt1_1 | ordinal | Adoption usefulness item 1 (recoded to participant's condition) |
+| adopt1_2 | ordinal | Adoption usefulness item 2 (recoded to participant's condition) |
+| adopt1_3 | ordinal | Adoption usefulness item 3 (recoded to participant's condition) |
+| adopt1_4 | ordinal | Adoption usefulness item 4 (recoded to participant's condition) |
+| adopt1_5 | ordinal | Adoption usefulness item 5 (recoded to participant's condition) |
+| adopt2_1 | ordinal | Adoption ease-of-use item 1 (recoded to participant's condition) |
+| adopt2_2 | ordinal | Adoption ease-of-use item 2 (recoded to participant's condition) |
+| adopt2_3 | ordinal | Adoption ease-of-use item 3 (recoded to participant's condition) |
+| adopt2_4 | ordinal | Adoption ease-of-use item 4 (recoded to participant's condition) |
+| adopt2_5 | ordinal | Adoption ease-of-use item 5 (recoded to participant's condition) |
+| adopt3_1 | ordinal | Adoption simplicity item 1 (recoded to participant's condition) |
+| adopt3_2 | ordinal | Adoption simplicity item 2 (recoded to participant's condition) |
+| adopt3_3 | ordinal | Adoption simplicity item 3 (recoded to participant's condition) |
+| adopt4_1 | ordinal | Adoption intention item 1 (recoded to participant's condition) |
+| adopt4_2 | ordinal | Adoption intention item 2 (recoded to participant's condition) |
+| adopt4_3 | ordinal | Adoption intention item 3 (recoded to participant's condition) |
+| whathappening | text | Open-ended recall: Please describe what is happening in the business case |
+| product | text | Open-ended recall: What product do they sell? |
+| priorrev | text | Open-ended recall: What was the revenue last quarter? |
+| priorprofit | text | Open-ended recall: What was the profitability last quarter? |
+| currentrev | text | Open-ended recall: What was the revenue this quarter? |
+| currentprofit | text | Open-ended recall: What was the profitability this quarter? |
+| factory | text | Open-ended recall: Describe the factory |
+| cycletimeprior | text | Open-ended recall: What was the cycle time last quarter? |
+| cycletimecurrent | text | Open-ended recall: What was the cycle time this quarter? |
+| floorfactorycolor | text | Open-ended visual recall: What color was the factory floor? |
+| storeceilingcolor | text | Open-ended visual recall: What color was the store ceiling? |
+| pricedecrease | text | Open-ended recall: By how much does the sales team want to decrease the price? |
+| currentfeaturesmonth | text | Open-ended recall: How many features does the sales team currently provide to engineering per month? |
+| officedescription | text | Open-ended visual recall: Describe the corporate offices where the case discussion ended |
+| floor | text | Open-ended recall: On what floor of the building were the offices? |
+| confroom | text | Open-ended visual recall: Describe the conference room where the case began |
+| height | text | Open-ended visual recall: How tall was the CEO? |
+| total_recall | count | Total recollection of facts (composite of all recall items) |
+| num_recall | count | Total numbers recalled correctly |
+| try_visual_recall | count | Number of visual dimensions participants attempted to describe |
+| visual_recall | count | Count of accurate visual details recalled |
+| len_whathappening | continuous | Written length of the overall case description response |
+| len_factory | continuous | Written length of factory description response |
+| len_officedescription | continuous | Written length of office description response |
+| len_confroom_info | continuous | Written length of conference room description response |
+| len_all_descriptions | continuous | Total written length across all open-ended description responses |
+| if_product | binary | Correctly recalled what product the company sells (0=no, 1=yes) |
+| if_prior_rev | binary | Correctly recalled prior quarter revenue (0=no, 1=yes) |
+| if_prior_profit | binary | Correctly recalled prior quarter profitability (0=no, 1=yes) |
+| if_current_rev | binary | Correctly recalled current quarter revenue (0=no, 1=yes) |
+| if_current_profit | binary | Correctly recalled current quarter profitability (0=no, 1=yes) |
+| if_prior_cycle | binary | Correctly recalled prior cycle time (0=no, 1=yes) |
+| if_current_cycle | binary | Correctly recalled current cycle time (0=no, 1=yes) |
+| if_factory_floor_color | binary | Correctly recalled factory floor color (0=no, 1=yes) |
+| if_store_color | binary | Correctly recalled store ceiling color (0=no, 1=yes) |
+| if_price_decrease | binary | Correctly recalled price decrease amount (0=no, 1=yes) |
+| if_current_features | binary | Correctly recalled number of features provided per month (0=no, 1=yes) |
+| if_confroom_info | binary | Correctly described the conference room (0=no, 1=yes) |
+| if_try_floor_number | binary | Attempted to answer the floor number question (0=no, 1=yes) |
+| if_responded_height | binary | Attempted to estimate the CEO's height (0=no, 1=yes) |
+| floor_number | continuous | Numeric floor number provided by participant |
+| total_inches | continuous | Total estimated CEO height in inches |
+| height_diff | continuous | Signed difference between estimated and actual CEO height (inches) |
+| abs_height_diff | continuous | Absolute difference between estimated and actual CEO height (inches) |
+| gender | categorical | Self-described gender (selected choice) |
+| gender_4_TEXT | text | Self-described gender (free text, for those who chose 'prefer to self-describe') |
+| if_female | binary | Female participant indicator (0=no, 1=yes) |
+| race_1 | binary | Race: White or Caucasian (0=no, 1=yes) |
+| race_2 | binary | Race: Black or African American (0=no, 1=yes) |
+| race_3 | binary | Race: American Indian/Native (0=no, 1=yes) |
+| race_4 | binary | Race: Asian (0=no, 1=yes) |
+| race_5 | binary | Race: Native Hawaiian or Other Pacific Islander (0=no, 1=yes) |
+| race_6 | binary | Race: Other (0=no, 1=yes) |
+| race_7 | binary | Race: Prefer not to say (0=no, 1=yes) |
+| if_non_white | binary | Non-white participant indicator (0=no, 1=yes) |
+| hispanic | binary | Spanish, Hispanic, or Latino origin (0=no, 1=yes) |
+| age | continuous | Participant age in years |
+| _merge | categorical | Matching result from data merge (Stata merge indicator) |
+
+## Suggested Learning Objectives
+
+- Conduct a one-way ANOVA comparing three experimental conditions
+- Use planned contrasts to test specific hypotheses about VR vs. paper and video
+- Distinguish between structural missingness (by design) and problematic missingness
+- Interpret multiple dependent variables from a single experiment
+
+## Suggested Classroom Activities
+
+- Compare mean knowledge recall scores across conditions and test for significant differences
+- Discuss why adoption items are missing for non-assigned conditions and whether this is a problem
+- Explore whether presence (IPQ) mediates the effect of condition on learning outcomes
+
+## Common Student Misconceptions
+
+- Treating structural NAs in condition-specific adoption items as data quality problems
+- Ignoring multiple comparisons when testing all pairwise differences between three conditions
+
+## Load This Dataset in R
+
+```r
+library(statsdata)
+data <- load_dataset("vr-business-education")
+```
