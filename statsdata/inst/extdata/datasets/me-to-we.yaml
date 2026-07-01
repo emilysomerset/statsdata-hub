@@ -1,0 +1,91 @@
+id: me-to-we
+title: "From Me to We: Generic Pronouns and Children's Judgments of Generosity (Experiment 2)"
+description: >
+  Data from Experiment 2 of a study examining how subtle shifts in
+  language perspective shape children's social judgments. A total of
+  100 children aged 6-9 years completed 8 trials in which a child
+  speaker described classroom norms using either generic pronouns
+  (we/you) or specific pronouns (referencing a named individual).
+  Children judged whether the speaker was generous after each trial.
+  The design is within-subjects for language type (generic vs. specific)
+  and between-subjects for pronoun type (we vs. generic you), with
+  counterbalancing via two presentation orders (A and B). Results
+  showed children were more likely to judge speakers as generous when
+  using generic pronouns, with stronger effects for we than generic you.
+  Ideal for teaching multilevel logistic regression, mixed within- and
+  between-subjects designs, and binary outcome analysis with repeated
+  measures.
+
+source:
+  citation: "Orvell A, Simmons E, Umscheid V, Elli G, Gelman SA. From 'me' to 'we': How perspective shifts in language can shape children's judgments about kindness, caring, and inclusivity. Journal of Experimental Psychology: General."
+  researchbox: "Simmons, E., Orvell, A., & Gelman, S. (2025). ResearchBox 3371, From 'me' to 'we', https://ResearchBox.org/3371. Zenodo. https://doi.org/10.5281/zenodo.15120345"
+  url: "https://researchbox.org/3371"
+  license: "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+
+file: "data/clean/me_to_we/exp_2.csv"
+
+data_source_type: published_study
+
+methods: [multilevel_modeling, logistic_regression, t_test]
+concepts: [clustered_observations, confounding, selection_bias]
+variable_types: [binary, categorical, continuous, ordinal]
+course_level: [intermediate, advanced_undergraduate, graduate]
+discipline: [psychology, education]
+
+characteristics:
+  n_obs: 800
+  n_vars: 11
+  missingness: false
+  survey_weights: false
+  longitudinal: false
+  hierarchical: true
+  cross_sectional: true
+
+teaching:
+  learning_objectives:
+    - "Fit a multilevel logistic regression model with a binary outcome and repeated observations nested within children"
+    - "Distinguish between within-subjects (language type) and between-subjects (pronoun type) factors"
+    - "Interpret fixed effects for language condition on the log-odds of a generosity judgment"
+    - "Explain why ignoring clustering by participant inflates Type I error in repeated-measures designs"
+  classroom_activities:
+    - "Compare the proportion of generous judgments for generic vs. specific language using a simple proportion test, then discuss why a multilevel model is more appropriate"
+    - "Examine whether the generic language effect differs by pronoun type (we vs. you) using an interaction term"
+    - "Plot individual-level response profiles across 8 trials to visualize within-person variability"
+  common_misconceptions:
+    - "Treating each of the 8 trial-level observations from the same child as independent"
+    - "Confusing the within-subjects manipulation (generic vs. specific language per trial) with the between-subjects factor (we vs. you condition)"
+
+variables:
+  - name: ID
+    type: categorical
+    description: "Unique participant identifier"
+  - name: age
+    type: continuous
+    description: "Participant exact age in years (range approximately 6-9)"
+  - name: age_c
+    type: continuous
+    description: "Age mean-centered (age minus sample mean age)"
+  - name: age_group
+    type: ordinal
+    description: "Age group in months (e.g., 67 = 67 months)"
+  - name: Generic
+    type: categorical
+    description: "Between-subjects pronoun condition: We (generic we) or You (generic you)"
+  - name: GenOrder
+    type: categorical
+    description: "Counterbalancing order: A (generic pronoun in Trials 1-4, specific in 5-8) or B (specific in Trials 1-4, generic in 5-8)"
+  - name: Attribution
+    type: ordinal
+    description: "Attribution measure collected at end of session"
+  - name: gender
+    type: categorical
+    description: "Participant gender (F = female, M = male)"
+  - name: Trial
+    type: ordinal
+    description: "Trial number within the session (Trial 1 through Trial 8)"
+  - name: Answer
+    type: binary
+    description: "Child's generosity judgment for the speaker on this trial (1 = generous, 0 = not generous)"
+  - name: Language
+    type: categorical
+    description: "Language type used by the speaker on this trial: Generic (we or you pronoun) or Specific (named individual); derived from Trial number and GenOrder"

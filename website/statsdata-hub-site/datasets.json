@@ -52,6 +52,19 @@
     "data_source_type": "published_study"
   },
   {
+    "id": "me-to-we",
+    "title": "From Me to We: Generic Pronouns and Children's Judgments of Generosity (Experiment 2)",
+    "description": "Data from Experiment 2 of a study examining how subtle shifts in language perspective shape children's social judgments. A total of 100 children aged 6-9 years completed 8 trials in which a child speaker described classroom norms using either generic pronouns (we/you) or specific pronouns (referencing a named individual). Children judged whether the speaker was generous after each trial. The design is within-subjects for language type (generic vs. specific) and between-subjects for pronoun type (we vs. generic you), with counterbalancing via two presentation orders (A and B). Results showed children were more likely to judge speakers as generous when using generic pronouns, with stronger effects for we than generic you. Ideal for teaching multilevel logistic regression, mixed within- and between-subjects designs, and binary outcome analysis with repeated measures.\n",
+    "methods": ["multilevel_modeling", "logistic_regression", "t_test"],
+    "concepts": ["clustered_observations", "confounding", "selection_bias"],
+    "variable_types": ["binary", "categorical", "continuous", "ordinal"],
+    "course_level": ["intermediate", "advanced_undergraduate", "graduate"],
+    "discipline": ["psychology", "education"],
+    "n_obs": 800,
+    "n_vars": 11,
+    "data_source_type": "published_study"
+  },
+  {
     "id": "plantbased-meat-reviews",
     "title": "Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis",
     "description": "A dataset of 3,915 Yelp reviews comparing consumer sentiment toward plant-based fast food menu items (e.g., \"Impossible,\" \"Beyond,\" \"Sofritas\") versus traditional meat-based controls (e.g., \"Whopper,\" \"Carnitas\") within the same restaurant chains, spanning 7 fast-food chains and hundreds of unique locations. Reviews were scored using transformer-based sentiment analysis (RoBERTa) for sentiment valence, and a large language model extraction procedure flagged mentions of sensory attributes, texture, and environmental/ethical motivations. Using fixed-effects and linear mixed models to control for restaurant, user, and temporal heterogeneity, plant-based items were found to receive significantly higher star ratings (β=0.73) and more positive sentiment valence (β=0.33) than meat-based controls, an effect driven primarily by moral utility rather than superior sensory performance. Ideal for teaching mixed-effects models, text/sentiment data, and analysis of nested/clustered review data (reviews nested within users and within restaurant locations).\n",

@@ -147,60 +147,151 @@
     "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"busy-wellbeing\")"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html",
-    "href": "datasets/epilepsy-seizures.html",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/me-to-we.html",
+    "href": "datasets/me-to-we.html",
+    "title": "From Me to We: Generic Pronouns and Children’s Judgments of Generosity (Experiment 2)",
     "section": "",
-    "text": "Longitudinal data from a clinical trial of the anti-epileptic drug progabide. Each of 59 patients was observed over 4 follow-up periods, with seizure counts recorded at each visit, alongside baseline seizure count and age. Commonly used to teach Poisson regression for count data with repeated measurements on the same subject."
+    "text": "Data from Experiment 2 of a study examining how subtle shifts in language perspective shape children’s social judgments. A total of 100 children aged 6-9 years completed 8 trials in which a child speaker described classroom norms using either generic pronouns (we/you) or specific pronouns (referencing a named individual). Children judged whether the speaker was generous after each trial. The design is within-subjects for language type (generic vs. specific) and between-subjects for pronoun type (we vs. generic you), with counterbalancing via two presentation orders (A and B). Results showed children were more likely to judge speakers as generous when using generic pronouns, with stronger effects for we than generic you. Ideal for teaching multilevel logistic regression, mixed within- and between-subjects designs, and binary outcome analysis with repeated measures."
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#source-and-citation",
-    "href": "datasets/epilepsy-seizures.html#source-and-citation",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/me-to-we.html#source-and-citation",
+    "href": "datasets/me-to-we.html#source-and-citation",
+    "title": "From Me to We: Generic Pronouns and Children’s Judgments of Generosity (Experiment 2)",
     "section": "Source and Citation",
-    "text": "Source and Citation\n\nCitation: Thall and Vail (1990), distributed in the MASS R package\nURL: https://cran.r-project.org/web/packages/MASS/\nLicense: Available via the MASS package (part of base R distribution)"
+    "text": "Source and Citation\n\nCitation: Orvell A, Simmons E, Umscheid V, Elli G, Gelman SA. From ‘me’ to ‘we’: How perspective shifts in language can shape children’s judgments about kindness, caring, and inclusivity. Journal of Experimental Psychology: General.\nURL: https://researchbox.org/3371\nLicense: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#dataset-characteristics",
-    "href": "datasets/epilepsy-seizures.html#dataset-characteristics",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/me-to-we.html#dataset-characteristics",
+    "href": "datasets/me-to-we.html#dataset-characteristics",
+    "title": "From Me to We: Generic Pronouns and Children’s Judgments of Generosity (Experiment 2)",
     "section": "Dataset Characteristics",
-    "text": "Dataset Characteristics\n\nObservations: 236\nVariables: 9\nMissingness present: FALSE\nLongitudinal: TRUE\nHierarchical: TRUE"
+    "text": "Dataset Characteristics\n\nObservations: 800\nVariables: 11\nMissingness present: FALSE\nLongitudinal: FALSE\nHierarchical: TRUE"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#variable-dictionary",
-    "href": "datasets/epilepsy-seizures.html#variable-dictionary",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/me-to-we.html#variable-dictionary",
+    "href": "datasets/me-to-we.html#variable-dictionary",
+    "title": "From Me to We: Generic Pronouns and Children’s Judgments of Generosity (Experiment 2)",
     "section": "Variable Dictionary",
-    "text": "Variable Dictionary\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nTRUE\ncount\nNumber of seizures during the follow-up period\n\n\ntrt\ncategorical\nTreatment group: placebo or progabide\n\n\nbase\ncount\nBaseline seizure count (8 weeks prior to trial)\n\n\nage\ncontinuous\nPatient age in years\n\n\nV4\nbinary\nIndicator for the 4th (final) follow-up period\n\n\nsubject\ncategorical\nPatient identifier (1-59), repeated across 4 rows each\n\n\nperiod\nordinal\nFollow-up period number (1 to 4)\n\n\nlbase\ncontinuous\nLog-transformed, centered baseline seizure count\n\n\nlage\ncontinuous\nLog-transformed, centered age"
+    "text": "Variable Dictionary\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nID\ncategorical\nUnique participant identifier\n\n\nage\ncontinuous\nParticipant exact age in years (range approximately 6-9)\n\n\nage_c\ncontinuous\nAge mean-centered (age minus sample mean age)\n\n\nage_group\nordinal\nAge group in months (e.g., 67 = 67 months)\n\n\nGeneric\ncategorical\nBetween-subjects pronoun condition: We (generic we) or You (generic you)\n\n\nGenOrder\ncategorical\nCounterbalancing order: A (generic pronoun in Trials 1-4, specific in 5-8) or B (specific in Trials 1-4, generic in 5-8)\n\n\nAttribution\nordinal\nAttribution measure collected at end of session\n\n\ngender\ncategorical\nParticipant gender (F = female, M = male)\n\n\nTrial\nordinal\nTrial number within the session (Trial 1 through Trial 8)\n\n\nAnswer\nbinary\nChild’s generosity judgment for the speaker on this trial (1 = generous, 0 = not generous)\n\n\nLanguage\ncategorical\nLanguage type used by the speaker on this trial: Generic (we or you pronoun) or Specific (named individual); derived from Trial number and GenOrder"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
-    "href": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/me-to-we.html#suggested-learning-objectives",
+    "href": "datasets/me-to-we.html#suggested-learning-objectives",
+    "title": "From Me to We: Generic Pronouns and Children’s Judgments of Generosity (Experiment 2)",
     "section": "Suggested Learning Objectives",
-    "text": "Suggested Learning Objectives\n\nFit a Poisson regression model for count outcomes\nRecognize the need to account for repeated measurements per subject\nCompare naive Poisson models to overdispersion-corrected alternatives"
+    "text": "Suggested Learning Objectives\n\nFit a multilevel logistic regression model with a binary outcome and repeated observations nested within children\nDistinguish between within-subjects (language type) and between-subjects (pronoun type) factors\nInterpret fixed effects for language condition on the log-odds of a generosity judgment\nExplain why ignoring clustering by participant inflates Type I error in repeated-measures designs"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
-    "href": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/me-to-we.html#suggested-classroom-activities",
+    "href": "datasets/me-to-we.html#suggested-classroom-activities",
+    "title": "From Me to We: Generic Pronouns and Children’s Judgments of Generosity (Experiment 2)",
     "section": "Suggested Classroom Activities",
-    "text": "Suggested Classroom Activities\n\nModel seizure counts as a function of treatment and baseline rate, ignoring then accounting for repeated measures"
+    "text": "Suggested Classroom Activities\n\nCompare the proportion of generous judgments for generic vs. specific language using a simple proportion test, then discuss why a multilevel model is more appropriate\nExamine whether the generic language effect differs by pronoun type (we vs. you) using an interaction term\nPlot individual-level response profiles across 8 trials to visualize within-person variability"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#common-student-misconceptions",
-    "href": "datasets/epilepsy-seizures.html#common-student-misconceptions",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/me-to-we.html#common-student-misconceptions",
+    "href": "datasets/me-to-we.html#common-student-misconceptions",
+    "title": "From Me to We: Generic Pronouns and Children’s Judgments of Generosity (Experiment 2)",
     "section": "Common Student Misconceptions",
-    "text": "Common Student Misconceptions\n\nTreating each of the 4 visits per patient as an independent observation"
+    "text": "Common Student Misconceptions\n\nTreating each of the 8 trial-level observations from the same child as independent\nConfusing the within-subjects manipulation (generic vs. specific language per trial) with the between-subjects factor (we vs. you condition)"
   },
   {
-    "objectID": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
-    "href": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
-    "title": "Epilepsy Seizure Counts (Progabide Trial)",
+    "objectID": "datasets/me-to-we.html#load-this-dataset-in-r",
+    "href": "datasets/me-to-we.html#load-this-dataset-in-r",
+    "title": "From Me to We: Generic Pronouns and Children’s Judgments of Generosity (Experiment 2)",
     "section": "Load This Dataset in R",
-    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"epilepsy-seizures\")"
+    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"me-to-we\")"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html",
+    "href": "datasets/titanic-survival.html",
+    "title": "Titanic Passenger Survival",
+    "section": "",
+    "text": "Passenger-level data on the 1912 Titanic disaster, including age, sex, ticket class, and survival outcome. Widely used to introduce logistic regression, classification, and discussions of confounding."
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#source-and-citation",
+    "href": "datasets/titanic-survival.html#source-and-citation",
+    "title": "Titanic Passenger Survival",
+    "section": "Source and Citation",
+    "text": "Source and Citation\n\nCitation: Kaggle Titanic dataset, derived from Encyclopedia Titanica\nURL: https://www.kaggle.com/c/titanic\nLicense: CC0-1.0"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#dataset-characteristics",
+    "href": "datasets/titanic-survival.html#dataset-characteristics",
+    "title": "Titanic Passenger Survival",
+    "section": "Dataset Characteristics",
+    "text": "Dataset Characteristics\n\nObservations: 891\nVariables: 12\nMissingness present: TRUE\nLongitudinal: FALSE\nHierarchical: FALSE"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#variable-dictionary",
+    "href": "datasets/titanic-survival.html#variable-dictionary",
+    "title": "Titanic Passenger Survival",
+    "section": "Variable Dictionary",
+    "text": "Variable Dictionary\n\n\n\nVariable\nType\nDescription\n\n\n\n\nPassengerId\ncontinuous\nUnique passenger identifier\n\n\nSurvived\nbinary\n0 = died, 1 = survived\n\n\nPclass\nordinal\nTicket class: 1 = first, 2 = second, 3 = third\n\n\nName\ntext\nPassenger name\n\n\nSex\ncategorical\nPassenger sex\n\n\nAge\ncontinuous\nAge in years (some values missing)\n\n\nSibSp\ncount\nNumber of siblings/spouses aboard\n\n\nParch\ncount\nNumber of parents/children aboard\n\n\nTicket\ncategorical\nTicket number\n\n\nFare\ncontinuous\nPassenger fare\n\n\nCabin\ncategorical\nCabin number (mostly missing)\n\n\nEmbarked\ncategorical\nPort of embarkation: C, Q, or S"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#suggested-learning-objectives",
+    "href": "datasets/titanic-survival.html#suggested-learning-objectives",
+    "title": "Titanic Passenger Survival",
+    "section": "Suggested Learning Objectives",
+    "text": "Suggested Learning Objectives\n\nFit and interpret a logistic regression model\nRecognize confounding by passenger class and sex"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#suggested-classroom-activities",
+    "href": "datasets/titanic-survival.html#suggested-classroom-activities",
+    "title": "Titanic Passenger Survival",
+    "section": "Suggested Classroom Activities",
+    "text": "Suggested Classroom Activities\n\nCompare crude vs. adjusted survival odds by sex"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#common-student-misconceptions",
+    "href": "datasets/titanic-survival.html#common-student-misconceptions",
+    "title": "Titanic Passenger Survival",
+    "section": "Common Student Misconceptions",
+    "text": "Common Student Misconceptions\n\nTreating fare as a clean linear predictor without checking skew"
+  },
+  {
+    "objectID": "datasets/titanic-survival.html#load-this-dataset-in-r",
+    "href": "datasets/titanic-survival.html#load-this-dataset-in-r",
+    "title": "Titanic Passenger Survival",
+    "section": "Load This Dataset in R",
+    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"titanic-survival\")"
+  },
+  {
+    "objectID": "contribute.html",
+    "href": "contribute.html",
+    "title": "Contribute a Dataset",
+    "section": "",
+    "text": "StatsData Hub is an open community resource — contributions of new datasets are welcome and encouraged. Each dataset needs two things: a data file and a metadata description. Here’s how to add one."
+  },
+  {
+    "objectID": "contribute.html#what-makes-a-good-dataset-for-this-repository",
+    "href": "contribute.html#what-makes-a-good-dataset-for-this-repository",
+    "title": "Contribute a Dataset",
+    "section": "What makes a good dataset for this repository?",
+    "text": "What makes a good dataset for this repository?\nA good teaching dataset should:\n\nIllustrate one or more specific statistical methods clearly\nHave a meaningful real-world context students can engage with\nBe openly licensed (CC0, CC BY, or similar) so others can freely use it\nBe appropriate for classroom use (no sensitive personal data)\nCome with a citable source (published study, public repository, or well-known teaching dataset)"
+  },
+  {
+    "objectID": "contribute.html#step-by-step-contribution-guide",
+    "href": "contribute.html#step-by-step-contribution-guide",
+    "title": "Contribute a Dataset",
+    "section": "Step-by-step contribution guide",
+    "text": "Step-by-step contribution guide\n\n1. Fork the repository\nGo to github.com/emilysomerset/statsdata-hub and click Fork (top right). This creates your own copy of the project to work in.\n\n\n2. Add the data file\nPlace your cleaned dataset as a CSV file at:\ndata/clean//.csv\nFor example:\ndata/clean/titanic-survival/titanic-survival.csv\nIf the data required cleaning or processing, add your processing script at:\nscripts/process-.R\n\n\n3. Create a metadata YAML file\nCopy the template below and save it as:\nmetadata/datasets/.yaml\nFill in every field — the more complete the metadata, the more useful the dataset is for instructors searching for specific teaching needs.\nid: your-dataset-id\ntitle: \"Your Dataset Title\"\ndescription: &gt;\n  A clear description of what the dataset contains, where it came from,\n  and what it is commonly used to teach.\n\nsource:\n  citation: \"Author(s) (Year). Title. Journal/Source.\"\n  url: \"https://link-to-source.com\"\n  license: \"CC0-1.0\"\n\nfile: \"data/clean/your-dataset-id/your-dataset-id.csv\"\n\ndata_source_type: published_study  # or: classic_dataset, public_repository, simulated\n\nmethods: [logistic_regression]     # see full list below\nconcepts: [confounding]            # see full list below\nvariable_types: [binary, continuous]\ncourse_level: [introductory]       # introductory, intermediate, advanced_undergraduate, graduate\ndiscipline: [health]               # see full list below\n\ncharacteristics:\n  n_obs: 1000\n  n_vars: 10\n  missingness: false\n  survey_weights: false\n  longitudinal: false\n  hierarchical: false\n  cross_sectional: true\n\nteaching:\n  learning_objectives:\n    - \"Learning objective 1\"\n    - \"Learning objective 2\"\n  classroom_activities:\n    - \"Suggested activity 1\"\n  common_misconceptions:\n    - \"Common misconception 1\"\n\nvariables:\n  - name: column_name\n    type: continuous\n    description: \"What this variable measures\"\n\n\n4. Open a pull request\nOnce you’ve added the data file and YAML, open a pull request on GitHub. Describe what the dataset is and why it would be useful for teaching. A maintainer will review it and let you know if anything needs updating."
+  },
+  {
+    "objectID": "contribute.html#valid-metadata-values",
+    "href": "contribute.html#valid-metadata-values",
+    "title": "Contribute a Dataset",
+    "section": "Valid metadata values",
+    "text": "Valid metadata values\nStatistical methods: t_test, anova, linear_regression, logistic_regression, poisson_regression, survival_analysis, pca, clustering, survey_sampling, bayesian_methods, time_series, multilevel_modeling, factor_analysis, mixed_effects\nTeaching concepts: confounding, simpsons_paradox, missing_data, outliers, heteroskedasticity, multicollinearity, nonlinearity, selection_bias, clustered_observations, measurement_error, overdispersion\nDisciplines: health, biology, psychology, economics, sports, climate, education, survey_research, finance, politics"
+  },
+  {
+    "objectID": "contribute.html#questions",
+    "href": "contribute.html#questions",
+    "title": "Contribute a Dataset",
+    "section": "Questions?",
+    "text": "Questions?\nOpen an issue on GitHub and I’ll be happy to help."
   },
   {
     "objectID": "datasets/vr-business-education.html",
@@ -259,95 +350,60 @@
     "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"vr-business-education\")"
   },
   {
-    "objectID": "contribute.html",
-    "href": "contribute.html",
-    "title": "Contribute a Dataset",
+    "objectID": "datasets/epilepsy-seizures.html",
+    "href": "datasets/epilepsy-seizures.html",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
     "section": "",
-    "text": "StatsData Hub is an open community resource — contributions of new datasets are welcome and encouraged. Each dataset needs two things: a data file and a metadata description. Here’s how to add one."
+    "text": "Longitudinal data from a clinical trial of the anti-epileptic drug progabide. Each of 59 patients was observed over 4 follow-up periods, with seizure counts recorded at each visit, alongside baseline seizure count and age. Commonly used to teach Poisson regression for count data with repeated measurements on the same subject."
   },
   {
-    "objectID": "contribute.html#what-makes-a-good-dataset-for-this-repository",
-    "href": "contribute.html#what-makes-a-good-dataset-for-this-repository",
-    "title": "Contribute a Dataset",
-    "section": "What makes a good dataset for this repository?",
-    "text": "What makes a good dataset for this repository?\nA good teaching dataset should:\n\nIllustrate one or more specific statistical methods clearly\nHave a meaningful real-world context students can engage with\nBe openly licensed (CC0, CC BY, or similar) so others can freely use it\nBe appropriate for classroom use (no sensitive personal data)\nCome with a citable source (published study, public repository, or well-known teaching dataset)"
-  },
-  {
-    "objectID": "contribute.html#step-by-step-contribution-guide",
-    "href": "contribute.html#step-by-step-contribution-guide",
-    "title": "Contribute a Dataset",
-    "section": "Step-by-step contribution guide",
-    "text": "Step-by-step contribution guide\n\n1. Fork the repository\nGo to github.com/emilysomerset/statsdata-hub and click Fork (top right). This creates your own copy of the project to work in.\n\n\n2. Add the data file\nPlace your cleaned dataset as a CSV file at:\ndata/clean//.csv\nFor example:\ndata/clean/titanic-survival/titanic-survival.csv\nIf the data required cleaning or processing, add your processing script at:\nscripts/process-.R\n\n\n3. Create a metadata YAML file\nCopy the template below and save it as:\nmetadata/datasets/.yaml\nFill in every field — the more complete the metadata, the more useful the dataset is for instructors searching for specific teaching needs.\nid: your-dataset-id\ntitle: \"Your Dataset Title\"\ndescription: &gt;\n  A clear description of what the dataset contains, where it came from,\n  and what it is commonly used to teach.\n\nsource:\n  citation: \"Author(s) (Year). Title. Journal/Source.\"\n  url: \"https://link-to-source.com\"\n  license: \"CC0-1.0\"\n\nfile: \"data/clean/your-dataset-id/your-dataset-id.csv\"\n\ndata_source_type: published_study  # or: classic_dataset, public_repository, simulated\n\nmethods: [logistic_regression]     # see full list below\nconcepts: [confounding]            # see full list below\nvariable_types: [binary, continuous]\ncourse_level: [introductory]       # introductory, intermediate, advanced_undergraduate, graduate\ndiscipline: [health]               # see full list below\n\ncharacteristics:\n  n_obs: 1000\n  n_vars: 10\n  missingness: false\n  survey_weights: false\n  longitudinal: false\n  hierarchical: false\n  cross_sectional: true\n\nteaching:\n  learning_objectives:\n    - \"Learning objective 1\"\n    - \"Learning objective 2\"\n  classroom_activities:\n    - \"Suggested activity 1\"\n  common_misconceptions:\n    - \"Common misconception 1\"\n\nvariables:\n  - name: column_name\n    type: continuous\n    description: \"What this variable measures\"\n\n\n4. Open a pull request\nOnce you’ve added the data file and YAML, open a pull request on GitHub. Describe what the dataset is and why it would be useful for teaching. A maintainer will review it and let you know if anything needs updating."
-  },
-  {
-    "objectID": "contribute.html#valid-metadata-values",
-    "href": "contribute.html#valid-metadata-values",
-    "title": "Contribute a Dataset",
-    "section": "Valid metadata values",
-    "text": "Valid metadata values\nStatistical methods: t_test, anova, linear_regression, logistic_regression, poisson_regression, survival_analysis, pca, clustering, survey_sampling, bayesian_methods, time_series, multilevel_modeling, factor_analysis, mixed_effects\nTeaching concepts: confounding, simpsons_paradox, missing_data, outliers, heteroskedasticity, multicollinearity, nonlinearity, selection_bias, clustered_observations, measurement_error, overdispersion\nDisciplines: health, biology, psychology, economics, sports, climate, education, survey_research, finance, politics"
-  },
-  {
-    "objectID": "contribute.html#questions",
-    "href": "contribute.html#questions",
-    "title": "Contribute a Dataset",
-    "section": "Questions?",
-    "text": "Questions?\nOpen an issue on GitHub and I’ll be happy to help."
-  },
-  {
-    "objectID": "datasets/titanic-survival.html",
-    "href": "datasets/titanic-survival.html",
-    "title": "Titanic Passenger Survival",
-    "section": "",
-    "text": "Passenger-level data on the 1912 Titanic disaster, including age, sex, ticket class, and survival outcome. Widely used to introduce logistic regression, classification, and discussions of confounding."
-  },
-  {
-    "objectID": "datasets/titanic-survival.html#source-and-citation",
-    "href": "datasets/titanic-survival.html#source-and-citation",
-    "title": "Titanic Passenger Survival",
+    "objectID": "datasets/epilepsy-seizures.html#source-and-citation",
+    "href": "datasets/epilepsy-seizures.html#source-and-citation",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
     "section": "Source and Citation",
-    "text": "Source and Citation\n\nCitation: Kaggle Titanic dataset, derived from Encyclopedia Titanica\nURL: https://www.kaggle.com/c/titanic\nLicense: CC0-1.0"
+    "text": "Source and Citation\n\nCitation: Thall and Vail (1990), distributed in the MASS R package\nURL: https://cran.r-project.org/web/packages/MASS/\nLicense: Available via the MASS package (part of base R distribution)"
   },
   {
-    "objectID": "datasets/titanic-survival.html#dataset-characteristics",
-    "href": "datasets/titanic-survival.html#dataset-characteristics",
-    "title": "Titanic Passenger Survival",
+    "objectID": "datasets/epilepsy-seizures.html#dataset-characteristics",
+    "href": "datasets/epilepsy-seizures.html#dataset-characteristics",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
     "section": "Dataset Characteristics",
-    "text": "Dataset Characteristics\n\nObservations: 891\nVariables: 12\nMissingness present: TRUE\nLongitudinal: FALSE\nHierarchical: FALSE"
+    "text": "Dataset Characteristics\n\nObservations: 236\nVariables: 9\nMissingness present: FALSE\nLongitudinal: TRUE\nHierarchical: TRUE"
   },
   {
-    "objectID": "datasets/titanic-survival.html#variable-dictionary",
-    "href": "datasets/titanic-survival.html#variable-dictionary",
-    "title": "Titanic Passenger Survival",
+    "objectID": "datasets/epilepsy-seizures.html#variable-dictionary",
+    "href": "datasets/epilepsy-seizures.html#variable-dictionary",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
     "section": "Variable Dictionary",
-    "text": "Variable Dictionary\n\n\n\nVariable\nType\nDescription\n\n\n\n\nPassengerId\ncontinuous\nUnique passenger identifier\n\n\nSurvived\nbinary\n0 = died, 1 = survived\n\n\nPclass\nordinal\nTicket class: 1 = first, 2 = second, 3 = third\n\n\nName\ntext\nPassenger name\n\n\nSex\ncategorical\nPassenger sex\n\n\nAge\ncontinuous\nAge in years (some values missing)\n\n\nSibSp\ncount\nNumber of siblings/spouses aboard\n\n\nParch\ncount\nNumber of parents/children aboard\n\n\nTicket\ncategorical\nTicket number\n\n\nFare\ncontinuous\nPassenger fare\n\n\nCabin\ncategorical\nCabin number (mostly missing)\n\n\nEmbarked\ncategorical\nPort of embarkation: C, Q, or S"
+    "text": "Variable Dictionary\n\n\n\n\n\n\n\n\nVariable\nType\nDescription\n\n\n\n\nTRUE\ncount\nNumber of seizures during the follow-up period\n\n\ntrt\ncategorical\nTreatment group: placebo or progabide\n\n\nbase\ncount\nBaseline seizure count (8 weeks prior to trial)\n\n\nage\ncontinuous\nPatient age in years\n\n\nV4\nbinary\nIndicator for the 4th (final) follow-up period\n\n\nsubject\ncategorical\nPatient identifier (1-59), repeated across 4 rows each\n\n\nperiod\nordinal\nFollow-up period number (1 to 4)\n\n\nlbase\ncontinuous\nLog-transformed, centered baseline seizure count\n\n\nlage\ncontinuous\nLog-transformed, centered age"
   },
   {
-    "objectID": "datasets/titanic-survival.html#suggested-learning-objectives",
-    "href": "datasets/titanic-survival.html#suggested-learning-objectives",
-    "title": "Titanic Passenger Survival",
+    "objectID": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
+    "href": "datasets/epilepsy-seizures.html#suggested-learning-objectives",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
     "section": "Suggested Learning Objectives",
-    "text": "Suggested Learning Objectives\n\nFit and interpret a logistic regression model\nRecognize confounding by passenger class and sex"
+    "text": "Suggested Learning Objectives\n\nFit a Poisson regression model for count outcomes\nRecognize the need to account for repeated measurements per subject\nCompare naive Poisson models to overdispersion-corrected alternatives"
   },
   {
-    "objectID": "datasets/titanic-survival.html#suggested-classroom-activities",
-    "href": "datasets/titanic-survival.html#suggested-classroom-activities",
-    "title": "Titanic Passenger Survival",
+    "objectID": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
+    "href": "datasets/epilepsy-seizures.html#suggested-classroom-activities",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
     "section": "Suggested Classroom Activities",
-    "text": "Suggested Classroom Activities\n\nCompare crude vs. adjusted survival odds by sex"
+    "text": "Suggested Classroom Activities\n\nModel seizure counts as a function of treatment and baseline rate, ignoring then accounting for repeated measures"
   },
   {
-    "objectID": "datasets/titanic-survival.html#common-student-misconceptions",
-    "href": "datasets/titanic-survival.html#common-student-misconceptions",
-    "title": "Titanic Passenger Survival",
+    "objectID": "datasets/epilepsy-seizures.html#common-student-misconceptions",
+    "href": "datasets/epilepsy-seizures.html#common-student-misconceptions",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
     "section": "Common Student Misconceptions",
-    "text": "Common Student Misconceptions\n\nTreating fare as a clean linear predictor without checking skew"
+    "text": "Common Student Misconceptions\n\nTreating each of the 4 visits per patient as an independent observation"
   },
   {
-    "objectID": "datasets/titanic-survival.html#load-this-dataset-in-r",
-    "href": "datasets/titanic-survival.html#load-this-dataset-in-r",
-    "title": "Titanic Passenger Survival",
+    "objectID": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
+    "href": "datasets/epilepsy-seizures.html#load-this-dataset-in-r",
+    "title": "Epilepsy Seizure Counts (Progabide Trial)",
     "section": "Load This Dataset in R",
-    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"titanic-survival\")"
+    "text": "Load This Dataset in R\nlibrary(statsdata)\ndata &lt;- load_dataset(\"epilepsy-seizures\")"
   },
   {
     "objectID": "datasets/plantbased-meat-reviews.html",

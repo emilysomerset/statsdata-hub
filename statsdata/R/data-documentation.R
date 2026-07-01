@@ -224,6 +224,28 @@ NULL
 #' @name gym-incentives
 NULL
 
+#' From Me to We: Generic Pronouns and Children's Judgments of Generosity (Experiment 2)
+#'
+#' Data from Experiment 2 of a study examining how subtle shifts in language perspective shape children's social judgments. A total of 100 children aged 6-9 years completed 8 trials in which a child speaker described classroom norms using either generic pronouns (we/you) or specific pronouns (referencing a named individual). Children judged whether the speaker was generous after each trial. The design is within-subjects for language type (generic vs. specific) and between-subjects for pronoun type (we vs. generic you), with counterbalancing via two presentation orders (A and B). Results showed children were more likely to judge speakers as generous when using generic pronouns, with stronger effects for we than generic you. Ideal for teaching multilevel logistic regression, mixed within- and between-subjects designs, and binary outcome analysis with repeated measures. 
+#'
+#' @format A data frame with variables:
+#' \describe{
+#'   \item{ID}{categorical. Unique participant identifier}
+#'   \item{age}{continuous. Participant exact age in years (range approximately 6-9)}
+#'   \item{age_c}{continuous. Age mean-centered (age minus sample mean age)}
+#'   \item{age_group}{ordinal. Age group in months (e.g., 67 = 67 months)}
+#'   \item{Generic}{categorical. Between-subjects pronoun condition: We (generic we) or You (generic you)}
+#'   \item{GenOrder}{categorical. Counterbalancing order: A (generic pronoun in Trials 1-4, specific in 5-8) or B (specific in Trials 1-4, generic in 5-8)}
+#'   \item{Attribution}{ordinal. Attribution measure collected at end of session}
+#'   \item{gender}{categorical. Participant gender (F = female, M = male)}
+#'   \item{Trial}{ordinal. Trial number within the session (Trial 1 through Trial 8)}
+#'   \item{Answer}{binary. Child's generosity judgment for the speaker on this trial (1 = generous, 0 = not generous)}
+#'   \item{Language}{categorical. Language type used by the speaker on this trial: Generic (we or you pronoun) or Specific (named individual); derived from Trial number and GenOrder}
+#' }
+#' @source Orvell A, Simmons E, Umscheid V, Elli G, Gelman SA. From 'me' to 'we': How perspective shifts in language can shape children's judgments about kindness, caring, and inclusivity. Journal of Experimental Psychology: General.
+#' @name me-to-we
+NULL
+
 #' Plant-Based vs. Meat-Based Fast Food: Yelp Review Sentiment Analysis
 #'
 #' A dataset of 3,915 Yelp reviews comparing consumer sentiment toward plant-based fast food menu items (e.g., "Impossible," "Beyond," "Sofritas") versus traditional meat-based controls (e.g., "Whopper," "Carnitas") within the same restaurant chains, spanning 7 fast-food chains and hundreds of unique locations. Reviews were scored using transformer-based sentiment analysis (RoBERTa) for sentiment valence, and a large language model extraction procedure flagged mentions of sensory attributes, texture, and environmental/ethical motivations. Using fixed-effects and linear mixed models to control for restaurant, user, and temporal heterogeneity, plant-based items were found to receive significantly higher star ratings (β=0.73) and more positive sentiment valence (β=0.33) than meat-based controls, an effect driven primarily by moral utility rather than superior sensory performance. Ideal for teaching mixed-effects models, text/sentiment data, and analysis of nested/clustered review data (reviews nested within users and within restaurant locations). 
